@@ -1,0 +1,13 @@
+@use '@scssVariables' as v;
+
+
+.logo{
+    display: flex;
+    &__b , &__j{        
+        font-size: 3.8rem;
+        font-weight: 700;       
+    }
+    &__j{
+        margin-top: 1.2rem;
+    }
+}
