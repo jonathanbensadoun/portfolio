@@ -4,7 +4,7 @@ import './Navbar.scss';
 export default function Navbar() {
   return (
     <div className="navbar">
-      <ul className="navigation">
+      <ul className="flex justify-between items-center p-2">
         <a href="">
           <li className="navigation_list">HOME</li>
         </a>
