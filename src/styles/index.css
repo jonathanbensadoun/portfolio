@@ -1,3 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+.text-black-shadow {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
