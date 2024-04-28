@@ -8,14 +8,12 @@ export default function Navbar() {
       <ul className="flex justify-between items-center p-4 md:px-8">
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? 'underline' : '')}
+          className={({ isActive }) => (isActive ? '' : '')}
           onClick={scrollUtils.scrollToTop}
         >
           <li
-            className={({ isActive }) =>
-              isActive
-                ? 'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow underline'
-                : 'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow'
+            className={
+              'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
             }
           >
             HOME
@@ -23,10 +21,8 @@ export default function Navbar() {
         </NavLink>
         <NavLink to="/" onClick={scrollUtils.scrollToProjects}>
           <li
-            className={({ isActive }) =>
-              isActive
-                ? 'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow underline'
-                : 'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow'
+            className={
+              'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
             }
           >
             PROJETS

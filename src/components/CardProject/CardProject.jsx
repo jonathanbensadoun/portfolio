@@ -7,14 +7,13 @@ export default function CardProject({ title, description, image, link }) {
 
   return (
     <div
-      className={`m-4 relative md:static transition-all duration-500 ease-in-out h-full w-80 cursor-pointer top-0 left-0`}
+      className={`m-4 relative md:static transition-all duration-500 ease-in-out md:h-80 w-80 cursor-pointer top-0 left-0 shadow-lg`}
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
-      onClick={() => setOpenCard(!openCard)}
     >
       <div
-        className={`  bg-purple-800 p-1  ${
-          openCard ? 'rounded-t' : 'rounded'
+        className={`  bg-purple-800 p-2  ${
+          openCard ? 'md:rounded-t' : 'rounded'
         }  transition-all ease-in-out duration-300    `}
       >
         <div className="flex flex-col justify-end items-center">
@@ -30,10 +29,10 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute top-0 h-full md:h-60   md:static flex flex-col justify-between items-center   bg-purple-800  rounded-b transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute top-0   md:static flex flex-col justify-between items-center   bg-purple-800  rounded-b transition-all duration-700 ease-out transform  w-full ${
             openCard
-              ? 'translate-y-0 opacity-100  '
-              : '-translate-y-0 opacity-0 '
+              ? 'translate-y-0 opacity-100 h-full rounded md:rounded-b '
+              : '-translate-y-0 opacity-0 md:-translate-y-60 '
           }`}
         >
           <h1 className="text-3xl pt-4 ">{title}</h1>
@@ -45,7 +44,7 @@ export default function CardProject({ title, description, image, link }) {
           </Link>
           <div
             className={`rounded bottom-0  h-1 bg-white transition-all ease-out duration-1000  ${
-              openCard ? 'w-40 translate-y-0 ' : 'w-14 -translate-y-full '
+              openCard ? 'w-60 translate-y-0 ' : 'w-0 -translate-y-full '
             } `}
           ></div>
         </div>

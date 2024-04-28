@@ -18,6 +18,14 @@ function App() {
             </>
           }
         />
+        <Route
+          path="/project/:title"
+          element={
+            <>
+              <Header />
+            </>
+          }
+        />
       </Routes>
     </div>
   );
