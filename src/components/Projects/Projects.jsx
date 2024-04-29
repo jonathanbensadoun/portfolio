@@ -12,7 +12,9 @@ export default function Projects() {
       <h2 className="mx-4 mt-4 text-justify md:text-3xl">
         Découvrez mon univers à tavers quelques-uns de mes projets personnels
       </h2>
-      <div className={`flex flex-wrap justify-center items-center  mt-4 `}>
+      <div
+        className={`flex flex-wrap justify-center items-center  mt-4 md:pb-60`}
+      >
         <CardProject
           title="Osurvivors"
           description="“ Jeu de rôle et de survie ”"

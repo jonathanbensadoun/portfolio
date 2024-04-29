@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name_fr": "React",
+    "name_en": "React",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 2,
+    "name_fr": "Redux",
+    "name_en": "Redux",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 3,
+    "name_fr": "JavaScript (Vanilla)",
+    "name_en": "JavaScript (Vanilla)",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 4,
+    "name_fr": "React Native",
+    "name_en": "React Native",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 5,
+    "name_fr": "Expo",
+    "name_en": "Expo",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 6,
+    "name_fr": "HTML",
+    "name_en": "HTML",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 7,
+    "name_fr": "CSS",
+    "name_en": "CSS",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 8,
+    "name_fr": "SCSS",
+    "name_en": "SCSS",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 9,
+    "name_fr": "Bulma",
+    "name_en": "Bulma",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 10,
+    "name_fr": "Tailwind CSS",
+    "name_en": "Tailwind CSS",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 11,
+    "name_fr": "Material UI",
+    "name_en": "Material UI",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 12,
+    "name_fr": "Semantic UI",
+    "name_en": "Semantic UI",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 13,
+    "name_fr": "Node.js",
+    "name_en": "Node.js",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 14,
+    "name_fr": "PostgreSQL",
+    "name_en": "PostgreSQL",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 15,
+    "name_fr": "Sequelize",
+    "name_en": "Sequelize",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 16,
+    "name_fr": "Supabase",
+    "name_en": "Supabase",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 17,
+    "name_fr": "Strapi",
+    "name_en": "Strapi",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 18,
+    "name_fr": "API REST",
+    "name_en": "REST API",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 19,
+    "name_fr": "Express.js",
+    "name_en": "Express.js",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 20,
+    "name_fr": "Nodemailer",
+    "name_en": "Nodemailer",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 21,
+    "name_fr": "Git",
+    "name_en": "Git",
+    "category": "Version Control",
+    "color": "#7D26CD"
+  },
+  {
+    "id": 22,
+    "name_fr": "GitHub",
+    "name_en": "GitHub",
+    "category": "Version Control",
+    "color": "#7D26CD"
+  },
+  {
+    "id": 25,
+    "name_fr": "Trello",
+    "name_en": "Trello",
+    "category": "Project Management",
+    "color": "#4B0082"
+  },
+  {
+    "id": 26,
+    "name_fr": "Notion",
+    "name_en": "Notion",
+    "category": "Project Management",
+    "color": "#4B0082"
+  }
+]

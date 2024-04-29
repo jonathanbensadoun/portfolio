@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name_fr": "Communication",
+    "name_en": "Communication",
+    "category": "Interpersonal Skills",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 2,
+    "name_fr": "Travail en équipe",
+    "name_en": "Teamwork",
+    "category": "Interpersonal Skills",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 3,
+    "name_fr": "Créativité",
+    "name_en": "Creativity",
+    "category": "Personal Development",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 4,
+    "name_fr": "Gestion du stress",
+    "name_en": "Stress Management",
+    "category": "Well-being",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 5,
+    "name_fr": "Autonomie",
+    "name_en": "Autonomy",
+    "category": "Personal Development",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 6,
+    "name_fr": "Polyvalence",
+    "name_en": "Versatility",
+    "category": "Personal Development",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 7,
+    "name_fr": "Curiosité",
+    "name_en": "Curiosity",
+    "category": "Personal Development",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 8,
+    "name_fr": "Rigueur",
+    "name_en": "Attention to detail",
+    "category": "Personal Development",
+    "color": "#C39BD3"
+  }
+]
