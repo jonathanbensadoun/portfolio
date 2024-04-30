@@ -1,0 +1,51 @@
+[
+  {
+    "id": 6,
+    "name_fr": "HTML",
+    "name_en": "HTML",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 7,
+    "name_fr": "CSS",
+    "name_en": "CSS",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 8,
+    "name_fr": "SCSS",
+    "name_en": "SCSS",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 9,
+    "name_fr": "Bulma",
+    "name_en": "Bulma",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 10,
+    "name_fr": "Tailwind CSS",
+    "name_en": "Tailwind CSS",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 11,
+    "name_fr": "Material UI",
+    "name_en": "Material UI",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  },
+  {
+    "id": 12,
+    "name_fr": "Semantic UI",
+    "name_en": "Semantic UI",
+    "category": "Integration web",
+    "color": "#A56ECC"
+  }
+]

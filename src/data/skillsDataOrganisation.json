@@ -1,0 +1,38 @@
+[
+    
+  {
+    "id": 21,
+    "name_fr": "Git",
+    "name_en": "Git",
+    "category": "Version Control",
+    "color": "#7D26CD"
+  },
+  {
+    "id": 22,
+    "name_fr": "GitHub",
+    "name_en": "GitHub",
+    "category": "Version Control",
+    "color": "#7D26CD"
+  },
+  {
+    "id": 25,
+    "name_fr": "Trello",
+    "name_en": "Trello",
+    "category": "Project Management",
+    "color": "#4B0082"
+  },
+  {
+    "id": 26,
+    "name_fr": "Notion",
+    "name_en": "Notion",
+    "category": "Project Management",
+    "color": "#4B0082"
+  },
+  {
+    "id": 27,
+    "name_fr": "whimsical",
+    "name_en": "whimsical",
+    "category": "Communication",
+    "color": "#4B0082"
+  }
+]

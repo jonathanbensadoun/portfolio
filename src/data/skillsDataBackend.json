@@ -1,0 +1,58 @@
+[    
+  {
+    "id": 13,
+    "name_fr": "Node.js",
+    "name_en": "Node.js",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 14,
+    "name_fr": "PostgreSQL",
+    "name_en": "PostgreSQL",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 15,
+    "name_fr": "Sequelize",
+    "name_en": "Sequelize",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 16,
+    "name_fr": "Supabase",
+    "name_en": "Supabase",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 17,
+    "name_fr": "Strapi",
+    "name_en": "Strapi",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 18,
+    "name_fr": "API REST",
+    "name_en": "REST API",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 19,
+    "name_fr": "Express.js",
+    "name_en": "Express.js",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  },
+  {
+    "id": 20,
+    "name_fr": "Nodemailer",
+    "name_en": "Nodemailer",
+    "category": "Backend",
+    "color": "#8A2BE2"
+  }
+]

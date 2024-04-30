@@ -29,7 +29,7 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute top-0   md:static flex flex-col justify-between items-center   bg-purple-800  rounded-b transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute top-0   md:static flex flex-col justify-between items-center bg-purple-800  rounded-b transition-all duration-700 ease-out transform  w-full ${
             openCard
               ? 'translate-y-0 opacity-100 h-full rounded md:rounded-b '
               : '-translate-y-0 opacity-0 md:-translate-y-60 '
