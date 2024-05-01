@@ -20,6 +20,7 @@ export default function Contact() {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit="submit"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-col mb-4">
