@@ -1,5 +1,10 @@
 import React from 'react';
-
+/**
+ *
+ * @returns
+ * Contact component
+ * fonctionnal with netlify form
+ */
 export default function Contact() {
   return (
     <div className="flex flex-col items-center justify-start h-screen bg-customPurple">
