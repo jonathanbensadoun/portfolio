@@ -7,6 +7,8 @@ export default {
         customPurple: '#23153C',
         customPurpleSecondary: '#1a102d',
         tagColor: '#8A2BE2',
+        buttonColor: '#8A2BE2',
+        buttonColorHover: '#A56ECC',
       },
       animation: {
         'slide-down': 'slideDown 1s ease-in-out',
