@@ -7,7 +7,7 @@ export default function CardProject({ title, description, image, link }) {
 
   return (
     <div
-      className={`m-4 relative md:static transition-all duration-500 ease-in-out md:h-80 w-80 cursor-pointer top-0 left-0 shadow-lg`}
+      className={`mt-4 md:mx-4 relative md:static transition-all duration-500 ease-in-out md:h-80 w-80 cursor-pointer top-0 left-0 shadow-lg`}
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
     >
@@ -20,7 +20,7 @@ export default function CardProject({ title, description, image, link }) {
           <img
             src={image}
             alt={title}
-            className={`rounded top-0 left-0 w-80 h-80 object-cover relative  `}
+            className={`rounded top-0 left-0 w-80 h-80 object-cover relative z-10 `}
           />
           {!openCard && (
             <FiChevronsDown className="absolute w-10 h-10 shadow-md animate-blink" />
@@ -29,10 +29,10 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute top-0   md:static flex flex-col justify-between items-center bg-purple-800  rounded-b transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute top-0 md:static flex flex-col justify-between items-center bg-purple-800  rounded-b transition-all duration-700 ease-out transform  w-full ${
             openCard
-              ? 'translate-y-0 opacity-100 h-full rounded md:rounded-b '
-              : '-translate-y-0 opacity-0 md:-translate-y-60 '
+              ? 'translate-y-0 opacity-100 h-full rounded md:rounded-b z-20 '
+              : '-translate-y-0 opacity-0 md:-translate-y-60 z-0'
           }`}
         >
           <h1 className="text-3xl pt-4 ">{title}</h1>

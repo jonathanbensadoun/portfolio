@@ -1,10 +1,12 @@
 import './App.scss';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import Projects from '../Projects/Projects';
 import Description from '../Description/Description';
 import { Routes, Route } from 'react-router-dom';
+import scrollUtils from '../../utils/scrollAnimation';
+import Contact from '../Contact/Contact';
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,7 @@ function App() {
               <Header />
               <Projects />
               <Description />
+              <Contact />
             </>
           }
         />

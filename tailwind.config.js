@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         customPurple: '#23153C',
+        customPurpleSecondary: '#1a102d',
+        tagColor: '#8A2BE2',
       },
       animation: {
         'slide-down': 'slideDown 1s ease-in-out',
