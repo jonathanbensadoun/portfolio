@@ -31,6 +31,7 @@ function App() {
             </>
           }
         />
+        <Route path="/success" element={<Header />} />
       </Routes>
     </div>
   );
