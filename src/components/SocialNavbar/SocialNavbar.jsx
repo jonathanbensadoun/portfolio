@@ -18,7 +18,7 @@ export default function SocialNavbar() {
 
   return (
     <div
-      className={`fixed bg-opacity-20 backdrop-blur-sm shadow-xl  bottom-0 left-0 right-0 md:bottom-auto md:top-60 md:right-auto py-4 md:py-0 z-30 md:flex md:rounded-r ${
+      className={`fixed bg-opacity-20 backdrop-blur-sm shadow-xl  bottom-0 left-0 right-0 md:bottom-auto md:top-60 md:right-auto py-4 md:py-0 z-30 md:flex md:rounded-r-xl ${
         isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
       }`}
     >

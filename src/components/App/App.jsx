@@ -50,11 +50,11 @@ function App() {
 
           touchControls: true,
           gyroControls: true,
-          minHeight: 10.0,
-          minWidth: 10.0,
+          minHeight: 1.0,
+          minWidth: 1.0,
           highlightColor: 0x2b3bce,
           // midtoneColor: 0x294250,
-          // lowlightColor: 0xe8dfd4,
+          // lowlightColor: 0xffffff,
           // baseColor: 0x8a72ea,
           blurFactor: 0.5,
           speed: 0.7,
@@ -69,13 +69,13 @@ function App() {
   return (
     <div
       ref={myRef}
-      className={`App text-black-shadow ${
+      className={`App text-black-shadow pt-16 md:pt-10 ${
         isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark'
       }`}
     >
       <Navbar />
       <div
-        className={`App text-black-shadow mx-10  bg-opacity-30   ${
+        className={`App text-black-shadow mx-4 md:mx-16 md:my-12 rounded-xl bg-opacity-30   ${
           isLightMode ? ' bg-primary' : ' bg-primaryDark'
         }`}
       >

@@ -33,7 +33,7 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute shadow-xl  top-0 md:static flex flex-col justify-between items-center bg-opacity-25    transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute shadow-xl  top-0 md:static flex flex-col justify-between items-center bg-opacity-90 md:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
             openCard
               ? 'translate-y-0 opacity-100 h-full md:rounded-b z-20 '
               : '-translate-y-0 opacity-0  md:-translate-y-60 z-0'

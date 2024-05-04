@@ -18,8 +18,8 @@ export default function ButtonDLCV() {
       <div
         className={`relative shadow-xl  inline-flex items-center px-12 py-3 my-3 overflow-hidden text-lg font-medium  border-2 rounded-full  ${
           isLightMode
-            ? 'border-text text-text  group hover:bg-text'
-            : 'text-textDark border-textDark  group hover:bg-textDark'
+            ? 'border-text text-text group hover:bg-text'
+            : 'text-textDark border-textDark group hover:bg-textDark'
         }`}
       >
         <span

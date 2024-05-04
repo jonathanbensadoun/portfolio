@@ -22,7 +22,7 @@ export default function Contact() {
           plus brefs délais.
         </p>
         <div
-          className={`flex flex-col items-center rounded mt-4 p-4 shadow-xl bg-opacity-25   ${
+          className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-xl bg-opacity-25   ${
             isLightMode
               ? 'bg-secondary text-text'
               : 'bg-secondaryDark text-textDark'
@@ -76,7 +76,7 @@ export default function Contact() {
               ></textarea>
             </div>
             <button
-              className={`py-2 px-4 shadow-xl  rounded-md ${
+              className={`py-2 px-4 shadow-xl  rounded-md bg-opacity-50 ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary'
                   : 'bg-tertiaryDark hover:bg-primaryDark'
