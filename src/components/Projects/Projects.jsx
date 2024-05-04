@@ -1,7 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
 import CardProject from '../CardProject/CardProject';
-import scrollUtils from '../../utils/scrollAnimation';
-import './Projects.scss';
 
 export default function Projects() {
   return (

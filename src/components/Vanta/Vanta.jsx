@@ -1,4 +1,3 @@
-import './Vanta.scss';
 import React, { useState, useEffect, useRef } from 'react';
 import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import FOG from 'vanta/dist/vanta.fog.min';
@@ -17,7 +16,7 @@ export default function Vanta() {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        NET({
+        FOG({
           el: myRef.current,
           // mouseControls: true,
           // touchControls: true,
@@ -32,24 +31,24 @@ export default function Vanta() {
           // speed: 0.9,
 
           // FOG
-          // touchControls: true,
-          // gyroControls: false,
-          // minHeight: 200.0,
-          // minWidth: 200.0,
-          // highlightColor: 0x415f70,
-          // midtoneColor: 0x294250,
-          // lowlightColor: 0xe8dfd4,
-          // baseColor: 0xadc5d7,
-          // blurFactor: 0.54,
-          // speed: 0.9,
-          //NET
-          mouseControls: true,
           touchControls: true,
-          gyroControls: true,
+          gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
+          highlightColor: 0x415f70,
+          midtoneColor: 0x294250,
+          lowlightColor: 0xe8dfd4,
+          baseColor: 0xadc5d7,
+          blurFactor: 0.54,
+          speed: 0.9,
+          //NET
+          // mouseControls: true,
+          // touchControls: true,
+          // gyroControls: true,
+          // minHeight: 200.0,
+          // minWidth: 200.0,
+          // scale: 1.0,
+          // scaleMobile: 1.0,
         })
       );
     }
@@ -65,7 +64,7 @@ export default function Vanta() {
     <div>
       <div
         ref={myRef}
-        className="animation  display flex flex-col justify-center "
+        className=" display flex flex-col justify-center h-screen"
       >
         <h1 className="text-2xl pt-10 mx-4 text-justify md:px-20 md:mx-20 md:text-5xl md:text-left animate-opacity text-black-shadow">
           Bonjour tout le monde ! je suis Jonathan Bensadoun

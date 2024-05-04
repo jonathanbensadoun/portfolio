@@ -1,5 +1,5 @@
 import Logo from '../Logo/Logo';
-import './Navbar.scss';
+
 import scrollUtils from '../../utils/scrollAnimation';
 import { NavLink } from 'react-router-dom';
 export default function Navbar() {
@@ -10,7 +10,6 @@ export default function Navbar() {
           to="/"
           className={({ isActive }) => (isActive ? '' : '')}
           onClick={scrollUtils.scrollToTop}
-          target="blank"
         >
           <li
             className={
@@ -20,7 +19,7 @@ export default function Navbar() {
             HOME
           </li>
         </NavLink>
-        <NavLink to="/" onClick={scrollUtils.scrollToProjects} target="blank">
+        <NavLink to="/" onClick={scrollUtils.scrollToProjects}>
           <li
             className={
               'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '

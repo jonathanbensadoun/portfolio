@@ -1,4 +1,3 @@
-import './Logo.scss';
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useTransition, animated } from '@react-spring/web';
 

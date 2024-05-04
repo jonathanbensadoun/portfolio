@@ -1,36 +1,19 @@
-import './App.scss';
-import React, { useEffect } from 'react';
-import Header from '../Header/Header';
+import React from 'react';
+
 import Navbar from '../Navbar/Navbar';
-import Projects from '../Projects/Projects';
-import Description from '../Description/Description';
+
 import { Routes, Route } from 'react-router-dom';
-import scrollUtils from '../../utils/scrollAnimation';
-import Contact from '../Contact/Contact';
+
+import HomePage from '../../pages/HomePage/HomePage';
+import ProjectPage from '../../pages/ProjectPage/ProjectPage';
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <Projects />
-              <Description />
-              <Contact />
-            </>
-          }
-        />
-        <Route
-          path="/project/:title"
-          element={
-            <>
-              <Header />
-            </>
-          }
-        />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/project/:title" element={<ProjectPage />} />
+        <Route path="/*" element={<HomePage />} />
       </Routes>
     </div>
   );

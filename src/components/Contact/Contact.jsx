@@ -6,6 +6,10 @@ import React from 'react';
  * fonctionnal with netlify form
  */
 export default function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Ici, vous pouvez gérer la soumission du formulaire
+  };
   return (
     <div className="flex flex-col items-center justify-start h-screen bg-customPurple">
       <div className="flex flex-col items-center justify-center">
@@ -23,7 +27,7 @@ export default function Contact() {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            onSubmit="submit"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="flex flex-col mb-4">
