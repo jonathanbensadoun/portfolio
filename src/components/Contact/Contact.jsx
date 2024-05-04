@@ -8,7 +8,7 @@ import React from 'react';
 export default function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Ici, vous pouvez gérer la soumission du formulaire
+    return 'submit';
   };
   return (
     <div className="flex flex-col items-center justify-start h-screen bg-customPurple">
