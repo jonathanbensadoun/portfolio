@@ -13,7 +13,7 @@ export default function Navbar() {
   const dispatch = useDispatch();
   return (
     <div
-      className={`navbar fixed top-0 left-0 w-full z-50  bg-opacity-75 shadow-md ${
+      className={`navbar fixed top-0 left-0 w-full z-50  bg-opacity-0 backdrop-blur-sm shadow-md ${
         isLightMode ? 'bg-primary' : 'k bg-primaryDark'
       }`}
     >
