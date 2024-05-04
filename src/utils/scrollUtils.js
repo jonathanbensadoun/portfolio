@@ -11,6 +11,11 @@ const scrollUtils = {
 
     projectsElement.scrollIntoView({ behavior: 'smooth' });
   },
+  scrollToContact: function () {
+    const contactElement = document.getElementById('contact');
+
+    contactElement.scrollIntoView({ behavior: 'smooth' });
+  },
 };
 
 export default scrollUtils;

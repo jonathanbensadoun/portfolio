@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        customPurple: '#23153C',
-        customPurpleSecondary: '#1a102d',
-        tagColor: '#8A2BE2',
-        buttonColor: '#8A2BE2',
-        buttonColorHover: '#A56ECC',
+        primary: '#adc5d7',
+        secondary: '#7c92a3',
+        tertiary: '#627d8c',
+        primaryDark: '#294250',
+        secondaryDark: '#415f70',
+        tertiaryDark: '#586670',
+        text: '#294250',
+        textDark: '#adc5d7',
       },
       animation: {
         'slide-down': 'slideDown 1s ease-in-out',
@@ -19,6 +23,10 @@ export default {
       boxShadow: {
         white: '0 0 100px rgba(255, 255, 255, 0.5)',
         neon: '0 0 5px #ddd, 0 0 10px #ddd, 0 0 15px #ddd, 0 0 20px #ddd',
+      },
+      textShadow: {
+        default: '0 2px 5px rgba(0, 0, 0, 0.5)',
+        lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
       },
       keyframes: {
         blink: {

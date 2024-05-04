@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 /**
  *
  * @returns
@@ -6,19 +7,29 @@ import React from 'react';
  * fonctionnal with netlify form
  */
 export default function Contact() {
+  const isLightMode = useSelector((state) => state.project.isLightMode);
   return (
-    <div className="flex flex-col items-center justify-start h-screen bg-customPurple">
+    <div
+      id="contact"
+      className={`flex flex-col  items-center justify-center h-full  p-6 md:mx-60  border-solid border-t-2 ${
+        isLightMode ? 'border-text' : 'border-textDark'
+      }`}
+    >
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl text-white font-bold">Contact</h1>
-        <p className="text-white text-center mt-4">
+        <h1 className="text-4xl  font-bold">Contact</h1>
+        <p className=" text-center mt-4">
           Vous pouvez me contacter via ce formulaire, je vous répondrai dans les
           plus brefs délais.
         </p>
         <div
-          className={`flex flex-col items-center rounded mt-4 p-4 bg-customPurpleSecondary `}
+          className={`flex flex-col items-center rounded mt-4 p-4 shadow-xl  ${
+            isLightMode
+              ? 'bg-secondary text-text'
+              : 'bg-secondaryDark text-textDark'
+          } `}
         >
           <form
-            className="mt-8 w-80"
+            className="mt-8 w-80  "
             name="contact"
             method="POST"
             data-netlify="true"
@@ -27,11 +38,11 @@ export default function Contact() {
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="flex flex-col mb-4">
-              <label className="text-white" htmlFor="name">
-                Nom:
-              </label>
+              <label htmlFor="name">Nom:</label>
               <input
-                className="py-2 px-3 bg-gray-200 rounded-md text-customPurple"
+                className={`py-2 px-3 rounded-md ${
+                  isLightMode ? 'bg-primary ' : 'bg-tertiary'
+                }`}
                 type="text"
                 name="name"
                 id="name"
@@ -39,11 +50,11 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col mb-4">
-              <label className="text-white" htmlFor="email">
-                Email:
-              </label>
+              <label htmlFor="email">Email:</label>
               <input
-                className="py-2 px-3 bg-gray-200 rounded-md text-customPurple"
+                className={`py-2 px-3 rounded-md ${
+                  isLightMode ? 'bg-primary ' : 'bg-tertiary'
+                }`}
                 type="email"
                 name="email"
                 id="email"
@@ -55,7 +66,9 @@ export default function Contact() {
                 Message:
               </label>
               <textarea
-                className="py-2 px-3 bg-gray-200 rounded-md text-customPurple"
+                className={`py-2 px-3 rounded-md ${
+                  isLightMode ? 'bg-primary ' : 'bg-tertiary'
+                }`}
                 name="message"
                 id="message"
                 rows="5"
@@ -63,7 +76,11 @@ export default function Contact() {
               ></textarea>
             </div>
             <button
-              className="py-2 px-4 bg-buttonColor text-white rounded-md hover:bg-buttonColorHover"
+              className={`py-2 px-4 shadow-xl  rounded-md ${
+                isLightMode
+                  ? 'bg-tertiary hover:bg-primary'
+                  : 'bg-tertiaryDark hover:bg-primaryDark'
+              }`}
               type="submit"
             >
               Envoyer
