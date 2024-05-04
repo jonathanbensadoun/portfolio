@@ -8,8 +8,8 @@ export default function HomePage() {
   return (
     <div>
       <Header />
-      <Projects />
       <Description />
+      <Projects />
       <Contact />
     </div>
   );

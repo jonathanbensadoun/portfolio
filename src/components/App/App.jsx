@@ -52,11 +52,11 @@ function App() {
           gyroControls: true,
           minHeight: 10.0,
           minWidth: 10.0,
-          highlightColor: 0x415f70,
-          midtoneColor: 0x294250,
-          lowlightColor: 0xe8dfd4,
-          baseColor: 0xadc5d7,
-          blurFactor: 0.42,
+          // highlightColor: 0x2b3bce,
+          // midtoneColor: 0x294250,
+          // lowlightColor: 0xe8dfd4,
+          // baseColor: 0x8a72ea,
+          blurFactor: 0.2,
           speed: 0.7,
         })
       );

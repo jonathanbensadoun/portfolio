@@ -7,7 +7,7 @@ export default function Tag({ data }) {
       {data.map((tag) => (
         <div
           key={tag.id}
-          className={`mx-4 mt-6 p-2 bg-tagColor shadow-xl  rounded-md text-sm sm:text-base ${
+          className={`mx-4 mt-6 p-2 bg-tagColor shadow-xl bg-opacity-25   rounded-md text-sm sm:text-base ${
             isLightMode ? 'bg-tertiary' : 'bg-tertiaryDark'
           }`}
         >

@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className={`flex flex-col  items-center justify-center h-full  p-6 md:mx-60  border-solid border-t-2 ${
+      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 md:mx-60 border-solid border-t-2 ${
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
     >
@@ -22,7 +22,7 @@ export default function Contact() {
           plus brefs délais.
         </p>
         <div
-          className={`flex flex-col items-center rounded mt-4 p-4 shadow-xl  ${
+          className={`flex flex-col items-center rounded mt-4 p-4 shadow-xl bg-opacity-25   ${
             isLightMode
               ? 'bg-secondary text-text'
               : 'bg-secondaryDark text-textDark'
@@ -40,7 +40,7 @@ export default function Contact() {
             <div className="flex flex-col mb-4">
               <label htmlFor="name">Nom:</label>
               <input
-                className={`py-2 px-3 rounded-md ${
+                className={`py-2 px-3 rounded-md bg-opacity-25 ${
                   isLightMode ? 'bg-primary ' : 'bg-tertiary'
                 }`}
                 type="text"
@@ -52,7 +52,7 @@ export default function Contact() {
             <div className="flex flex-col mb-4">
               <label htmlFor="email">Email:</label>
               <input
-                className={`py-2 px-3 rounded-md ${
+                className={`py-2 px-3 rounded-md bg-opacity-25 ${
                   isLightMode ? 'bg-primary ' : 'bg-tertiary'
                 }`}
                 type="email"
@@ -66,7 +66,7 @@ export default function Contact() {
                 Message:
               </label>
               <textarea
-                className={`py-2 px-3 rounded-md ${
+                className={`py-2 px-3 rounded-md bg-opacity-25 ${
                   isLightMode ? 'bg-primary ' : 'bg-tertiary'
                 }`}
                 name="message"

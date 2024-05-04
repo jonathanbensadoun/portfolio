@@ -16,7 +16,7 @@ export default function CardProject({ title, description, image, link }) {
       <div
         className={`  p-2  ${
           openCard ? 'md:rounded-t' : 'rounded'
-        }  transition-all ease-in-out duration-300 ${
+        }  transition-all ease-in-out duration-300 bg-opacity-25   ${
           isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
         }   `}
       >
@@ -33,7 +33,7 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute shadow-xl  top-0 md:static flex flex-col justify-between items-center   transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute shadow-xl  top-0 md:static flex flex-col justify-between items-center bg-opacity-25    transition-all duration-700 ease-out transform  w-full ${
             openCard
               ? 'translate-y-0 opacity-100 h-full md:rounded-b z-20 '
               : '-translate-y-0 opacity-0  md:-translate-y-60 z-0'
@@ -44,7 +44,7 @@ export default function CardProject({ title, description, image, link }) {
           <h2 className="mx-4 mt-4 text-center md:text-1xl ">{description}</h2>
           <Link to={`project/${title}`}>
             <button
-              className={`mt-5 font-bold py-2 px-4 rounded mb-2 ${
+              className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-25   ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary '
                   : 'bg-tertiaryDark hover:bg-primaryDark'
