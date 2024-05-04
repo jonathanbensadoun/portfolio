@@ -52,11 +52,11 @@ function App() {
           gyroControls: true,
           minHeight: 10.0,
           minWidth: 10.0,
-          // highlightColor: 0x2b3bce,
+          highlightColor: 0x2b3bce,
           // midtoneColor: 0x294250,
           // lowlightColor: 0xe8dfd4,
           // baseColor: 0x8a72ea,
-          blurFactor: 0.2,
+          blurFactor: 0.5,
           speed: 0.7,
         })
       );
@@ -74,11 +74,17 @@ function App() {
       }`}
     >
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/:title" element={<ProjectPage />} />
-        <Route path="/*" element={<HomePage />} />
-      </Routes>
+      <div
+        className={`App text-black-shadow mx-10  bg-opacity-30   ${
+          isLightMode ? ' bg-primary' : ' bg-primaryDark'
+        }`}
+      >
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:title" element={<ProjectPage />} />
+          <Route path="/*" element={<HomePage />} />
+        </Routes>
+      </div>
       <Footer />
       <SocialNavbar />
     </div>

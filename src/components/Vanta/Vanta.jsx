@@ -39,10 +39,10 @@ export default function Vanta() {
   //         gyroControls: false,
   //         minHeight: 200.0,
   //         minWidth: 200.0,
-  //         highlightColor: 0x415f70,
-  //         midtoneColor: 0x294250,
-  //         lowlightColor: 0xe8dfd4,
-  //         baseColor: 0xadc5d7,
+  // highlightColor: 0x415f70,
+  // midtoneColor: 0x294250,
+  // lowlightColor: 0xe8dfd4,
+  // baseColor: 0xadc5d7,
   //         blurFactor: 0.54,
   //         speed: 0.9,
   //         //NET
@@ -68,7 +68,7 @@ export default function Vanta() {
         className=" display flex flex-col justify-center h-screen"
       >
         <div
-          className={`flex flex-col justify-between mx-4   rounded-lg  bg-opacity-25  ${
+          className={`flex flex-col justify-between mx-4 rounded-lg  bg-opacity-0  ${
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
@@ -91,14 +91,14 @@ export default function Vanta() {
             <ButtonDLCV />
             <button onClick={scrollUtils.scrollToProjects}>
               <div
-                className={`relative shadow-xl inline-flex items-center px-12 py-3 my-3 overflow-hidden text-lg font-medium  border-2 rounded-full  ${
+                className={`relative shadow-xl inline-flex items-center px-12 py-3 my-3 bg-opacity-25  overflow-hidden text-lg font-medium  border-2 rounded-full  ${
                   isLightMode
-                    ? 'border-text text-text  group hover:bg-text'
+                    ? 'border-text text-text  group hover:bg-text '
                     : 'text-textDark border-textDark  group hover:bg-textDark'
                 }`}
               >
                 <span
-                  className={`absolute left-0 block w-full h-0 transition-all  opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease ${
+                  className={`absolute left-0 block w-full h-0 transition-all  bg-opacity-25 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease ${
                     isLightMode ? 'bg-primary' : 'bg-primaryDark'
                   }`}
                 ></span>
