@@ -4,7 +4,10 @@ import scrollUtils from '../../utils/scrollUtils';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { scrollOnTheProject } from '../../store/slices/projectSlice';
+import {
+  scrollOnTheProject,
+  scrollOnTheContact,
+} from '../../store/slices/projectSlice';
 
 export default function Navbar() {
   const isDesktop = useSelector((state) => state.project.isDesktop);
@@ -18,7 +21,7 @@ export default function Navbar() {
       }`}
     >
       {isDesktop ? (
-        <ul className="flex justify-between items-center p-4 2xl:px-8">
+        <ul className="flex justify-between items-center p-4 md:px-8">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? '' : '')}
@@ -26,7 +29,7 @@ export default function Navbar() {
           >
             <li
               className={
-                'navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow '
+                'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
               }
             >
               HOME
@@ -40,7 +43,7 @@ export default function Navbar() {
           >
             <li
               className={
-                'navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow '
+                'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
               }
             >
               PROJETS
@@ -49,15 +52,15 @@ export default function Navbar() {
 
           <Logo />
           <button>
-            <li className="navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow">
+            <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
               ABOUT
             </li>
           </button>
-          <button>
-            <li className="navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow">
+          <NavLink to="/" onClick={() => dispatch(scrollOnTheContact(true))}>
+            <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
               CONTACT
             </li>
-          </button>
+          </NavLink>
         </ul>
       ) : (
         <div className="flex justify-center pb-3">
