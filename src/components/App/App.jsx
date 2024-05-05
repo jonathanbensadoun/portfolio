@@ -46,26 +46,26 @@ function App() {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        CELLS({
+        FOG({
           el: myRef.current,
 
-          // touchControls: true,
-          // gyroControls: true,
-          // minHeight: 1.0,
-          // minWidth: 1.0,
-          // highlightColor: 0x2b3bce,
-          // // midtoneColor: 0x294250,
-          // // lowlightColor: 0xffffff,
-          // // baseColor: 0x8a72ea,
-          // blurFactor: 0.5,
-          // speed: 0.7,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          color1: 0x1c27bd,
-          color2: 0x2b888e,
-          size: 2.4,
+          touchControls: true,
+          gyroControls: true,
+          minHeight: 1.0,
+          minWidth: 1.0,
+          highlightColor: 0x2b3bce,
+          // midtoneColor: 0x294250,
+          // lowlightColor: 0xffffff,
+          // baseColor: 0x8a72ea,
+          blurFactor: 0.5,
+          speed: 0.7,
+          // gyroControls: false,
+          // minHeight: 200.0,
+          // minWidth: 200.0,
+          // scale: 1.0,
+          // color1: 0x1c27bd,
+          // color2: 0x2b888e,
+          // size: 2.4,
         })
       );
     }
