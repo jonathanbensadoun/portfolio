@@ -9,13 +9,13 @@ export default function CardProject({ title, description, image, link }) {
 
   return (
     <div
-      className={`mt-4 md:mx-4 relative md:static transition-all duration-500 ease-in-out md:h-80 w-80 cursor-pointer top-0 left-0 shadow-xl `}
+      className={`mt-4 2xl:mx-4 relative 2xl:static transition-all duration-500 ease-in-out 2xl:h-80 w-80 cursor-pointer top-0 left-0 shadow-xl `}
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
     >
       <div
         className={`  p-2  ${
-          openCard ? 'md:rounded-t' : 'rounded'
+          openCard ? '2xl:rounded-t' : 'rounded'
         }  transition-all ease-in-out duration-300 bg-opacity-25   ${
           isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
         }   `}
@@ -33,15 +33,15 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute shadow-xl  top-0 md:static flex flex-col justify-between items-center bg-opacity-90 md:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute shadow-xl  top-0 2xl:static flex flex-col justify-between items-center bg-opacity-90 2xl:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
             openCard
-              ? 'translate-y-0 opacity-100 h-full md:rounded-b z-20 '
-              : '-translate-y-0 opacity-0  md:-translate-y-60 z-0'
+              ? 'translate-y-0 opacity-100 h-full 2xl:rounded-b z-20 '
+              : '-translate-y-0 opacity-0  2xl:-translate-y-60 z-0'
           }
           ${isLightMode ? 'bg-secondary' : 'bg-secondaryDark'}`}
         >
           <h1 className="text-3xl pt-4 ">{title}</h1>
-          <h2 className="mx-4 mt-4 text-center md:text-1xl ">{description}</h2>
+          <h2 className="mx-4 mt-4 text-center 2xl:text-1xl ">{description}</h2>
           <Link to={`project/${title}`}>
             <button
               className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-25   ${

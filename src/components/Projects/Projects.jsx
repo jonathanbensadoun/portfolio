@@ -6,16 +6,16 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className={`flex flex-col  items-center justify-center border-solid border-t-2 md:mx-60 ${
+      className={`flex flex-col  items-center justify-center border-solid border-t-2 ${
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
     >
-      <h1 className="text-3xl md:mt-4 md:text-6xl">Projects</h1>
-      <h2 className="mx-4 mt-4 text-justify md:text-3xl">
+      <h1 className="text-3xl 2xl:mt-4 2xl:text-6xl">Projects</h1>
+      <h2 className="mx-4 mt-4 text-justify 2xl:text-3xl">
         Découvrez mon univers à tavers quelques-uns de mes projets personnels
       </h2>
       <div
-        className={`flex flex-wrap justify-center items-center  mt-4 md:pb-60`}
+        className={`flex flex-wrap justify-center items-center  mt-4 2xl:pb-60`}
       >
         <CardProject
           title="Osurvivors"

@@ -69,13 +69,13 @@ function App() {
   return (
     <div
       ref={myRef}
-      className={`App text-black-shadow pt-16 md:pt-10 ${
+      className={`App text-black-shadow pt-16 2xl:pt-10 ${
         isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark'
       }`}
     >
       <Navbar />
       <div
-        className={`App text-black-shadow mx-4 md:mx-16 md:my-12 rounded-xl bg-opacity-30   ${
+        className={`App text-black-shadow mx-4 2xl:mx-16 2xl:my-12 rounded-xl bg-opacity-30   ${
           isLightMode ? ' bg-primary' : ' bg-primaryDark'
         }`}
       >

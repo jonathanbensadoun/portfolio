@@ -18,7 +18,7 @@ export default function Navbar() {
       }`}
     >
       {isDesktop ? (
-        <ul className="flex justify-between items-center p-4 md:px-8">
+        <ul className="flex justify-between items-center p-4 2xl:px-8">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? '' : '')}
@@ -26,7 +26,7 @@ export default function Navbar() {
           >
             <li
               className={
-                'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
+                'navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow '
               }
             >
               HOME
@@ -40,7 +40,7 @@ export default function Navbar() {
           >
             <li
               className={
-                'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
+                'navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow '
               }
             >
               PROJETS
@@ -49,12 +49,12 @@ export default function Navbar() {
 
           <Logo />
           <button>
-            <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
+            <li className="navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow">
               ABOUT
             </li>
           </button>
           <button>
-            <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
+            <li className="navigation_list animate-opacity 2xl:text-2xl text-sm text-black-shadow">
               CONTACT
             </li>
           </button>

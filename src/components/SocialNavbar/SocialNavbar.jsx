@@ -18,12 +18,12 @@ export default function SocialNavbar() {
 
   return (
     <div
-      className={`fixed bg-opacity-20 backdrop-blur-sm shadow-xl  bottom-0 left-0 right-0 md:bottom-auto md:top-60 md:right-auto py-4 md:py-0 z-30 md:flex md:rounded-r-xl ${
+      className={`fixed bg-opacity-20 backdrop-blur-sm shadow-xl  bottom-0 left-0 right-0 2xl:bottom-auto 2xl:top-60 2xl:right-auto py-4 2xl:py-0 z-30 2xl:flex 2xl:rounded-r-xl ${
         isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
       }`}
     >
-      <nav className="flex items-center  justify-between px-4 md:px-2 md:py-4 space-x-4 md:flex-col md:space-x-0 md:space-y-4">
-        <div className="flex items-center justify-center space-x-4 md:flex-col md:space-x-0 md:space-y-4">
+      <nav className="flex items-center  justify-between px-4 2xl:px-2 2xl:py-4 space-x-4 2xl:flex-col 2xl:space-x-0 2xl:space-y-4">
+        <div className="flex items-center justify-center space-x-4 2xl:flex-col 2xl:space-x-0 2xl:space-y-4">
           <Link
             to="https://www.linkedin.com/in/jonathan-bensadoun/"
             target="_blank"
@@ -42,7 +42,7 @@ export default function SocialNavbar() {
           </Link>
         </div>
         {!isDesktop && (
-          <div className="flex items-center justify-center space-x-4 md:flex-col md:space-x-0 md:space-y-4">
+          <div className="flex items-center justify-center space-x-4 2xl:flex-col 2xl:space-x-0 2xl:space-y-4">
             <Link
               to="/"
               className=" hover:text-gray-400"
@@ -66,7 +66,7 @@ export default function SocialNavbar() {
             </Link>
           </div>
         )}
-        <div className="md:pt-8">
+        <div className="2xl:pt-8">
           <ButtonLightMode />
         </div>
       </nav>

@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 md:mx-60 border-solid border-t-2 ${
+      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 2xl:mx-60 border-solid border-t-2 ${
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
     >
