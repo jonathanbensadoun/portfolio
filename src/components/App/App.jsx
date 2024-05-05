@@ -17,6 +17,7 @@ import ProjectPage from '../../pages/ProjectPage/ProjectPage';
 import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
 import FOG from 'vanta/dist/vanta.fog.min';
+import CELLS from 'vanta/dist/vanta.cells.min';
 function App() {
   const dispatch = useDispatch();
 
@@ -45,19 +46,26 @@ function App() {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        FOG({
+        CELLS({
           el: myRef.current,
 
-          touchControls: true,
-          gyroControls: true,
-          minHeight: 1.0,
-          minWidth: 1.0,
-          highlightColor: 0x2b3bce,
-          // midtoneColor: 0x294250,
-          // lowlightColor: 0xffffff,
-          // baseColor: 0x8a72ea,
-          blurFactor: 0.5,
-          speed: 0.7,
+          // touchControls: true,
+          // gyroControls: true,
+          // minHeight: 1.0,
+          // minWidth: 1.0,
+          // highlightColor: 0x2b3bce,
+          // // midtoneColor: 0x294250,
+          // // lowlightColor: 0xffffff,
+          // // baseColor: 0x8a72ea,
+          // blurFactor: 0.5,
+          // speed: 0.7,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          color1: 0x1c27bd,
+          color2: 0x2b888e,
+          size: 2.4,
         })
       );
     }
