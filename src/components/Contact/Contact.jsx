@@ -41,7 +41,7 @@ export default function Contact() {
               <label htmlFor="name">Nom:</label>
               <input
                 className={`py-2 px-3 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-primary ' : 'bg-tertiary'
+                  isLightMode ? 'bg-white ' : 'bg-black'
                 }`}
                 type="text"
                 name="name"
@@ -53,7 +53,7 @@ export default function Contact() {
               <label htmlFor="email">Email:</label>
               <input
                 className={`py-2 px-3 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-primary ' : 'bg-tertiary'
+                  isLightMode ? 'bg-white ' : 'bg-black'
                 }`}
                 type="email"
                 name="email"
@@ -67,7 +67,7 @@ export default function Contact() {
               </label>
               <textarea
                 className={`py-2 px-3 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-primary ' : 'bg-tertiary'
+                  isLightMode ? 'bg-white ' : 'bg-black'
                 }`}
                 name="message"
                 id="message"

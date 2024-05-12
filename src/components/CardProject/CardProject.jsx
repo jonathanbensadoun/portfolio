@@ -42,7 +42,7 @@ export default function CardProject({ title, description, image, link }) {
         >
           <h1 className="text-3xl pt-4 ">{title}</h1>
           <h2 className="mx-4 mt-4 text-center 2xl:text-1xl ">{description}</h2>
-          <Link to={`project/${title}`}>
+          <Link to={`project/${title === 'Dinoto API' ? 'DinotoAPI' : title}`}>
             <button
               className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-25   ${
                 isLightMode

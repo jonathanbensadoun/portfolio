@@ -18,6 +18,7 @@ import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
 import FOG from 'vanta/dist/vanta.fog.min';
 import CELLS from 'vanta/dist/vanta.cells.min';
+import TOPOLOGY from 'vanta/dist/vanta.topology.min';
 function App() {
   const dispatch = useDispatch();
 
@@ -49,16 +50,28 @@ function App() {
         FOG({
           el: myRef.current,
 
+          mouseControls: true,
           touchControls: true,
-          gyroControls: true,
-          minHeight: 1.0,
-          minWidth: 1.0,
-          highlightColor: 0x2b3bce,
-          // midtoneColor: 0x294250,
-          // lowlightColor: 0xffffff,
-          // baseColor: 0x8a72ea,
-          blurFactor: 0.5,
-          speed: 0.7,
+          gyroControls: false,
+          minHeight: 100.0,
+          minWidth: 100.0,
+          highlightColor: 0x2b5159,
+          midtoneColor: 0x11ccf2,
+          lowlightColor: 0x201163,
+          baseColor: 0xcee5e5,
+          blurFactor: 0.45,
+          zoom: 0.8,
+
+          // touchControls: true,
+          // gyroControls: true,
+          // minHeight: 1.0,
+          // minWidth: 1.0,
+          // highlightColor: 0x2b3bce,
+          // // midtoneColor: 0x294250,
+          // // lowlightColor: 0xffffff,
+          // // baseColor: 0x8a72ea,
+          // blurFactor: 0.5,
+          // speed: 0.7,
           // gyroControls: false,
           // minHeight: 200.0,
           // minWidth: 200.0,
@@ -77,8 +90,8 @@ function App() {
   return (
     <div
       ref={myRef}
-      className={`App text-black-shadow pt-16 2xl:pt-10 ${
-        isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark'
+      className={`App text-black-shadow pt-16 2xl:pt-10 transition-all duration-700 ease-out-in ${
+        isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark '
       }`}
     >
       <Navbar />

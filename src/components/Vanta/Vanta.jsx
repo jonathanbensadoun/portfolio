@@ -7,7 +7,7 @@ import WAVES from 'vanta/dist/vanta.waves.min';
 import RINGS from 'vanta/dist/vanta.rings.min';
 import NET from 'vanta/dist/vanta.net.min';
 import scrollUtils from '../../utils/scrollUtils';
-import Navbar from '../Navbar/Navbar';
+
 import { TypeAnimation } from 'react-type-animation';
 import ButtonDLCV from '../Buttons/ButtonDLCV/ButtonDLCV';
 import { useSelector } from 'react-redux';
@@ -80,6 +80,7 @@ export default function Vanta() {
             <TypeAnimation
               className=""
               cursor={true}
+              speed={75}
               sequence={[
                 ' Développeur web passionné spécialisé en React, Fort de mon parcours diversifié et de ma maîtrise technique mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
                 1000,

@@ -22,23 +22,30 @@
   },
   {
     "id": 4,
-    "name_fr": "React Native",
-    "name_en": "React Native",
+    "name_fr": "phaser 3",
+    "name_en": "phaser 3",
     "category": "Frontend / Application mobile",
     "color": "#C39BD3"
   },
   {
     "id": 5,
-    "name_fr": "Expo",
-    "name_en": "Expo",
+    "name_fr": "Node.JS",
+    "name_en": "Node.JS",
     "category": "Frontend / Application mobile",
     "color": "#C39BD3"
   },
   {
     "id": 6,
-    "name_fr": "Phaser 3",
-    "name_en": "Phaser 3",
+    "name_fr": "Express.JS",
+    "name_en": "Express.JS",
     "category": "Frontend / Application mobile",
     "color": "#C39BD3"
-  } 
+  },
+  {
+    "id": 7,
+    "name_fr": "Nodemailer",
+    "name_en": "Nodemailer",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  }
 ]

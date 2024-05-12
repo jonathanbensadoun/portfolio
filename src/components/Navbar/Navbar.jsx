@@ -8,17 +8,29 @@ import {
   scrollOnTheProject,
   scrollOnTheContact,
 } from '../../store/slices/projectSlice';
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const isDesktop = useSelector((state) => state.project.isDesktop);
   const isLightMode = useSelector((state) => state.project.isLightMode);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const dispatch = useDispatch();
   return (
     <div
-      className={`navbar fixed top-0 left-0 w-full z-50  bg-opacity-0 backdrop-blur-sm shadow-md ${
-        isLightMode ? 'bg-primary' : 'k bg-primaryDark'
-      }`}
+      className={`navbar fixed top-0 left-0 w-full z-50 bg-opacity-25 backdrop-blur-sm shadow-md ${
+        isLightMode ? 'bg-primary' : 'bg-primaryDark'
+      } `}
     >
       {isDesktop ? (
         <ul className="flex justify-between items-center p-4 md:px-8">

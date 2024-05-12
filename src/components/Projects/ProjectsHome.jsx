@@ -27,13 +27,13 @@ export default function Projects() {
           description="“ Explorer les dinosaures 
           à travers 
           cette encyclopédie. ”"
-          image="./img/dinoto.png"
+          image="./img/dinotomini.png"
         />
         <CardProject
           title="Dinoto API"
           description="“ API open source de plus de 100 dinosaures.  contenant des informations détaillé et images
           généré avec Dall-e.  ”"
-          image="./img/dinotoAPI.png"
+          image="./img/dinotoapimini.png"
         />
       </div>
     </div>
