@@ -2,9 +2,9 @@ import { useParams } from 'react-router-dom';
 import scrollUtils from '../../utils/scrollUtils';
 import { useEffect } from 'react';
 import ProjectDetail from '../../components/Projects/ProjectDetail';
-import Osurvivors from '../../data/osurvivors.json';
-import Dinoto from '../../data/dinoto.json';
-import DinotoAPI from '../../data/dinotoAPI.json';
+import Osurvivors from '../../data/Osurvivors.json';
+import Dinoto from '../../data/Dinoto.json';
+import DinotoAPI from '../../data/DinotoAPI.json';
 
 export default function ProjectPage() {
   const { title } = useParams();
