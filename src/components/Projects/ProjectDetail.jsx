@@ -12,7 +12,7 @@ export default function ProjectDetail({
   const isLightMode = useSelector((state) => state.project.isLightMode);
   return (
     <div className="p-4 mt-6">
-      <div className=" flex flex-col h-full justify-center items-center space-y-4 2xl:h-screen  ">
+      <div className=" flex flex-col h-full justify-center items-center space-y-4 2xl:h-full  ">
         <h1 className="text-4xl font-bold text-center mt-10">{title}</h1>
         <p className="text-xl text-center mt-5">{shortDescription}</p>
         <button
