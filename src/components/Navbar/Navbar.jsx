@@ -9,8 +9,9 @@ import {
   scrollOnTheContact,
 } from '../../store/slices/projectSlice';
 import { useEffect, useState } from 'react';
-
+import { showReloadVanta } from '../../store/slices/projectSlice';
 export default function Navbar() {
+  const dispatch = useDispatch();
   const [isScrolled, setIsScrolled] = useState(false);
   const isDesktop = useSelector((state) => state.project.isDesktop);
   const isLightMode = useSelector((state) => state.project.isLightMode);
@@ -25,7 +26,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const dispatch = useDispatch();
   return (
     <div
       className={`navbar fixed top-0 left-0 w-full z-50 bg-opacity-25 backdrop-blur-sm shadow-md ${
@@ -36,8 +36,9 @@ export default function Navbar() {
         <ul className="flex justify-between items-center p-4 md:px-8">
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? '' : '')}
-            onClick={scrollUtils.scrollToTop}
+            onClick={() => {
+              dispatch(showReloadVanta(true));
+            }}
           >
             <li
               className={
@@ -50,6 +51,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             onClick={() => {
+              dispatch(showReloadVanta(true));
               dispatch(scrollOnTheProject(true));
             }}
           >
@@ -68,7 +70,13 @@ export default function Navbar() {
               ABOUT
             </li>
           </button>
-          <NavLink to="/" onClick={() => dispatch(scrollOnTheContact(true))}>
+          <NavLink
+            to="/"
+            onClick={() => {
+              dispatch(showReloadVanta(true));
+              dispatch(scrollOnTheContact(true));
+            }}
+          >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
               CONTACT
             </li>

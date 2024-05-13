@@ -22,7 +22,7 @@ export default function Contact() {
           plus brefs délais.
         </p>
         <div
-          className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-xl bg-opacity-25   ${
+          className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-md bg-opacity-25   ${
             isLightMode
               ? 'bg-secondary text-text'
               : 'bg-secondaryDark text-textDark'
@@ -34,7 +34,6 @@ export default function Contact() {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            onSubmit="submit"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="flex flex-col mb-4">
@@ -76,7 +75,7 @@ export default function Contact() {
               ></textarea>
             </div>
             <button
-              className={`py-2 px-4 shadow-xl  rounded-md bg-opacity-50 ${
+              className={`py-2 px-4 shadow-md  rounded-md bg-opacity-50 ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary'
                   : 'bg-tertiaryDark hover:bg-primaryDark'

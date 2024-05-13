@@ -5,16 +5,28 @@ import ProjectDetail from '../../components/Projects/ProjectDetail';
 import Osurvivors from '../../data/Osurvivors.json';
 import Dinoto from '../../data/Dinoto.json';
 import DinotoAPI from '../../data/DinotoAPI.json';
+import { useDispatch } from 'react-redux';
 
 export default function ProjectPage() {
+  const dispatch = useDispatch();
   const { title } = useParams();
   const data = title;
   useEffect(() => {
     scrollUtils.scrollToTop();
   }, []);
+  useEffect(() => {
+    function handleDOMContentLoaded() {
+      dispatch(showReloadVanta(true));
+    }
 
+    document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
+    };
+  }, []);
   return (
-    <div>
+    <div className="h-full">
       <ProjectDetail
         url={
           title === 'Osurvivors'

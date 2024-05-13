@@ -92,7 +92,7 @@ export default function Vanta() {
             <ButtonDLCV />
             <button onClick={scrollUtils.scrollToProjects}>
               <div
-                className={`relative shadow-xl inline-flex items-center px-12 py-3 my-3 bg-opacity-25  overflow-hidden text-lg font-medium  border-2 rounded-full  ${
+                className={`relative shadow-md inline-flex items-center px-12 py-3 my-3 bg-opacity-25  overflow-hidden text-lg font-medium  border-2 rounded-full  ${
                   isLightMode
                     ? 'border-text text-text  group hover:bg-text '
                     : 'text-textDark border-textDark  group hover:bg-textDark'

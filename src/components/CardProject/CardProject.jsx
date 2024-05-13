@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronsDown } from 'react-icons/fi';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { showReloadVanta } from '../../store/slices/projectSlice';
 
 export default function CardProject({ title, description, image, link }) {
+  const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const [openCard, setOpenCard] = useState(false);
 
   return (
     <div
-      className={`mt-4 2xl:mx-4 relative 2xl:static transition-all duration-500 ease-in-out 2xl:h-80 w-80 cursor-pointer top-0 left-0 shadow-xl `}
+      className={`mt-4 2xl:mx-4 relative 2xl:static transition-all duration-500 ease-in-out 2xl:h-80 w-80 cursor-pointer top-0 left-0 shadow-md `}
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
     >
@@ -33,7 +35,7 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute shadow-xl  top-0 2xl:static flex flex-col justify-between items-center bg-opacity-90 2xl:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute shadow-md  top-0 2xl:static flex flex-col justify-between items-center bg-opacity-90 2xl:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
             openCard
               ? 'translate-y-0 opacity-100 h-full 2xl:rounded-b z-20 '
               : '-translate-y-0 opacity-0  2xl:-translate-y-60 z-0'

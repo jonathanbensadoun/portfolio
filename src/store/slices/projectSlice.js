@@ -5,12 +5,16 @@ const initialState = {
   scrollToContact: false,
   isDesktop: false,
   isLightMode: true,
+  reloadVanta: false,
 };
 
 const projectSlice = createSlice({
   name: 'project',
   initialState,
   reducers: {
+    showReloadVanta: (state, action) => {
+      state.reloadVanta = action.payload;
+    },
     changeTheme: (state) => {
       state.isLightMode = !state.isLightMode;
     },
@@ -27,6 +31,7 @@ const projectSlice = createSlice({
 });
 
 export const {
+  showReloadVanta,
   scrollOnTheProject,
   scrollOnTheContact,
   isDesktopMediaQuery,

@@ -9,10 +9,10 @@ export default {
         secondary: '#7c92a3',
         tertiary: '#627d8c',
         primaryDark: '#294250',
-        secondaryDark: '#415f70',
-        tertiaryDark: '#586670',
+        secondaryDark: '#0f0f59',
+        tertiaryDark: '#731fd4',
         text: '#294250',
-        textDark: '#adc5d7',
+        textDark: '#fff',
       },
       animation: {
         'slide-down': 'slideDown 1s ease-in-out',
@@ -25,7 +25,7 @@ export default {
         neon: '0 0 5px #ddd, 0 0 10px #ddd, 0 0 15px #ddd, 0 0 20px #ddd',
       },
       textShadow: {
-        default: '0 2px 5px rgba(0, 0, 0, 0.5)',
+        default: '0 2px 2px rgba(0, 0, 0, 0.3)',
         lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
       },
       keyframes: {
