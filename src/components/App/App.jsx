@@ -45,47 +45,28 @@ function App() {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
   useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        FOG({
-          el: myRef.current,
-
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 100.0,
-          minWidth: 100.0,
-          highlightColor: 0x2b5159,
-          midtoneColor: 0x11ccf2,
-          lowlightColor: 0x201163,
-          baseColor: 0xcee5e5,
-          blurFactor: 0.45,
-          zoom: 0.8,
-
-          // touchControls: true,
-          // gyroControls: true,
-          // minHeight: 1.0,
-          // minWidth: 1.0,
-          // highlightColor: 0x2b3bce,
-          // // midtoneColor: 0x294250,
-          // // lowlightColor: 0xffffff,
-          // // baseColor: 0x8a72ea,
-          // blurFactor: 0.5,
-          // speed: 0.7,
-          // gyroControls: false,
-          // minHeight: 200.0,
-          // minWidth: 200.0,
-          // scale: 1.0,
-          // color1: 0x1c27bd,
-          // color2: 0x2b888e,
-          // size: 2.4,
-        })
-      );
+    let vantaEffect;
+    if (myRef.current) {
+      if (vantaEffect) vantaEffect.destroy();
+      vantaEffect = FOG({
+        el: myRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 100.0,
+        minWidth: 100.0,
+        highlightColor: isLightMode ? 0x2b5159 : 0xe3b538,
+        midtoneColor: isLightMode ? 0x11ccf2 : 0xff1800,
+        lowlightColor: isLightMode ? 0x201163 : 0x2a00f2,
+        baseColor: isLightMode ? 0xcee5e5 : 0xcfa1a1,
+        blurFactor: 0.45,
+        zoom: 1.5,
+      });
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
-  }, [vantaEffect]);
+  }, [isLightMode]);
 
   return (
     <div
