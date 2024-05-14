@@ -82,9 +82,7 @@ function App() {
     >
       <Navbar />
       <div
-        className={`App  mx-4 2xl:mx-16 2xl:my-12 rounded-xl bg-opacity-30   ${
-          isLightMode ? ' bg-primary' : ' bg-primaryDark'
-        }`}
+        className={`App  mx-4 2xl:mx-16 2xl:my-12 rounded-xl bg-opacity-30  `}
       >
         <Routes>
           <Route path="/" element={<HomePage />} />
