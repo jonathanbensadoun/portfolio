@@ -16,7 +16,7 @@ import scrollUtils from '../../utils/scrollUtils';
 
 import Navbar from '../Navbar/Navbar';
 import HomePage from '../../pages/HomePage/HomePage';
-import ContactSucess from '../../pages/ContactSucess/ContactSucess';
+
 import ProjectPage from '../../pages/ProjectPage/ProjectPage';
 import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
@@ -96,7 +96,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:title" element={<ProjectPage />} />
-          <Route path="/contact/success" element={<ContactSucess />} />
+
           <Route path="/*" element={<HomePage />} />
         </Routes>
       </div>

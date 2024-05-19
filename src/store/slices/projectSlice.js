@@ -4,6 +4,7 @@ const initialState = {
   scrollToDescription: false,
   scrollToProject: false,
   scrollToContact: false,
+  contactSucess: false,
   isDesktop: false,
   isLightMode: true,
   reloadVanta: false,
@@ -13,6 +14,9 @@ const projectSlice = createSlice({
   name: 'project',
   initialState,
   reducers: {
+    showMessageContact: (state, action) => {
+      state.contactSucess = action.payload;
+    },
     showReloadVanta: (state, action) => {
       state.reloadVanta = action.payload;
     },
@@ -41,6 +45,7 @@ export const {
   scrollOnTheDescription,
   isDesktopMediaQuery,
   changeTheme,
+  showMessageContact,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

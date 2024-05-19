@@ -1,5 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { showMessageContact } from '../../store/slices/projectSlice';
 /**
  *
  * @returns
@@ -7,6 +8,7 @@ import { useSelector } from 'react-redux';
  * fonctionnal with netlify form
  */
 export default function Contact() {
+  const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   return (
     <div
@@ -34,7 +36,8 @@ export default function Contact() {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            action="/contact/success"
+            action="/"
+            onSubmit={() => dispatch(showMessageContact(true))}
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="flex flex-col mb-4">
