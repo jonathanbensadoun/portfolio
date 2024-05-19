@@ -16,6 +16,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const isDesktop = useSelector((state) => state.project.isDesktop);
   const isLightMode = useSelector((state) => state.project.isLightMode);
+  const language = useSelector((state) => state.project.language);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +47,7 @@ export default function Navbar() {
                 'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
               }
             >
-              HOME
+              {language === 'FR' ? 'ACCUEIL' : 'HOME'}
             </li>
           </NavLink>
           <NavLink
@@ -61,7 +62,7 @@ export default function Navbar() {
                 'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
               }
             >
-              PROJETS
+              {language === 'FR' ? 'PROJETS' : 'PROJECTS'}
             </li>
           </NavLink>
 
@@ -74,7 +75,7 @@ export default function Navbar() {
             }}
           >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
-              ABOUT
+              {language === 'FR' ? 'A PROPOS' : 'ABOUT'}
             </li>
           </NavLink>
           <NavLink

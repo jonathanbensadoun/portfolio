@@ -12,17 +12,7 @@ export default function ProjectDetail({
 }) {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   function handleDOMContentLoaded() {
-  //     dispatch(showReloadVanta(true));
-  //   }
-
-  //   document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
-
-  //   return () => {
-  //     document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
-  //   };
-  // }, []);
+  const language = useSelector((state) => state.project.language);
 
   return (
     <div className="p-4 mt-6 h-full">
@@ -46,9 +36,15 @@ export default function ProjectDetail({
           alt={`image du site ${title}`}
           className="rounded-lg shadow-md m-4"
         />
-        <h2 className="text-3xl">Aperçu du projet {title}</h2>
+        <h2 className="text-3xl">
+          {language === 'FR'
+            ? `Aperçu du projet ${title}`
+            : `Overview of the ${title} project `}
+        </h2>
         <p className="text-center mt-4">{description}</p>
-        <h2 className="text-3xl">Outils utilisés</h2>
+        <h2 className="text-3xl">
+          {language === 'FR' ? 'Outils utilisés' : 'tools used'}
+        </h2>
         <Tag data={technologies} />
       </div>
     </div>

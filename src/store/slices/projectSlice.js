@@ -8,12 +8,24 @@ const initialState = {
   isDesktop: false,
   isLightMode: true,
   reloadVanta: false,
+  language: 'FR',
 };
 
 const projectSlice = createSlice({
   name: 'project',
   initialState,
   reducers: {
+    changeLanguage: (state, action) => {
+      state.language = state.language === 'FR' ? 'GB' : 'FR';
+      localStorage.setItem('language', state.language);
+    },
+    getLocalStorage: (state, action) => {
+      return {
+        ...state,
+        isLightMode: action.payload.isLightMode,
+        language: action.payload.language,
+      };
+    },
     showMessageContact: (state, action) => {
       state.contactSucess = action.payload;
     },
@@ -22,6 +34,7 @@ const projectSlice = createSlice({
     },
     changeTheme: (state) => {
       state.isLightMode = !state.isLightMode;
+      localStorage.setItem('isLightMode', state.isLightMode);
     },
     scrollOnTheDescription: (state, action) => {
       state.scrollToDescription = action.payload;
@@ -46,6 +59,8 @@ export const {
   isDesktopMediaQuery,
   changeTheme,
   showMessageContact,
+  changeLanguage,
+  getLocalStorage,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

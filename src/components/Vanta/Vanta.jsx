@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux';
 
 export default function Vanta() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
-
+  const language = useSelector((state) => state.project.language);
   // const [vantaEffect, setVantaEffect] = useState(null);
   // const myRef = useRef(null);
   // useEffect(() => {
@@ -76,19 +76,36 @@ export default function Vanta() {
             Jonathan Bensadoun
           </h1>
           <h2 className="text-2xl pb-10  mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow">
-            Développeur Fullstack
+            {language === 'FR'
+              ? 'Développeur fullstack'
+              : 'Fullstack developer'}
           </h2>
-          <div className="text-1xl  mx-4 text-justify 2xl:px-20 2xl:mx-20  h-40 sm:h-30 2xl:h-20 text-black-shadow ">
-            <TypeAnimation
-              className=""
-              cursor={true}
-              speed={75}
-              sequence={[
-                ' Développeur web passionné spécialisé en React, Fort de mon parcours diversifié et de ma maîtrise technique mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
-                1000,
-              ]}
-              // wrapper="h2"
-            />
+          <div className="flex items-start w-full">
+            <div className=" text-1xl  mx-4 text-justify 2xl:px-20 2xl:mx-20  h-40 sm:h-30 2xl:h-20 text-black-shadow ">
+              {language === 'FR' ? (
+                <TypeAnimation
+                  key={language}
+                  className=""
+                  cursor={true}
+                  speed={75}
+                  sequence={[
+                    ' Développeur web passionné spécialisé en React, Fort de mon parcours diversifié et de ma maîtrise technique mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
+                    1000,
+                  ]}
+                />
+              ) : (
+                <TypeAnimation
+                  key={language}
+                  className=""
+                  cursor={true}
+                  speed={75}
+                  sequence={[
+                    ' Passionate web developer specializing in React, With my diverse background and technical expertise, my goal is to create exceptional online experiences tailored to your needs.',
+                    1000,
+                  ]}
+                />
+              )}
+            </div>
           </div>
           <div className="flex flex-col justify-center items-center text-black-shadow">
             <ButtonDLCV />
@@ -121,7 +138,9 @@ export default function Vanta() {
                     ></path>
                   </svg>
                 </span>
-                <span className="relative">Mes projets</span>
+                <span className="relative">
+                  {language === 'FR' ? 'Mes projets' : 'MY project'}
+                </span>
               </div>
             </button>
           </div>

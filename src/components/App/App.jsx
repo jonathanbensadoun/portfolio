@@ -10,6 +10,7 @@ import {
   scrollOnTheDescription,
   isDesktopMediaQuery,
   showReloadVanta,
+  getLocalStorage,
 } from '../../store/slices/projectSlice';
 
 import scrollUtils from '../../utils/scrollUtils';
@@ -55,6 +56,27 @@ function App() {
   useEffect(() => {
     dispatch(isDesktopMediaQuery(isDesktop));
   }, [isDesktop]);
+
+  useEffect(() => {
+    let language = localStorage.getItem('language');
+    let isLightMode = localStorage.getItem('isLightMode');
+    if (!language) {
+      localStorage.setItem('language', 'FR');
+      language = 'FR';
+    }
+    if (!isLightMode) {
+      localStorage.setItem('isLightMode', true);
+      isLightMode = true;
+    }
+
+    isLightMode = isLightMode === 'false' ? false : true;
+
+    if (language || isLightMode) {
+      dispatch(
+        getLocalStorage({ isLightMode: isLightMode, language: language })
+      );
+    }
+  }, []);
 
   const myRef = useRef(null);
   useEffect(() => {

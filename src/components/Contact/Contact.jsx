@@ -10,6 +10,7 @@ import { showMessageContact } from '../../store/slices/projectSlice';
 export default function Contact() {
   const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
+  const language = useSelector((state) => state.project.language);
   return (
     <div
       id="contact"
@@ -20,8 +21,9 @@ export default function Contact() {
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-4xl  font-bold">Contact</h1>
         <p className=" text-center mt-4">
-          Vous pouvez me contacter via ce formulaire, je vous répondrai dans les
-          plus brefs délais.
+          {language === 'FR'
+            ? 'Vous pouvez me contacter via ce formulaire, je vous répondrai dans les plus brefs délais.'
+            : 'You can contact me via this form, I will answer you as soon as possible.'}
         </p>
         <div
           className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-md bg-opacity-25   ${
@@ -37,11 +39,12 @@ export default function Contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             action="/"
-            onSubmit={() => dispatch(showMessageContact(true))}
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="flex flex-col mb-4">
-              <label htmlFor="name">Nom:</label>
+              <label htmlFor="name">
+                {language === 'FR' ? 'Nom:' : 'Name:'}
+              </label>
               <input
                 className={`py-2 px-3 rounded-md bg-opacity-25 ${
                   isLightMode ? 'bg-white ' : 'bg-black'

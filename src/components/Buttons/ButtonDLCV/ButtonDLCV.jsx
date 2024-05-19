@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 export default function ButtonDLCV() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
-
+  const language = useSelector((state) => state.project.language);
   const handleDownload = () => {
     // Créer un élément <a> temporaire
     const link = document.createElement('a');
@@ -43,7 +43,9 @@ export default function ButtonDLCV() {
             ></path>
           </svg>
         </span>
-        <span className="relative">Télécharger mon CV</span>
+        <span className="relative">
+          {language === 'FR' ? 'Télécharger mon CV' : 'Download my resume'}
+        </span>
       </div>
     </button>
   );

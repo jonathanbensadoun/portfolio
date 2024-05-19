@@ -8,7 +8,7 @@ export default function ButtonLightMode() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   return (
     <div
-      className={` text-1xl p-1 rounded bg-opacity-50 ${
+      className={` text-1xl p-1  rounded bg-opacity-50 ${
         isLightMode ? 'bg-primary' : 'bg-primaryDark'
       }`}
       onClick={() => dispatch(changeTheme())}
