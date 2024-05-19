@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   scrollOnTheProject,
   scrollOnTheContact,
+  scrollOnTheDescription,
 } from '../../store/slices/projectSlice';
 import { useEffect, useState } from 'react';
 import { showReloadVanta } from '../../store/slices/projectSlice';
@@ -65,11 +66,17 @@ export default function Navbar() {
           </NavLink>
 
           <Logo />
-          <button>
+          <NavLink
+            to="/"
+            onClick={() => {
+              dispatch(showReloadVanta(true));
+              dispatch(scrollOnTheDescription(true));
+            }}
+          >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
               ABOUT
             </li>
-          </button>
+          </NavLink>
           <NavLink
             to="/"
             onClick={() => {

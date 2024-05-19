@@ -5,6 +5,7 @@ import skillsDataBackend from '../../data/skillsDataBackend.json';
 import skillsDataWebIntegration from '../../data/skillsDataWebIntegration.json';
 import skillsDataOrganisation from '../../data/skillsDataOrganisation.json';
 import { useSelector } from 'react-redux';
+import IconSvg from '../IconSvg/IconSvg';
 
 export default function Description() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
@@ -13,6 +14,7 @@ export default function Description() {
       className={`flex flex-col  items-center mt-4 2xl:mx-60  border-solid border-t-2 ${
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
+      id="description"
     >
       <div className="flex flex-col justify-center items-center p-10 ">
         <h1 className="text-3xl 2xl:text-5xl font-bold">Qui suis-je ?</h1>
@@ -27,7 +29,7 @@ export default function Description() {
           au sein de votre entreprise.
         </h2>
       </div>
-      <div className="flex flex-col 2xl:flex-row justify-start items-center ">
+      {/* <div className="flex flex-col 2xl:flex-row justify-start items-center ">
         <div className="flex flex-col justify-start items-center  2xl:w-1/2 h-full">
           <h2 className="text-3xl 2xl:text-4xl pt-2 2xl:pt-0">Organisation</h2>
           <Tag data={skillsDataOrganisation} />
@@ -46,7 +48,8 @@ export default function Description() {
           <h2 className="text-3xl 2xl:text-4xl pt-2 2xl:pt-0">Integration</h2>
           <Tag data={skillsDataWebIntegration} />
         </div>
-      </div>
+      </div> */}
+
       <div className="flex flex-col 2xl:flex-row justify-start items-center 2xl:h-full">
         <div className="flex flex-col justify-start items-center w-full ">
           <h2 className="text-3xl 2xl:text-4xl ">Soft Skills</h2>

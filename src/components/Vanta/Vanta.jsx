@@ -68,14 +68,16 @@ export default function Vanta() {
         className=" display flex flex-col justify-center h-full 2xl:h-screen pb-16"
       >
         <div
-          className={`flex flex-col justify-between mx-4 rounded-lg  bg-opacity-0  ${
+          className={`flex flex-col items-center mx-4 rounded-lg  bg-opacity-0  ${
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
-          <h1 className="text-2xl py-10 mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-3xl 2xl:text-left animate-opacity text-black-shadow">
-            Bonjour tout le monde ! je suis Jonathan Bensadoun
+          <h1 className="text-2xl pt-10 mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow">
+            Jonathan Bensadoun
           </h1>
-
+          <h2 className="text-2xl pb-10  mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow">
+            Développeur Fullstack
+          </h2>
           <div className="text-1xl  mx-4 text-justify 2xl:px-20 2xl:mx-20  h-40 sm:h-30 2xl:h-20 text-black-shadow ">
             <TypeAnimation
               className=""

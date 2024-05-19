@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import {
   scrollOnTheProject,
   scrollOnTheContact,
+  scrollOnTheDescription,
   isDesktopMediaQuery,
   showReloadVanta,
 } from '../../store/slices/projectSlice';
@@ -30,6 +31,9 @@ function App() {
   const scrollToContact = useSelector((state) => state.project.scrollToContact);
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   const reloadVanta = useSelector((state) => state.project.reloadVanta);
+  const scrollToDescription = useSelector(
+    (state) => state.project.scrollToDescription
+  );
 
   const location = useLocation();
   useEffect(() => {
@@ -41,7 +45,11 @@ function App() {
       scrollUtils.scrollToContact();
       dispatch(scrollOnTheContact(false));
     }
-  }, [scrollToProject, scrollToContact]);
+    if (scrollToDescription) {
+      scrollUtils.scrollToDescription();
+      dispatch(scrollOnTheDescription(false));
+    }
+  }, [scrollToProject, scrollToContact, scrollToDescription]);
 
   useEffect(() => {
     dispatch(isDesktopMediaQuery(isDesktop));
@@ -59,10 +67,10 @@ function App() {
         gyroControls: false,
         minHeight: 100.0,
         minWidth: 100.0,
-        highlightColor: isLightMode ? 0x2b5159 : 0xb175e8,
-        midtoneColor: isLightMode ? 0x11ccf2 : 0x7e21b8,
-        lowlightColor: isLightMode ? 0x201163 : 0x731fd4,
-        baseColor: isLightMode ? 0xcee5e5 : 0xf0f59,
+        highlightColor: isLightMode ? 0x2b5159 : 0x7e21b8,
+        midtoneColor: isLightMode ? 0x11ccf2 : 0x731fd4,
+        lowlightColor: isLightMode ? 0x201163 : 0x3e1e56,
+        baseColor: isLightMode ? 0xcee5e5 : 0x000,
         blurFactor: 0.45,
         zoom: 1.5,
       });
@@ -87,6 +95,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:title" element={<ProjectPage />} />
+          <Route path="/contact/success" element={<HomePage />} />
           <Route path="/*" element={<HomePage />} />
         </Routes>
       </div>

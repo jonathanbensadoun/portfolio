@@ -16,6 +16,10 @@ const scrollUtils = {
 
     contactElement.scrollIntoView({ behavior: 'smooth' });
   },
+  scrollToDescription: function () {
+    const descriptionElement = document.getElementById('description');
+    descriptionElement.scrollIntoView({ behavior: 'smooth' });
+  },
 };
 
 export default scrollUtils;

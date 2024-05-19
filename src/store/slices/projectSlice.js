@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+  scrollToDescription: false,
   scrollToProject: false,
   scrollToContact: false,
   isDesktop: false,
@@ -18,6 +19,9 @@ const projectSlice = createSlice({
     changeTheme: (state) => {
       state.isLightMode = !state.isLightMode;
     },
+    scrollOnTheDescription: (state, action) => {
+      state.scrollToDescription = action.payload;
+    },
     scrollOnTheProject: (state, action) => {
       state.scrollToProject = action.payload;
     },
@@ -34,6 +38,7 @@ export const {
   showReloadVanta,
   scrollOnTheProject,
   scrollOnTheContact,
+  scrollOnTheDescription,
   isDesktopMediaQuery,
   changeTheme,
 } = projectSlice.actions;
