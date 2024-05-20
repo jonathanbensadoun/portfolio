@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const NotFoundPage = () => {
   const language = useSelector((state) => state.project.language);
   return (
-    <div className="flex flex-col justify-center items-center max-h-screen -mt-7">
+    <div className="flex flex-col justify-center items-center max-h-screen ">
       <img className="max-h-90" src="/img/NotFound.png" alt="404" />
       <h1 className="text-2xl 2xl:text-4xl font-bold text-center px-4 ">
         {language === 'FR'

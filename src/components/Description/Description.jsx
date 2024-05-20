@@ -12,7 +12,7 @@ export default function Description() {
   const language = useSelector((state) => state.project.language);
   return (
     <div
-      className={`flex flex-col  items-center mt-4 2xl:mx-60  border-solid border-t-2 ${
+      className={`flex flex-col  items-center mt-4 2xl:mx-60 pt-10 border-solid border-t-2 ${
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
       id="description"

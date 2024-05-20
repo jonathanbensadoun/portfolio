@@ -96,7 +96,7 @@ function App() {
         baseColor: isLightMode ? 0xe3f2f2 : 0x000,
         blurFactor: 0.45,
         zoom: 1,
-        speed: 0.2,
+        speed: 0.4,
       });
     }
     dispatch(showReloadVanta(false));

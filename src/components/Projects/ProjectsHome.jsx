@@ -11,7 +11,7 @@ export default function Projects() {
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
     >
-      <h1 className="text-3xl 2xl:mt-4 2xl:text-6xl">
+      <h1 className="text-3xl 2xl:mt-4 2xl:text-6xl font-bold pt-6 ">
         {language === 'FR' ? 'Projets' : 'Projects '}
       </h1>
       <h2 className="mx-4 mt-4 text-justify 2xl:text-3xl">
