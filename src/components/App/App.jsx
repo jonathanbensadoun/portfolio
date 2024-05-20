@@ -17,7 +17,7 @@ import scrollUtils from '../../utils/scrollUtils';
 
 import Navbar from '../Navbar/Navbar';
 import HomePage from '../../pages/HomePage/HomePage';
-
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import ProjectPage from '../../pages/ProjectPage/ProjectPage';
 import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
@@ -90,12 +90,13 @@ function App() {
         gyroControls: false,
         minHeight: 100.0,
         minWidth: 100.0,
-        highlightColor: isLightMode ? 0x2b5159 : 0x7e21b8,
-        midtoneColor: isLightMode ? 0x11ccf2 : 0x731fd4,
-        lowlightColor: isLightMode ? 0x201163 : 0x3e1e56,
-        baseColor: isLightMode ? 0xcee5e5 : 0x000,
+        highlightColor: isLightMode ? 0x25b5c7 : 0x7e21b8,
+        midtoneColor: isLightMode ? 0x89c1e8 : 0x731fd4,
+        lowlightColor: isLightMode ? 0x82c2db : 0x3e1e56,
+        baseColor: isLightMode ? 0xe3f2f2 : 0x000,
         blurFactor: 0.45,
-        zoom: 1.5,
+        zoom: 1,
+        speed: 0.2,
       });
     }
     dispatch(showReloadVanta(false));
@@ -119,7 +120,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:title" element={<ProjectPage />} />
 
-          <Route path="/*" element={<HomePage />} />
+          <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </div>
       <Footer />
