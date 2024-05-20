@@ -29,6 +29,9 @@ export default {
         default: '0 2px 2px rgba(0, 0, 0, 0.3)',
         lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
       },
+      fontFamily: {
+        sans: ['Noto Sans Myanmar', 'sans-serif'],
+      },
       keyframes: {
         bounce: {
           '0%, 100%': {

@@ -116,7 +116,7 @@ export default function Navbar() {
               dispatch(changePage('home'));
               dispatch(
                 changeTextEncode(
-                  ' A project? A question? A simple greeting? Use the form! 😁'
+                  ' Un projet ?  Une question ? Une simple salutation ? Utilisez le formulaire ! 😁'
                 )
               );
               dispatch(
