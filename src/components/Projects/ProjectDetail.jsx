@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Tag from '../Tag/Tag';
 import { useEffect } from 'react';
 import {
-  showReloadVanta,
+  showreaload,
   changeTextEncode,
   changeTextEncodeEN,
   changeShowButtonUrl,
@@ -19,12 +19,15 @@ export default function ProjectDetail({
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const dispatch = useDispatch();
   const language = useSelector((state) => state.project.language);
+
   useEffect(() => {
     dispatch(
       changeTextEncode(`Pour visiter ${title} cliquez sur le bouton ci-dessous`)
     );
     dispatch(changeTextEncodeEN(`To visit ${title} click on the button below`));
     dispatch(changeShowButtonUrl(url));
+  }, []);
+  useEffect(() => {
     dispatch(changePage('project'));
   }, []);
 

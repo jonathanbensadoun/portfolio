@@ -7,7 +7,7 @@ const initialState = {
   contactSucess: false,
   isDesktop: false,
   isLightMode: true,
-  reloadVanta: false,
+  reaload: false,
   language: 'FR',
   textEncode: 'Salut, je suis Encode, assistant de Jonathan. 🤗',
   textEncodeEN: "Hi, I'm Encode, Jonathan's assistant. 🤗",
@@ -45,8 +45,8 @@ const projectSlice = createSlice({
     showMessageContact: (state, action) => {
       state.contactSucess = action.payload;
     },
-    showReloadVanta: (state, action) => {
-      state.reloadVanta = action.payload;
+    showreaload: (state, action) => {
+      state.reaload = action.payload;
     },
     changeTheme: (state) => {
       state.isLightMode = !state.isLightMode;
@@ -68,7 +68,7 @@ const projectSlice = createSlice({
 });
 
 export const {
-  showReloadVanta,
+  showreaload,
   scrollOnTheProject,
   scrollOnTheContact,
   scrollOnTheDescription,

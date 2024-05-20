@@ -9,7 +9,7 @@ import {
   scrollOnTheContact,
   scrollOnTheDescription,
   isDesktopMediaQuery,
-  showReloadVanta,
+  showreaload,
   getLocalStorage,
   changeTextEncode,
   changeTextEncodeEN,
@@ -31,17 +31,24 @@ import TOPOLOGY from 'vanta/dist/vanta.topology.min';
 import PNJ from '../PNJ/PNJ';
 function App() {
   const [vantaEffect, setVantaEffect] = useState(null);
+  const [homePage, setHomePage] = useState(true);
   const dispatch = useDispatch();
 
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const scrollToProject = useSelector((state) => state.project.scrollToProject);
   const scrollToContact = useSelector((state) => state.project.scrollToContact);
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-  const reloadVanta = useSelector((state) => state.project.reloadVanta);
+  const reaload = useSelector((state) => state.project.reaload);
   const scrollToDescription = useSelector(
     (state) => state.project.scrollToDescription
   );
-
+  const page = useSelector((state) => state.project.page);
+  useEffect(() => {
+    if (page === 'home') {
+      setHomePage(true);
+    }
+  }, [page]);
+  const language = useSelector((state) => state.project.language);
   const location = useLocation();
   useEffect(() => {
     if (scrollToProject) {
@@ -104,11 +111,11 @@ function App() {
         speed: 0.4,
       });
     }
-    dispatch(showReloadVanta(false));
+
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
-  }, [isLightMode, location.pathname === '/']);
+  }, [isLightMode, language, homePage]);
 
   useEffect(() => {
     dispatch(
@@ -119,7 +126,8 @@ function App() {
         'Hi, I am Encode, Jonathan assistant. I am here to help you. 🤗'
       )
     );
-  }, [location.pathname === '/']);
+    setHomePage(false);
+  }, [homePage]);
   useEffect(() => {
     let reachedDescription = false;
     let reachedProjectsHome = false;

@@ -20,7 +20,7 @@ export default function ProjectPage() {
   }, []);
   useEffect(() => {
     function handleDOMContentLoaded() {
-      dispatch(showReloadVanta(true));
+      dispatch(showreaload(true));
     }
 
     document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);

@@ -11,7 +11,7 @@ import {
 } from '../../store/slices/projectSlice';
 import { useEffect, useState } from 'react';
 import {
-  showReloadVanta,
+  showreaload,
   changePage,
   changeShowButtonUrl,
 } from '../../store/slices/projectSlice';
@@ -43,7 +43,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             onClick={() => {
-              dispatch(showReloadVanta(true));
+              dispatch(showreaload(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
             }}
@@ -59,7 +59,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             onClick={() => {
-              dispatch(showReloadVanta(true));
+              dispatch(showreaload(true));
               dispatch(scrollOnTheProject(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
@@ -78,7 +78,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             onClick={() => {
-              dispatch(showReloadVanta(true));
+              dispatch(showreaload(true));
               dispatch(scrollOnTheDescription(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
@@ -91,7 +91,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             onClick={() => {
-              dispatch(showReloadVanta(true));
+              dispatch(showreaload(true));
               dispatch(scrollOnTheContact(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));

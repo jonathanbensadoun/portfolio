@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronsDown } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
-import { showReloadVanta } from '../../store/slices/projectSlice';
+import { showreaload } from '../../store/slices/projectSlice';
 
 export default function CardProject({ title, description, image, link }) {
   const dispatch = useDispatch();
