@@ -11,6 +11,10 @@ import {
   isDesktopMediaQuery,
   showReloadVanta,
   getLocalStorage,
+  changeTextEncode,
+  changeTextEncodeEN,
+  changePage,
+  changeShowButtonUrl,
 } from '../../store/slices/projectSlice';
 
 import scrollUtils from '../../utils/scrollUtils';
@@ -104,8 +108,85 @@ function App() {
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
-  }, [isLightMode, reloadVanta]);
+  }, [isLightMode, location.pathname === '/']);
 
+  useEffect(() => {
+    dispatch(
+      changeTextEncode('Salut, je suis Encode, assistant de Jonathan. 🤗')
+    );
+    dispatch(
+      changeTextEncodeEN(
+        'Hi, I am Encode, Jonathan assistant. I am here to help you. 🤗'
+      )
+    );
+  }, [location.pathname === '/']);
+  useEffect(() => {
+    let reachedDescription = false;
+    let reachedProjectsHome = false;
+    let reachedContact = false;
+
+    const handleScroll = () => {
+      const description = document.getElementById('description');
+      const projects = document.getElementById('projects');
+      const contact = document.getElementById('contact');
+
+      const scrollPosition = window.scrollY;
+
+      if (
+        !reachedDescription &&
+        description &&
+        description.offsetTop - 500 <= scrollPosition
+      ) {
+        reachedDescription = true;
+        dispatch(
+          changeTextEncodeEN(
+            'React, Redux, Node.js, Express.js are his specialties 😸'
+          )
+        );
+        dispatch(
+          changeTextEncode(
+            'React, Redux, Node.js, Express.js sont ses spécialités 😸'
+          )
+        );
+      }
+
+      if (
+        !reachedProjectsHome &&
+        projects &&
+        projects.offsetTop - 500 <= scrollPosition
+      ) {
+        reachedProjectsHome = true;
+        dispatch(changeTextEncodeEN('✨Click on the image to discover it!✨'));
+        dispatch(
+          changeTextEncode("✨Cliquez sur l'image pour le découvrir !✨")
+        );
+      }
+
+      if (
+        !reachedContact &&
+        contact &&
+        contact.offsetTop - 500 <= scrollPosition
+      ) {
+        reachedContact = true;
+        dispatch(
+          changeTextEncodeEN(
+            ' A project? A question? A simple greeting? Use the form! 😁'
+          )
+        );
+        dispatch(
+          changeTextEncode(
+            'Un projet ?  Une question ? Une simple salutation ? Utilisez le formulaire ! 😁'
+          )
+        );
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div
       ref={myRef}
@@ -124,8 +205,8 @@ function App() {
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </div>
-      <Footer />
       <PNJ />
+      <Footer />
       <SocialNavbar />
     </div>
   );

@@ -19,6 +19,7 @@ export default {
         'slide-up': 'slideUp 1s ease-in-out',
         opacity: 'opacity 0.5s ease-in-out',
         blink: 'blink 2s linear infinite ',
+        bounce: 'bounce 4s ease-in-out infinite',
       },
       boxShadow: {
         white: '0 0 100px rgba(255, 255, 255, 0.5)',
@@ -29,6 +30,14 @@ export default {
         lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
       },
       keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '50%': {
+            transform: 'translateY(-10px)',
+          },
+        },
         blink: {
           '0%, 100%': { opacity: '0' },
           '50%': { opacity: '1' },

@@ -2,7 +2,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Tag from '../Tag/Tag';
 import { useEffect } from 'react';
-import { showReloadVanta } from '../../store/slices/projectSlice';
+import {
+  showReloadVanta,
+  changeTextEncode,
+  changeTextEncodeEN,
+  changeShowButtonUrl,
+  changePage,
+} from '../../store/slices/projectSlice';
 export default function ProjectDetail({
   title,
   url,
@@ -13,9 +19,17 @@ export default function ProjectDetail({
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const dispatch = useDispatch();
   const language = useSelector((state) => state.project.language);
+  useEffect(() => {
+    dispatch(
+      changeTextEncode(`Pour visiter ${title} cliquez sur le bouton ci-dessous`)
+    );
+    dispatch(changeTextEncodeEN(`To visit ${title} click on the button below`));
+    dispatch(changeShowButtonUrl(url));
+    dispatch(changePage('project'));
+  }, []);
 
   return (
-    <div className="p-4 mt-6 h-full">
+    <div className="p-4 mt-6 2xl:mx-40 h-full">
       <div className=" flex flex-col h-full justify-center items-center space-y-4   ">
         <h1 className="text-4xl 2xl:text-6xl font-bold text-center mt-10">
           {title}

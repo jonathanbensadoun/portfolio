@@ -9,12 +9,28 @@ const initialState = {
   isLightMode: true,
   reloadVanta: false,
   language: 'FR',
+  textEncode: 'Salut, je suis Encode, assistant de Jonathan. 🤗',
+  textEncodeEN: "Hi, I'm Encode, Jonathan's assistant. 🤗",
+  showButtonUrl: '',
+  page: 'home',
 };
 
 const projectSlice = createSlice({
   name: 'project',
   initialState,
   reducers: {
+    changePage: (state, action) => {
+      state.page = action.payload;
+    },
+    changeShowButtonUrl: (state, action) => {
+      state.showButtonUrl = action.payload;
+    },
+    changeTextEncodeEN: (state, action) => {
+      state.textEncodeEN = action.payload;
+    },
+    changeTextEncode: (state, action) => {
+      state.textEncode = action.payload;
+    },
     changeLanguage: (state, action) => {
       state.language = state.language === 'FR' ? 'GB' : 'FR';
       localStorage.setItem('language', state.language);
@@ -61,6 +77,10 @@ export const {
   showMessageContact,
   changeLanguage,
   getLocalStorage,
+  changeTextEncode,
+  changeTextEncodeEN,
+  changeShowButtonUrl,
+  changePage,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

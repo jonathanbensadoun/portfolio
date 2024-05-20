@@ -11,7 +11,13 @@ import { GrProjects, GrContact } from 'react-icons/gr';
 import { MdOutlineTranslate } from 'react-icons/md';
 import scrollUtils from '../../utils/scrollUtils';
 import ButtonLightMode from '../Buttons/ButtonLightMode/ButtonLightMode';
-import { changeLanguage } from '../../store/slices/projectSlice';
+import {
+  changeLanguage,
+  changeShowButtonUrl,
+  changePage,
+  changeTextEncode,
+  changeTextEncodeEN,
+} from '../../store/slices/projectSlice';
 import Flag from 'react-flagkit';
 
 export default function SocialNavbar() {
@@ -33,6 +39,16 @@ export default function SocialNavbar() {
             target="_blank"
             rel="noopener noreferrer"
             className=" hover:text-gray-400"
+            onClick={() => {
+              dispatch(
+                changeTextEncode(
+                  'Vous avez Aimez le profil LinkedIn de Jonathan ?'
+                )
+              );
+              dispatch(
+                changeTextEncodeEN('Did you like Jonathan LinkedIn profile ?')
+              );
+            }}
           >
             <FaLinkedinIn className="text-2xl" />
           </Link>
@@ -41,6 +57,16 @@ export default function SocialNavbar() {
             target="_blank"
             rel="noopener noreferrer"
             className=" hover:text-gray-400"
+            onClick={() => {
+              dispatch(
+                changeTextEncode(
+                  'Vous avez Aimez le profil GitHub de Jonathan ?'
+                )
+              );
+              dispatch(
+                changeTextEncodeEN('Did you like Jonathan GitHub profile ?')
+              );
+            }}
           >
             <FaGithub className="text-2xl" />
           </Link>
@@ -50,21 +76,33 @@ export default function SocialNavbar() {
             <Link
               to="/"
               className=" hover:text-gray-400"
-              onClick={scrollUtils.scrollToTop}
+              onClick={() => {
+                dispatch(changeShowButtonUrl(''));
+                dispatch(changePage('home'));
+                scrollUtils.scrollToTop;
+              }}
             >
               <RiHome2Fill className="text-2xl" />
             </Link>
             <Link
               to="/"
               className=" hover:text-gray-400"
-              onClick={() => dispatch(scrollOnTheProject(true))}
+              onClick={() => {
+                dispatch(changeShowButtonUrl(''));
+                dispatch(changePage('home'));
+                dispatch(scrollOnTheProject(true));
+              }}
             >
               <GrProjects className="text-2xl" />
             </Link>
             <Link
               to="/"
               className=" hover:text-gray-400"
-              onClick={() => dispatch(scrollOnTheContact(true))}
+              onClick={() => {
+                dispatch(changeShowButtonUrl(''));
+                dispatch(changePage('home'));
+                dispatch(scrollOnTheContact(true));
+              }}
             >
               <GrContact className="text-2xl" />
             </Link>
@@ -79,7 +117,11 @@ export default function SocialNavbar() {
               className={`flex 2xl:flex-col items-center space-x-2 2xl:space-x-0 text-sm justify-center text-1xl rounded bg-opacity-50 ${
                 isLightMode ? 'bg-primary' : 'bg-primaryDark'
               }`}
-              onClick={() => dispatch(changeLanguage())}
+              onClick={() => {
+                dispatch(changeLanguage());
+                dispatch(changeTextEncodeEN('Ok, I speak English.'));
+                dispatch(changeTextEncode('Ok, je parle Francais. '));
+              }}
             >
               <Flag country={language} />
             </div>

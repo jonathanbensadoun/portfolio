@@ -10,7 +10,11 @@ import {
   scrollOnTheDescription,
 } from '../../store/slices/projectSlice';
 import { useEffect, useState } from 'react';
-import { showReloadVanta } from '../../store/slices/projectSlice';
+import {
+  showReloadVanta,
+  changePage,
+  changeShowButtonUrl,
+} from '../../store/slices/projectSlice';
 export default function Navbar() {
   const dispatch = useDispatch();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,6 +44,8 @@ export default function Navbar() {
             to="/"
             onClick={() => {
               dispatch(showReloadVanta(true));
+              dispatch(changeShowButtonUrl(''));
+              dispatch(changePage('home'));
             }}
           >
             <li
@@ -55,6 +61,8 @@ export default function Navbar() {
             onClick={() => {
               dispatch(showReloadVanta(true));
               dispatch(scrollOnTheProject(true));
+              dispatch(changeShowButtonUrl(''));
+              dispatch(changePage('home'));
             }}
           >
             <li
@@ -72,6 +80,8 @@ export default function Navbar() {
             onClick={() => {
               dispatch(showReloadVanta(true));
               dispatch(scrollOnTheDescription(true));
+              dispatch(changeShowButtonUrl(''));
+              dispatch(changePage('home'));
             }}
           >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
@@ -83,6 +93,8 @@ export default function Navbar() {
             onClick={() => {
               dispatch(showReloadVanta(true));
               dispatch(scrollOnTheContact(true));
+              dispatch(changeShowButtonUrl(''));
+              dispatch(changePage('home'));
             }}
           >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
