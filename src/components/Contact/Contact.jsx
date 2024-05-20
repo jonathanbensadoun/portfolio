@@ -19,14 +19,18 @@ export default function Contact() {
       }`}
     >
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl  font-bold">Contact</h1>
+        <h1 className="text-4xl text-center  font-bold">
+          {language === 'FR'
+            ? 'Interessé pour une collaboration ? '
+            : 'Interested in a collaboration ?'}
+        </h1>
         <p className=" text-center mt-4">
           {language === 'FR'
-            ? 'Vous pouvez me contacter via ce formulaire, je vous répondrai dans les plus brefs délais.'
-            : 'You can contact me via this form, I will answer you as soon as possible.'}
+            ? "Ouvert à de nouvelles opportunités, je serais ravi d'échanger avec vous sur vos projets. Contactez moi via ce formulaire."
+            : 'Open to new opportunities, I would be happy to discuss your projects with you. Contact me via this form.'}
         </p>
         <div
-          className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-md bg-opacity-25   ${
+          className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-md bg-opacity-25 ${
             isLightMode
               ? 'bg-secondary text-text'
               : 'bg-secondaryDark text-textDark'
@@ -89,7 +93,7 @@ export default function Contact() {
               }`}
               type="submit"
             >
-              Envoyer
+              {language === 'FR' ? 'Envoyer' : 'Send'}
             </button>
           </form>
         </div>

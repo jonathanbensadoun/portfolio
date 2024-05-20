@@ -26,5 +26,12 @@
     "name_en": "React Router",
     "category": "Frontend / Application mobile",
     "color": "#C39BD3"
+  },
+  {
+    "id": 5,
+    "name_fr": "Bulma",
+    "name_en": "Bulma",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
   }
 ]

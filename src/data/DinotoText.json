@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "shortDescriptionFR": "Le premier projet",
-    "shortDescriptionEN": "The first project",
-    "descriptionFr": "Description du premier projet",
-    "descriptionEn": "Description of the first project"
+    "shortDescriptionFR": "Explorez et vivez une expérience unique au cœur les différentes ères des dinosaures ! 🦖",
+    "shortDescriptionEN": "Explore and live a unique experience in the heart of the different eras of dinosaurs! 🦖",
+    "descriptionFR": "Dinoto est une encyclopédie classant les dinosaures par ères géologiques. Elle permet de découvrir les différentes espèces de dinosaures, leurs caractéristiques, leurs tailles, leurs régimes alimentaires, leurs habitats, leurs périodes de vie, etc.",
+    "descriptionEN": "Dinoto is an encyclopedia classifying dinosaurs by geological eras. It allows you to discover the different species of dinosaurs, their characteristics, their sizes, their diets, their habitats, their life periods, etc."
   }
 ]

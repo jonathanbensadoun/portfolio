@@ -89,7 +89,7 @@ export default function Vanta() {
                   cursor={true}
                   speed={75}
                   sequence={[
-                    ' Développeur web passionné spécialisé en React, Fort de mon parcours diversifié et de ma maîtrise technique mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
+                    ' Développeur web passionné spécialisé en React. Fort de mon parcours professionnel diversifié et de ma maîtrise technique mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
                     1000,
                   ]}
                 />
@@ -100,14 +100,14 @@ export default function Vanta() {
                   cursor={true}
                   speed={75}
                   sequence={[
-                    ' Passionate web developer specializing in React, With my diverse background and technical expertise, my goal is to create exceptional online experiences tailored to your needs.',
+                    ' Passionate web developer specializing in React. With my various professionnal experiences and technical expertise, my goal is to create exceptional online experiences tailored to your needs.',
                     1000,
                   ]}
                 />
               )}
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-black-shadow">
+          <div className="flex flex-col justify-center items-center text-black-shadow pt-8">
             <ButtonDLCV />
             <button onClick={scrollUtils.scrollToProjects}>
               <div

@@ -17,7 +17,9 @@ export default function ProjectDetail({
   return (
     <div className="p-4 mt-6 h-full">
       <div className=" flex flex-col h-full justify-center items-center space-y-4   ">
-        <h1 className="text-4xl font-bold text-center mt-10">{title}</h1>
+        <h1 className="text-4xl 2xl:text-6xl font-bold text-center mt-10">
+          {title}
+        </h1>
         <p className="text-xl text-center mt-5">{shortDescription}</p>
         <button
           className={`py-2 px-4 shadow-md rounded-md bg-opacity-50 ${
@@ -27,7 +29,9 @@ export default function ProjectDetail({
           }`}
           onClick={() => window.open(url, '_blank')}
         >
-          Visitez le site {title}
+          {language === 'FR'
+            ? `Visitez le site ${title}`
+            : `Visit the ${title} site`}
         </button>
       </div>
       <div className="flex flex-col justify-center items-center space-y-4">
@@ -36,12 +40,8 @@ export default function ProjectDetail({
           alt={`image du site ${title}`}
           className="rounded-lg shadow-md m-4"
         />
-        <h2 className="text-3xl">
-          {language === 'FR'
-            ? `Aperçu du projet ${title}`
-            : `Overview of the ${title} project `}
-        </h2>
-        <p className="text-center mt-4">{description}</p>
+
+        <p className="text-center mt-4 2xl:text-1xl">{description}</p>
         <h2 className="text-3xl">
           {language === 'FR' ? 'Outils utilisés' : 'tools used'}
         </h2>

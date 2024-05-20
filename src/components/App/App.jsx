@@ -24,6 +24,7 @@ import Footer from '../Footer/Footer';
 import FOG from 'vanta/dist/vanta.fog.min';
 import CELLS from 'vanta/dist/vanta.cells.min';
 import TOPOLOGY from 'vanta/dist/vanta.topology.min';
+import PNJ from '../PNJ/PNJ';
 function App() {
   const [vantaEffect, setVantaEffect] = useState(null);
   const dispatch = useDispatch();
@@ -124,6 +125,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <PNJ />
       <SocialNavbar />
     </div>
   );

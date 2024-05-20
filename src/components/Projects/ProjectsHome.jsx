@@ -16,8 +16,8 @@ export default function Projects() {
       </h1>
       <h2 className="mx-4 mt-4 text-justify 2xl:text-3xl">
         {language === 'FR'
-          ? 'Découvrez mon univers à tavers quelques-uns de mes projets personnels'
-          : 'Discover my universe through some of my personal projects'}
+          ? 'Découvrez mes projets personnels'
+          : 'Discover my personal projects'}
       </h2>
       <div
         className={`flex flex-wrap justify-center items-center  mt-4 2xl:pb-60`}

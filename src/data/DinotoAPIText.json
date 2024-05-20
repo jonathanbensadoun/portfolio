@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "shortDescriptionFR": "Le premier projet",
-    "shortDescriptionEN": "The first project",
-    "descriptionFr": "Description du premier projet",
-    "descriptionEn": "Description of the first project"
+    "shortDescriptionFR": "Source d'information sur les animaux exceptionnels qu'étaient les dinosaures",
+    "shortDescriptionEN": "Source of information on the exceptional animals that were the dinosaurs",
+    "descriptionFR": "DinotoAPI est une API REST, open source qui permet d'aquérir des informations et images sur les dinosaures. Elle est basée sur une base de données de plus de 100 dinosaures.",
+    "descriptionEN": "DinotoAPI is an open source REST API that allows you to acquire information and images about dinosaurs. It is based on a database of over 100 dinosaurs."
   }
 ]

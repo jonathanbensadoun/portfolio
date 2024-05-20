@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "shortDescriptionFR": "Le premier projet",
-    "shortDescriptionEN": "The first project",
-    "descriptionFR": "Description du premier projet",
-    "descriptionEN": "Description of the first project"
+    "shortDescriptionFR": "Affrontez et survivez aux ennemis redoutables !",
+    "shortDescriptionEN": "Face and survive the dreadful enemies!",
+    "descriptionFR": "Le projet O’Survivors est une application web qui offre une expérience immersive de jeu de survie en 2D dans un navigateur, inspiré du jeu “vampire Survivors”. Les joueurs doivent survivre sur une carte pendant une période de 15 minutes, affrontant des vagues d’ennemis de plus en plus redoutables.",
+    "descriptionEN": "The O’Survivors project is a web application that offers an immersive 2D survival game experience in a browser, inspired by the game “vampire Survivors”. Players must survive on a map for a period of 15 minutes, facing increasingly dreadful waves of enemies."
   }
 ]

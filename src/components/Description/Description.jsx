@@ -19,13 +19,13 @@ export default function Description() {
     >
       <div className="flex flex-col justify-center items-center p-10 ">
         <h1 className="text-3xl 2xl:text-5xl font-bold">
-          {language === 'FR' ? 'Qui suis-je ?' : 'Who am i ?'}
+          {language === 'FR' ? 'Qui suis-je ?' : 'Who am I ?'}
         </h1>
 
         <h2 className="mx-4 mt-4 text-justify 2xl:text-3xl">
           {language === 'FR'
-            ? 'Développeur Fullstack passionné spécialisé dans React. Après 18 ans d’expérience professionnelle dans le secteur commercial, j’ai réalisée une formation dans l’école O’clock . suivie d’un travail dans l’entreprise Yuli pour concevoir une application mobile en React native de A à Z. Je suis ouvert aux nouvelles opportunités et prêt à apporter ma passion pour la technologie et mon expérience précédente au sein de votre entreprise.'
-            : 'Fullstack developer passionate about React. After 18 years of professional experience in the commercial sector, I completed a training course at the O’clock school. followed by work at the Yuli company to design a mobile application in React native from A to Z. I am open to new opportunities and ready to bring my passion for technology and my previous experience to your company.'}
+            ? "Développeur Fullstack passionné spécialisé dans React. Après 18 ans d’expérience professionnelle dans le secteur commercial, je me suis lancé dans une formation intensive à l’école O’clock et obtenu mon Titre Professionnel de 'Développeur web et web mobile'. J'ai eu la chance d'apporter mon savoir faire à l’entreprise Yuli en participant à l'entière conception d'une application mobile en React native. Je suis ouvert aux nouvelles opportunités et prêt à apporter ma passion pour la technologie et mes expériences précédentes au sein de votre entreprise."
+            : "Passionate Fullstack developer specializing in React. After 18 years of professional experience in the commercial sector, I embarked on an intensive training course at the O'clock school and obtained my Professional Title of 'Web and mobile web developer'. I had the chance to bring my expertise to the Yuli company by participating in the entire design of a mobile application in React native. I am open to new opportunities and ready to bring my passion for technology and my previous experiences to your company."}
         </h2>
       </div>
       {/* <div className="flex flex-col 2xl:flex-row justify-start items-center ">
