@@ -1,9 +1,15 @@
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  changeTextEncode,
+  changeTextEncodeEN,
+} from '../../../store/slices/projectSlice';
 export default function ButtonDLCV() {
+  const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
   const handleDownload = () => {
+    dispatch(changeTextEncode('Vous avez téléchargé le CV de Jonathan ! 📜 '));
+    dispatch(changeTextEncodeEN('You downloaded Jonathan CV ! 📜 '));
     // Créer un élément <a> temporaire
     const link = document.createElement('a');
     // Définir l'URL du fichier à télécharger
@@ -13,6 +19,7 @@ export default function ButtonDLCV() {
     // Simuler un clic sur le lien
     link.click();
   };
+
   return (
     <button onClick={handleDownload}>
       <div

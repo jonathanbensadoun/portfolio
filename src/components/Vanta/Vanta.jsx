@@ -10,9 +10,14 @@ import scrollUtils from '../../utils/scrollUtils';
 
 import { TypeAnimation } from 'react-type-animation';
 import ButtonDLCV from '../Buttons/ButtonDLCV/ButtonDLCV';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  changeTextEncode,
+  changeTextEncodeEN,
+} from '../../store/slices/projectSlice';
 
 export default function Vanta() {
+  const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
   // const [vantaEffect, setVantaEffect] = useState(null);
@@ -109,7 +114,19 @@ export default function Vanta() {
           </div>
           <div className="flex flex-col justify-center items-center text-black-shadow pt-8">
             <ButtonDLCV />
-            <button onClick={scrollUtils.scrollToProjects}>
+            <button
+              onClick={() => {
+                scrollUtils.scrollToProjects();
+                dispatch(
+                  changeTextEncode('Pensez à envoyer un message à Jonathan !')
+                );
+                dispatch(
+                  changeTextEncodeEN(
+                    'Think about sending a message to Jonathan !'
+                  )
+                );
+              }}
+            >
               <div
                 className={`relative shadow-md inline-flex items-center px-12 py-3 my-3 bg-opacity-25  overflow-hidden text-lg font-medium  border-2 rounded-full  ${
                   isLightMode

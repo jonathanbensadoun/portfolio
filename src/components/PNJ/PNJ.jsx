@@ -1,3 +1,4 @@
+import './PNJ.scss';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TypeAnimation } from 'react-type-animation';
@@ -7,13 +8,12 @@ import {
 } from '../../store/slices/projectSlice';
 
 const PNJ = () => {
-  const dispacth = useDispatch();
+  const dispatch = useDispatch();
   const textEncode = useSelector((state) => state.project.textEncode);
   const textEncodeEN = useSelector((state) => state.project.textEncodeEN);
   const language = useSelector((state) => state.project.language);
   const showButtonUrl = useSelector((state) => state.project.showButtonUrl);
   const isLightMode = useSelector((state) => state.project.isLightMode);
-  const page = useSelector((state) => state.project.page);
 
   const text = language === 'FR' ? textEncode : textEncodeEN;
   const key = `${language}-${textEncode}-${textEncodeEN}`;
@@ -57,29 +57,30 @@ const PNJ = () => {
 
   const randomMessage = () => {
     const index = Math.floor(Math.random() * messagesFR.length);
-    dispacth(changeTextEncodeEN(messagesEN[index]));
-    dispacth(changeTextEncode(messagesFR[index]));
+    dispatch(changeTextEncodeEN(messagesEN[index]));
+    dispatch(changeTextEncode(messagesFR[index]));
   };
 
   return (
-    <div className="fixed bottom-12 2xl:bottom-2 2xl:right-4 -right-2 z-50 invisible 2xl:visible">
+    <div
+      className={`fixed bottom-12 2xl:bottom-2 2xl:right-4 right-2 z-50 invisible 2xl:visible `}
+    >
       <div className="relative inline-block">
         <div
-          className={`flex flex-col justify-center items-center border text-center bg-opacity-80 border-gray-300 rounded-lg p-4 max-w-48 ${
+          className={`bubble flex flex-col justify-center items-center border text-center bg-opacity-80 border-gray-300 rounded-lg p-4 px-2 max-w-48 ${
             isLightMode ? 'bg-white' : 'bg-secondaryDark'
-          }
-          `}
+          }`}
         >
           <TypeAnimation
             key={key}
-            className="w-48 text-center"
+            className="w-48 text-center px-2"
             cursor={true}
             speed={75}
             sequence={[text, 1000]}
           />
           {showButtonUrl && (
             <button
-              className={`py-2 mt-4 px-4 shadow-md text-jusity rounded-md bg-opacity-50 ${
+              className={`py-2 mt-4 px-4 shadow-md text-center rounded-md bg-opacity-50 ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary'
                   : 'bg-tertiaryDark hover:bg-primaryDark'
@@ -94,7 +95,7 @@ const PNJ = () => {
       </div>
 
       <img
-        className="h-40 w-40  animate-bounce"
+        className="h-40 w-40 animate-bounce"
         src={'/img/pnj2.png'}
         alt="PNJ"
         onClick={randomMessage}

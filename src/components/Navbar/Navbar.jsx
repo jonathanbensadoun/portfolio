@@ -14,6 +14,8 @@ import {
   showreaload,
   changePage,
   changeShowButtonUrl,
+  changeTextEncode,
+  changeTextEncodeEN,
 } from '../../store/slices/projectSlice';
 export default function Navbar() {
   const dispatch = useDispatch();
@@ -46,6 +48,7 @@ export default function Navbar() {
               dispatch(showreaload(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
+              scrollUtils.scrollToTop();
             }}
           >
             <li
@@ -63,6 +66,12 @@ export default function Navbar() {
               dispatch(scrollOnTheProject(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
+              dispatch(
+                changeTextEncode("✨Cliquez sur l'image pour le découvrir !✨")
+              );
+              dispatch(
+                changeTextEncodeEN('✨Click on the image to discover it!✨')
+              );
             }}
           >
             <li
@@ -82,6 +91,16 @@ export default function Navbar() {
               dispatch(scrollOnTheDescription(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
+              dispatch(
+                changeTextEncode(
+                  ' React, Redux, Node.js, Express.js are his specialties 😸'
+                )
+              );
+              dispatch(
+                changeTextEncodeEN(
+                  'React, Redux, Node.js, Express.js sont ses spécialités 😸'
+                )
+              );
             }}
           >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
@@ -95,6 +114,16 @@ export default function Navbar() {
               dispatch(scrollOnTheContact(true));
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
+              dispatch(
+                changeTextEncode(
+                  ' A project? A question? A simple greeting? Use the form! 😁'
+                )
+              );
+              dispatch(
+                changeTextEncodeEN(
+                  ' A project? A question? A simple greeting? Use the form! 😁'
+                )
+              );
             }}
           >
             <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
