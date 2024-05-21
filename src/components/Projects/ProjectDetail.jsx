@@ -32,7 +32,7 @@ export default function ProjectDetail({
   }, []);
 
   return (
-    <div className="p-4 mt-6 2xl:mx-40 h-full">
+    <div className="p-4 pt-6 2xl:mx-40 h-full">
       <div className=" flex flex-col h-full justify-center items-center space-y-4   ">
         <h1 className="text-4xl 2xl:text-6xl font-bold text-center mt-10">
           {title}

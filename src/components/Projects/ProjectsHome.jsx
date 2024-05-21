@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className={`flex flex-col  items-center justify-center border-solid border-t-2 ${
+      className={`flex flex-col  items-center justify-center  ${
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
     >

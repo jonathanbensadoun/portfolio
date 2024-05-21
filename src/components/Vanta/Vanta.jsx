@@ -20,6 +20,7 @@ export default function Vanta() {
   const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
+  const homePage = useSelector((state) => state.project.homePage);
   // const [vantaEffect, setVantaEffect] = useState(null);
   // const myRef = useRef(null);
   // useEffect(() => {
@@ -65,19 +66,65 @@ export default function Vanta() {
   //     if (vantaEffect) vantaEffect.destroy();
   //   };
   // }, [vantaEffect]);
-
+  const myRef = useRef(null);
+  useEffect(() => {
+    let vantaEffect;
+    if (!isLightMode) {
+      if (myRef.current) {
+        if (vantaEffect) vantaEffect.destroy();
+        vantaEffect = NET({
+          el: myRef.current,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x8626f2,
+          backgroundColor: 0x180727,
+          points: 13.0,
+          maxDistance: 30.0,
+          spacing: 17.0,
+        });
+      }
+    }
+    if (isLightMode) {
+      if (myRef.current) {
+        if (vantaEffect) vantaEffect.destroy();
+        vantaEffect = CLOUDS({
+          el: myRef.current,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 100.0,
+          minWidth: 100.0,
+          highlightColor: isLightMode ? 0x25b5c7 : 0x7e21b8,
+          midtoneColor: isLightMode ? 0x89c1e8 : 0x731fd4,
+          lowlightColor: isLightMode ? 0x82c2db : 0x3e1e56,
+          baseColor: isLightMode ? 0xe3f2f2 : 0x000,
+          blurFactor: 0.45,
+          zoom: 0.2,
+          speed: 0.4,
+        });
+      }
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [isLightMode, language, homePage]);
   return (
     <div>
       <div
-        // ref={myRef}
-        className=" display flex flex-col justify-center h-full 2xl:h-screen pb-16"
+        ref={myRef}
+        className=" display flex flex-col justify-center h-full 2xl:h-screen pb-16 max-w-screen pt-16 2xl:pt-10 "
       >
         <div
           className={`flex flex-col items-center mx-4 rounded-lg  bg-opacity-0  ${
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
-          <h1 className="text-2xl pt-10 mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow">
+          <h1 className="text-2xl pt-10 mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow font-bold">
             Jonathan Bensadoun
           </h1>
           <h2 className="text-2xl pb-10  mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow">
@@ -86,7 +133,7 @@ export default function Vanta() {
               : 'Fullstack developer'}
           </h2>
           <div className="flex items-start w-full">
-            <div className=" text-1xl  mx-4 text-justify 2xl:px-20 2xl:mx-20  h-40 sm:h-30 2xl:h-20 text-black-shadow ">
+            <div className=" text-1xl  mx-4 text-justify 2xl:px-20 2xl:mx-40  h-40 sm:h-30 2xl:h-20 text-black-shadow ">
               {language === 'FR' ? (
                 <TypeAnimation
                   key={language}

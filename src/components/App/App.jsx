@@ -90,32 +90,32 @@ function App() {
     }
   }, []);
 
-  const myRef = useRef(null);
-  useEffect(() => {
-    let vantaEffect;
-    if (myRef.current) {
-      if (vantaEffect) vantaEffect.destroy();
-      vantaEffect = FOG({
-        el: myRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 100.0,
-        minWidth: 100.0,
-        highlightColor: isLightMode ? 0x25b5c7 : 0x7e21b8,
-        midtoneColor: isLightMode ? 0x89c1e8 : 0x731fd4,
-        lowlightColor: isLightMode ? 0x82c2db : 0x3e1e56,
-        baseColor: isLightMode ? 0xe3f2f2 : 0x000,
-        blurFactor: 0.45,
-        zoom: 1,
-        speed: 0.4,
-      });
-    }
+  // const myRef = useRef(null);
+  // useEffect(() => {
+  //   let vantaEffect;
+  //   if (myRef.current) {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //     vantaEffect = FOG({
+  //       el: myRef.current,
+  //       mouseControls: true,
+  //       touchControls: true,
+  //       gyroControls: false,
+  //       minHeight: 100.0,
+  //       minWidth: 100.0,
+  //       highlightColor: isLightMode ? 0x25b5c7 : 0x7e21b8,
+  //       midtoneColor: isLightMode ? 0x89c1e8 : 0x731fd4,
+  //       lowlightColor: isLightMode ? 0x82c2db : 0x3e1e56,
+  //       baseColor: isLightMode ? 0xe3f2f2 : 0x000,
+  //       blurFactor: 0.45,
+  //       zoom: 1,
+  //       speed: 0.4,
+  //     });
+  //   }
 
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [isLightMode, language, homePage]);
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //   };
+  // }, [isLightMode, language, homePage]);
 
   useEffect(() => {
     dispatch(
@@ -197,15 +197,13 @@ function App() {
   }, []);
   return (
     <div
-      ref={myRef}
-      className={`App pt-16 2xl:pt-10 transition-all duration-700 ease-out-in ${
+      // ref={myRef}
+      className={`App  transition-all duration-700 ease-out-in ${
         isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark '
       }`}
     >
       <Navbar />
-      <div
-        className={`App  mx-4 2xl:mx-16 2xl:my-12 rounded-xl bg-opacity-30  `}
-      >
+      <div className={`   rounded-xl bg-opacity-30  `}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:title" element={<ProjectPage />} />
