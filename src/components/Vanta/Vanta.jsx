@@ -81,11 +81,11 @@ export default function Vanta() {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x8626f2,
-          backgroundColor: 0x180727,
-          points: 13.0,
-          maxDistance: 30.0,
-          spacing: 17.0,
+          color: 0xfafab6,
+          backgroundColor: 0x1012d,
+          points: 20.0,
+          maxDistance: 12.0,
+          spacing: 11.0,
         });
       }
     }

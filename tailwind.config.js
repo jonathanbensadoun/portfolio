@@ -16,7 +16,7 @@ export default {
         primary: '#D8F9F9',
         secondary: '#7c92a3',
         tertiary: '#627d8c',
-        primaryDark: '#180727',
+        primaryDark: '#01012d',
         secondaryDark: '#0f0f59',
         tertiaryDark: '#731fd4',
         text: '#294250',
