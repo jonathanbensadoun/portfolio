@@ -73,20 +73,17 @@ export default function Vanta() {
     if (!isLightMode) {
       if (myRef.current) {
         if (vantaEffect) vantaEffect.destroy();
-        vantaEffect = NET({
+        vantaEffect = HALO({
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0xfafab6,
-          backgroundColor: 0x1012d,
-          points: 20.0,
-          maxDistance: 12.0,
-          spacing: 11.0,
+          baseColor: 0x000,
+          backgroundColor: 0x01012d,
+          amplitudeFactor: 1.5,
+          size: 1.5,
         });
       }
     }
@@ -100,9 +97,9 @@ export default function Vanta() {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          baseColor: 0xffffff,
+          baseColor: 0x000,
           backgroundColor: 0xbbc1eb,
-          amplitudeFactor: 0.0,
+          amplitudeFactor: 1.5,
           size: 1.5,
         });
       }
