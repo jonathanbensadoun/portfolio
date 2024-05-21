@@ -6,8 +6,9 @@ import DOTS from 'vanta/dist/vanta.dots.min';
 import WAVES from 'vanta/dist/vanta.waves.min';
 import RINGS from 'vanta/dist/vanta.rings.min';
 import NET from 'vanta/dist/vanta.net.min';
+import HALO from 'vanta/dist/vanta.halo.min';
 import scrollUtils from '../../utils/scrollUtils';
-
+import CLOUDS2 from 'vanta/dist/vanta.clouds2.min';
 import { TypeAnimation } from 'react-type-animation';
 import ButtonDLCV from '../Buttons/ButtonDLCV/ButtonDLCV';
 import { useDispatch, useSelector } from 'react-redux';
@@ -92,20 +93,17 @@ export default function Vanta() {
     if (isLightMode) {
       if (myRef.current) {
         if (vantaEffect) vantaEffect.destroy();
-        vantaEffect = CLOUDS({
+        vantaEffect = HALO({
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 100.0,
-          minWidth: 100.0,
-          highlightColor: isLightMode ? 0x25b5c7 : 0x7e21b8,
-          midtoneColor: isLightMode ? 0x89c1e8 : 0x731fd4,
-          lowlightColor: isLightMode ? 0x82c2db : 0x3e1e56,
-          baseColor: isLightMode ? 0xe3f2f2 : 0x000,
-          blurFactor: 0.45,
-          zoom: 0.2,
-          speed: 0.4,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          baseColor: 0xffffff,
+          backgroundColor: 0xbbc1eb,
+          amplitudeFactor: 0.0,
+          size: 1.5,
         });
       }
     }
@@ -117,7 +115,7 @@ export default function Vanta() {
     <div>
       <div
         ref={myRef}
-        className=" display flex flex-col justify-center h-full 2xl:h-screen pb-16 max-w-screen pt-16 2xl:pt-10 "
+        className=" display flex flex-col justify-center h-full 2xl:h-screen pb-16 max-w-screen pt-16 2xl:pt-10 transition-all duration-200 ease-out-in "
       >
         <div
           className={`flex flex-col items-center mx-4 rounded-lg  bg-opacity-0  ${

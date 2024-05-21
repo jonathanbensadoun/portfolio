@@ -13,7 +13,7 @@ export default {
         // tertiaryDark: '#731fd4',
         // text: '#294250',
         // textDark: '#fff',
-        primary: '#D8F9F9',
+        primary: '#bbc1eb',
         secondary: '#7c92a3',
         tertiary: '#627d8c',
         primaryDark: '#01012d',
