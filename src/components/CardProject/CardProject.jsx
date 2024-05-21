@@ -11,7 +11,7 @@ export default function CardProject({ title, description, image, link }) {
 
   return (
     <div
-      className={`mt-4 2xl:mx-4 relative 2xl:static transition-all duration-500 ease-in-out 2xl:h-80 w-80 cursor-pointer top-0 left-0 shadow-md `}
+      className={`mt-4 2xl:mx-4 relative 2xl:static transition-all duration-500 ease-in-out 2xl:h-80 w-80 cursor-pointer top-0 left-0 shadow-md text-textDark`}
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
     >
@@ -40,13 +40,13 @@ export default function CardProject({ title, description, image, link }) {
               ? 'translate-y-0 opacity-100 h-full 2xl:rounded-b z-20 '
               : '-translate-y-0 opacity-0  2xl:-translate-y-60 z-0'
           }
-          ${isLightMode ? 'bg-secondary' : 'bg-secondaryDark'}`}
+          ${isLightMode ? 'bg-primaryDark' : 'bg-secondaryDark'}`}
         >
-          <h1 className="text-3xl pt-4 ">{title}</h1>
+          <h1 className="text-3xl pt-8 2xl:pt-4">{title}</h1>
           <h2 className="mx-4 mt-4 text-center 2xl:text-1xl ">{description}</h2>
           <Link to={`project/${title === 'Dinoto API' ? 'DinotoAPI' : title}`}>
             <button
-              className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-25   ${
+              className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-40   ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary '
                   : 'bg-tertiaryDark hover:bg-primaryDark'

@@ -22,51 +22,7 @@ export default function Vanta() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
   const homePage = useSelector((state) => state.project.homePage);
-  // const [vantaEffect, setVantaEffect] = useState(null);
-  // const myRef = useRef(null);
-  // useEffect(() => {
-  //   if (!vantaEffect) {
-  //     setVantaEffect(
-  //       FOG({
-  //         el: myRef.current,
-  //         // mouseControls: true,
-  //         // touchControls: true,
-  //         // gyroControls: false,
-  //         // minHeight: 200.0,
-  //         // minWidth: 200.0,
-  //         // highlightColor: 0xe8e8e8,
-  //         // midtoneColor: 0xe8dfd4,
-  //         // lowlightColor: 0x919191,
-  //         // baseColor: 0x425966,
-  //         // blurFactor: 0.47,
-  //         // speed: 0.9,
 
-  //         // FOG
-  //         touchControls: true,
-  //         gyroControls: false,
-  //         minHeight: 200.0,
-  //         minWidth: 200.0,
-  // highlightColor: 0x415f70,
-  // midtoneColor: 0x294250,
-  // lowlightColor: 0xe8dfd4,
-  // baseColor: 0xadc5d7,
-  //         blurFactor: 0.54,
-  //         speed: 0.9,
-  //         //NET
-  //         // mouseControls: true,
-  //         // touchControls: true,
-  //         // gyroControls: true,
-  //         // minHeight: 200.0,
-  //         // minWidth: 200.0,
-  //         // scale: 1.0,
-  //         // scaleMobile: 1.0,
-  //       })
-  //     );
-  //   }
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy();
-  //   };
-  // }, [vantaEffect]);
   const myRef = useRef(null);
   useEffect(() => {
     let vantaEffect;
@@ -98,7 +54,7 @@ export default function Vanta() {
           minHeight: 200.0,
           minWidth: 200.0,
           baseColor: 0x000,
-          backgroundColor: 0xbbc1eb,
+          backgroundColor: 0xbbd3ea,
           amplitudeFactor: 1.5,
           size: 1.5,
         });

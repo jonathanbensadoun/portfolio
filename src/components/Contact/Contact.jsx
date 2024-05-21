@@ -14,30 +14,30 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 2xl:mx-60 border-solid border-t-2 ${
-        isLightMode ? 'border-text' : 'border-textDark'
+      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 2xl:mx-60 border-opacity-60  border-solid border-t-2 ${
+        isLightMode ? 'border-secondary' : 'border-secondaryDark'
       }`}
     >
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center pt-10">
         <h1 className="text-4xl text-center  font-bold">
           {language === 'FR'
             ? 'Interessé pour une collaboration ? '
             : 'Interested in a collaboration ?'}
         </h1>
-        <p className=" text-center mt-4">
+        <p className=" text-center mt-4 py-10">
           {language === 'FR'
             ? "Ouvert à de nouvelles opportunités, je serais ravi d'échanger avec vous sur vos projets. Contactez moi via ce formulaire."
             : 'Open to new opportunities, I would be happy to discuss your projects with you. Contact me via this form.'}
         </p>
         <div
-          className={`flex flex-col items-center rounded-lg mt-4 p-4 shadow-md bg-opacity-25 ${
-            isLightMode
-              ? 'bg-secondary text-text'
-              : 'bg-secondaryDark text-textDark'
+          className={`flex flex-col items-center rounded-lg mt-4 p-4 border-opacity-60 shadow-md bg-opacity-25 ${
+            isLightMode ? 'bg-primary' : 'bg-primaryDark'
+          } border-solid border-2 ${
+            isLightMode ? 'border-secondary' : 'border-secondaryDark'
           } `}
         >
           <form
-            className="mt-8 w-80  "
+            className=" mt-8 flex flex-col items-center "
             name="contact"
             method="POST"
             data-netlify="true"
@@ -50,9 +50,9 @@ export default function Contact() {
                 {language === 'FR' ? 'Nom:' : 'Name:'}
               </label>
               <input
-                className={`py-2 px-3 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-white ' : 'bg-black'
-                }`}
+                className={`py-2 px-3 mt-2 w-80 rounded-md bg-opacity-25 ${
+                  isLightMode ? 'bg-secondary ' : 'bg-secondaryDark'
+                } `}
                 type="text"
                 name="name"
                 id="name"
@@ -62,8 +62,8 @@ export default function Contact() {
             <div className="flex flex-col mb-4">
               <label htmlFor="email">Email:</label>
               <input
-                className={`py-2 px-3 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-white ' : 'bg-black'
+                className={`py-2 px-3 mt-2 w-80 rounded-md bg-opacity-25 ${
+                  isLightMode ? 'bg-secondary ' : 'bg-secondaryDark'
                 }`}
                 type="email"
                 name="email"
@@ -76,8 +76,8 @@ export default function Contact() {
                 Message:
               </label>
               <textarea
-                className={`py-2 px-3 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-white ' : 'bg-black'
+                className={`py-2 mt-2 px-3 w-80 rounded-md bg-opacity-25 ${
+                  isLightMode ? 'bg-secondary ' : 'bg-secondaryDark'
                 }`}
                 name="message"
                 id="message"
@@ -85,6 +85,7 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
+
             <button
               className={`py-2 px-4 shadow-md  rounded-md bg-opacity-50 ${
                 isLightMode
