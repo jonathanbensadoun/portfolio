@@ -53,7 +53,7 @@ export default function ProjectDetail({
       </div>
       <div className="flex flex-col justify-center items-center space-y-4">
         <img
-          src={`/img/${title}.png`}
+          src={`/img/${title}.gif`}
           alt={`image du site ${title}`}
           className="rounded-lg shadow-md m-4"
         />
