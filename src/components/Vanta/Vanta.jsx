@@ -98,7 +98,7 @@ export default function Vanta() {
           minHeight: 200.0,
           minWidth: 200.0,
           baseColor: 0x000,
-          backgroundColor: 0xbbc1eb,
+          backgroundColor: 0xcdf2f2,
           amplitudeFactor: 1.5,
           size: 1.5,
         });
