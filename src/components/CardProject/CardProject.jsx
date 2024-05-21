@@ -40,7 +40,9 @@ export default function CardProject({ title, description, image, link }) {
               ? 'translate-y-0 opacity-100 h-full 2xl:rounded-b z-20 '
               : '-translate-y-0 opacity-0  2xl:-translate-y-60 z-0'
           }
-          ${isLightMode ? 'bg-primaryDark' : 'bg-secondaryDark'}`}
+          ${
+            isLightMode ? 'bg-primaryDark 2xl:bg-secondary' : 'bg-secondaryDark'
+          }`}
         >
           <h1 className="text-3xl pt-8 2xl:pt-4">{title}</h1>
           <h2 className="mx-4 mt-4 text-center 2xl:text-1xl ">{description}</h2>
