@@ -30,7 +30,7 @@ export default function ProjectPage() {
     };
   }, []);
   return (
-    <div className="h-full">
+    <div>
       <ProjectDetail
         url={
           title === 'Osurvivors'
