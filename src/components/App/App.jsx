@@ -9,12 +9,9 @@ import {
   scrollOnTheContact,
   scrollOnTheDescription,
   isDesktopMediaQuery,
-  showreaload,
   getLocalStorage,
   changeTextEncode,
   changeTextEncodeEN,
-  changePage,
-  changeShowButtonUrl,
 } from '../../store/slices/projectSlice';
 
 import scrollUtils from '../../utils/scrollUtils';
@@ -25,12 +22,13 @@ import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import ProjectPage from '../../pages/ProjectPage/ProjectPage';
 import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
-import FOG from 'vanta/dist/vanta.fog.min';
-import CELLS from 'vanta/dist/vanta.cells.min';
-import TOPOLOGY from 'vanta/dist/vanta.topology.min';
 import PNJ from '../PNJ/PNJ';
+
+/**
+ * component App
+ * @returns {JSX.Element}
+ */
 function App() {
-  const [vantaEffect, setVantaEffect] = useState(null);
   const [homePage, setHomePage] = useState(true);
   const dispatch = useDispatch();
 
@@ -48,8 +46,7 @@ function App() {
       setHomePage(true);
     }
   }, [page]);
-  const language = useSelector((state) => state.project.language);
-  const location = useLocation();
+
   useEffect(() => {
     if (scrollToProject) {
       scrollUtils.scrollToProjects();
@@ -90,33 +87,6 @@ function App() {
     }
   }, []);
 
-  // const myRef = useRef(null);
-  // useEffect(() => {
-  //   let vantaEffect;
-  //   if (myRef.current) {
-  //     if (vantaEffect) vantaEffect.destroy();
-  //     vantaEffect = FOG({
-  //       el: myRef.current,
-  //       mouseControls: true,
-  //       touchControls: true,
-  //       gyroControls: false,
-  //       minHeight: 100.0,
-  //       minWidth: 100.0,
-  //       highlightColor: isLightMode ? 0x25b5c7 : 0x7e21b8,
-  //       midtoneColor: isLightMode ? 0x89c1e8 : 0x731fd4,
-  //       lowlightColor: isLightMode ? 0x82c2db : 0x3e1e56,
-  //       baseColor: isLightMode ? 0xe3f2f2 : 0x000,
-  //       blurFactor: 0.45,
-  //       zoom: 1,
-  //       speed: 0.4,
-  //     });
-  //   }
-
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy();
-  //   };
-  // }, [isLightMode, language, homePage]);
-
   useEffect(() => {
     dispatch(
       changeTextEncode('Salut, je suis Encode, assistant de Jonathan. 🤗')
@@ -128,11 +98,16 @@ function App() {
     );
     setHomePage(false);
   }, [homePage]);
+
   useEffect(() => {
     let reachedDescription = false;
     let reachedProjectsHome = false;
     let reachedContact = false;
 
+    /**
+     * handleScroll - function to handle the scroll event
+     * @returns {void}
+     */
     const handleScroll = () => {
       const description = document.getElementById('description');
       const projects = document.getElementById('projects');
@@ -197,7 +172,6 @@ function App() {
   }, []);
   return (
     <div
-      // ref={myRef}
       className={`App  transition-all duration-700 ease-out-in ${
         isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark '
       }`}

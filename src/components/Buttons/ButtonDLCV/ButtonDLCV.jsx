@@ -3,10 +3,21 @@ import {
   changeTextEncode,
   changeTextEncodeEN,
 } from '../../../store/slices/projectSlice';
+
+/**
+ * ButtonDLCV component : Button to download the CV
+ * @returns {JSX.Element}
+ */
 export default function ButtonDLCV() {
   const dispatch = useDispatch();
+
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
+
+  /**
+   * Handle download of the CV
+   * @returns {void}
+   */
   const handleDownload = () => {
     dispatch(changeTextEncode('Vous avez téléchargé le CV de Jonathan ! 📜 '));
     dispatch(changeTextEncodeEN('You downloaded Jonathan CV ! 📜 '));

@@ -15,7 +15,7 @@ export default {
         // textDark: '#fff',
         primary: '#bbd3ea',
         secondary: '#465bdd',
-        tertiary: '#db9034',
+        tertiary: '#ff6e00',
         primaryDark: '#01012d',
         secondaryDark: '#0f0f59',
         tertiaryDark: '#731fd4',

@@ -12,13 +12,9 @@ export default function Projects() {
       }`}
     >
       <h1 className="text-3xl 2xl:mt-4 2xl:text-6xl font-bold pt-6 ">
-        {language === 'FR' ? 'Projets' : 'Projects '}
+        {language === 'FR' ? 'Mes projets' : 'My projects'}
       </h1>
-      <h2 className="mx-4 mt-4 text-justify 2xl:text-3xl">
-        {language === 'FR'
-          ? 'Découvrez mes projets personnels'
-          : 'Discover my personal projects'}
-      </h2>
+
       <div
         className={`flex flex-wrap justify-center items-center  mt-4 2xl:pb-60`}
       >
