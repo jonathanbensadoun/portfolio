@@ -48,7 +48,7 @@ export default function CardProject({ title, description, image, link }) {
           <h2 className="mx-4 mt-4 text-center 2xl:text-1xl ">{description}</h2>
           <Link to={`project/${title === 'Dinoto API' ? 'DinotoAPI' : title}`}>
             <button
-              className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-40   ${
+              className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-50   ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary '
                   : 'bg-tertiaryDark hover:bg-primaryDark'
