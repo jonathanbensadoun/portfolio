@@ -179,11 +179,7 @@ function App() {
       setLoading(false);
     };
 
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    setTimeout(handleLoad, 1000);
   }, []);
 
   return (
@@ -192,18 +188,23 @@ function App() {
         isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark '
       }`}
     >
-      {loading && <Loader />}
-      <Navbar />
-      <div className={`rounded-xl bg-opacity-30`}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/project/:title" element={<ProjectPage />} />
-          <Route path="/*" element={<NotFoundPage />} />
-        </Routes>
-      </div>
-      <PNJ />
-      <Footer />
-      <SocialNavbar />
+      {loading ? (
+        <Loader />
+      ) : (
+        <div>
+          <Navbar />
+          <div className={`rounded-xl bg-opacity-30`}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/project/:title" element={<ProjectPage />} />
+              <Route path="/*" element={<NotFoundPage />} />
+            </Routes>
+          </div>
+          <PNJ />
+          <Footer />
+          <SocialNavbar />
+        </div>
+      )}
     </div>
   );
 }

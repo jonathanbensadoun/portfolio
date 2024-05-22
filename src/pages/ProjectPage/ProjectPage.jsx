@@ -35,7 +35,7 @@ export default function ProjectPage() {
     const handleLoad = () => {
       setLoading(false);
     };
-    setTimeout(handleLoad, 600);
+    setTimeout(handleLoad, 1000);
   }, []);
   return (
     <div>
