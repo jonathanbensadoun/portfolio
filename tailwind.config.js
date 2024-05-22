@@ -28,6 +28,8 @@ export default {
         opacity: 'opacity 0.5s ease-in-out',
         blink: 'blink 2s linear infinite ',
         bounce: 'bounce 4s ease-in-out infinite',
+        bounce200: 'bounce 1s infinite 200ms',
+        bounce400: 'bounce 1s infinite 400ms',
       },
       boxShadow: {
         white: '0 0 100px rgba(255, 255, 255, 0.5)',

@@ -23,6 +23,7 @@ import ProjectPage from '../../pages/ProjectPage/ProjectPage';
 import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
 import PNJ from '../PNJ/PNJ';
+import Loader from '../Loader/Loader';
 
 /**
  * component App
@@ -30,6 +31,7 @@ import PNJ from '../PNJ/PNJ';
  */
 function App() {
   const [homePage, setHomePage] = useState(true);
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
   const isLightMode = useSelector((state) => state.project.isLightMode);
@@ -41,6 +43,7 @@ function App() {
     (state) => state.project.scrollToDescription
   );
   const page = useSelector((state) => state.project.page);
+
   useEffect(() => {
     if (page === 'home') {
       setHomePage(true);
@@ -136,7 +139,7 @@ function App() {
       if (
         !reachedProjectsHome &&
         projects &&
-        projects.offsetTop - 500 <= scrollPosition
+        projects.offsetTop - 800 <= scrollPosition
       ) {
         reachedProjectsHome = true;
         dispatch(changeTextEncodeEN('✨Click on the image to discover it!✨'));
@@ -148,7 +151,7 @@ function App() {
       if (
         !reachedContact &&
         contact &&
-        contact.offsetTop - 500 <= scrollPosition
+        contact.offsetTop - 800 <= scrollPosition
       ) {
         reachedContact = true;
         dispatch(
@@ -170,18 +173,31 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <div
       className={`App  transition-all duration-700 ease-out-in ${
         isLightMode ? 'text-text bg-primary' : 'text-textDark bg-primaryDark '
       }`}
     >
+      {loading && <Loader />}
       <Navbar />
-      <div className={`   rounded-xl bg-opacity-30  `}>
+      <div className={`rounded-xl bg-opacity-30`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:title" element={<ProjectPage />} />
-
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </div>
