@@ -68,23 +68,23 @@ export default function Vanta() {
     <div>
       <div
         ref={myRef}
-        className=" display flex flex-col justify-center h-full 2xl:h-screen pb-16 max-w-screen pt-16 2xl:pt-10 transition-all duration-200 ease-out-in "
+        className=" display flex flex-col justify-center h-full lg:h-screen pb-16 max-w-screen pt-16 lg:pt-10 transition-all duration-200 ease-out-in "
       >
         <div
           className={`flex flex-col items-center mx-4 rounded-lg  bg-opacity-0  ${
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
-          <h1 className="text-2xl pt-10 mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow font-bold">
+          <h1 className="text-2xl pt-10 mx-4 text-justify lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow font-bold">
             Jonathan Bensadoun
           </h1>
-          <h2 className="text-2xl pb-10  mx-4 text-justify 2xl:px-20 2xl:mx-20 2xl:text-5xl 2xl:text-left animate-opacity text-black-shadow">
+          <h2 className="text-2xl pb-10  mx-4 text-justify lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
             {language === 'FR'
               ? 'Développeur fullstack'
               : 'Fullstack developer'}
           </h2>
           <div className="flex items-start w-full">
-            <div className=" text-1xl  mx-4 text-justify 2xl:px-20 2xl:mx-40  h-40 sm:h-30 2xl:h-20 text-black-shadow ">
+            <div className=" text-1xl  mx-4 text-justify lg:px-20 lg:mx-40  h-40 sm:h-30 lg:h-20 text-black-shadow ">
               {language === 'FR' ? (
                 <TypeAnimation
                   key={language}

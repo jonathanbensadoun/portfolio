@@ -1,16 +1,39 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useTransition, animated } from '@react-spring/web';
-
+import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import scrollUtils from '../../utils/scrollUtils';
+import {
+  showreaload,
+  changePage,
+  changeShowButtonUrl,
+  changeTextEncode,
+  changeTextEncodeEN,
+  scrollOnTheDescription,
+  scrollOnTheProject,
+  scrollOnTheContact,
+} from '../../store/slices/projectSlice';
 export default function Logo() {
+  const dispatch = useDispatch();
   return (
-    <div className="flex">
-      <p className="text-5xl font-bold mr-2 animate-slide-down text-black-shadow">
-        B
-      </p>
+    <NavLink
+      to="/"
+      onClick={() => {
+        dispatch(showreaload(true));
+        dispatch(changeShowButtonUrl(''));
+        dispatch(changePage('home'));
+        scrollUtils.scrollToTop();
+      }}
+    >
+      <div className="flex">
+        <p className="text-5xl font-bold mr-2 animate-slide-down text-black-shadow">
+          B
+        </p>
 
-      <p className="text-5xl font-bold ml-6 mt-3 animate-slide-up absolute logo-j text-black-shadow">
-        J
-      </p>
-    </div>
+        <p className="text-5xl font-bold ml-6 mt-3 animate-slide-up absolute logo-j text-black-shadow">
+          J
+        </p>
+      </div>
+    </NavLink>
   );
 }

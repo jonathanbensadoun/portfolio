@@ -32,9 +32,9 @@ export default function ProjectDetail({
   }, []);
 
   return (
-    <div className="flex flex-col justify-start p-4 pt-12 2xl:mx-40 h-full">
+    <div className="flex flex-col justify-start p-4 pt-12 lg:mx-40 h-full">
       <div className=" flex flex-col h-full items-center space-y-4   ">
-        <h1 className="text-4xl 2xl:text-6xl font-bold text-center mt-10">
+        <h1 className="text-4xl lg:text-6xl font-bold text-center mt-10">
           {title}
         </h1>
         <p className="text-xl text-center mt-5">{shortDescription}</p>
@@ -55,10 +55,10 @@ export default function ProjectDetail({
         <img
           src={`/img/${title}.gif`}
           alt={`image du site ${title}`}
-          className="rounded-lg shadow-md mt-4 2xl:w-3/4"
+          className="rounded-lg shadow-md mt-4 "
         />
 
-        <p className="text-center mt-4 2xl:text-1xl">{description}</p>
+        <p className="text-center mt-4 lg:text-1xl">{description}</p>
         <h2 className="text-3xl">
           {language === 'FR' ? 'Outils utilisés' : 'tools used'}
         </h2>

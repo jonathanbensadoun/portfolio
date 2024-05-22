@@ -11,12 +11,12 @@ export default function Projects() {
         isLightMode ? 'border-text' : 'border-textDark'
       }`}
     >
-      <h1 className="text-3xl 2xl:mt-4 2xl:text-6xl font-bold pt-6 ">
+      <h1 className="text-3xl lg:mt-4 lg:text-6xl font-bold pt-6 ">
         {language === 'FR' ? 'Mes projets' : 'My projects'}
       </h1>
 
       <div
-        className={`flex flex-wrap justify-center items-center  mt-4 2xl:pb-60`}
+        className={`flex flex-wrap justify-center items-center  mt-4 lg:pb-60`}
       >
         <CardProject
           title="Osurvivors"

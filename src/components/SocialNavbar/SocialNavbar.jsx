@@ -28,17 +28,17 @@ export default function SocialNavbar() {
 
   return (
     <div
-      className={`fixed bg-opacity-20 backdrop-blur-sm shadow-md  bottom-0 left-0 right-0 2xl:bottom-auto 2xl:top-60 2xl:right-auto py-4 2xl:py-0 z-30 2xl:flex 2xl:rounded-r-xl ${
+      className={`fixed bg-opacity-20 backdrop-blur-sm shadow-md  bottom-0 left-0 right-0 lg:bottom-auto lg:top-60 lg:right-auto py-4 lg:py-0 z-30 lg:flex lg:rounded-r-xl ${
         isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
       }`}
     >
-      <nav className="flex items-center  justify-between px-4 2xl:px-2 2xl:py-4 space-x-4 2xl:flex-col 2xl:space-x-0 2xl:space-y-4">
-        <div className="flex items-center justify-center space-x-4 2xl:flex-col 2xl:space-x-0 2xl:space-y-4">
+      <nav className="flex items-center  justify-between px-4 lg:px-2 lg:py-4 space-x-4 lg:flex-col lg:space-x-0 lg:space-y-4">
+        <div className="flex items-center justify-center space-x-4 lg:flex-col lg:space-x-0 lg:space-y-4">
           <Link
             to="https://www.linkedin.com/in/jonathan-bensadoun/"
             target="_blank"
             rel="noopener noreferrer"
-            className=" hover:text-gray-400"
+            className=" hover:text-tertiary"
             onClick={() => {
               dispatch(
                 changeTextEncode(
@@ -56,7 +56,7 @@ export default function SocialNavbar() {
             to="https://github.com/jonathanbensadoun"
             target="_blank"
             rel="noopener noreferrer"
-            className=" hover:text-gray-400"
+            className=" hover:text-tertiary"
             onClick={() => {
               dispatch(
                 changeTextEncode(
@@ -72,21 +72,21 @@ export default function SocialNavbar() {
           </Link>
         </div>
         {!isDesktop && (
-          <div className="flex items-center justify-center space-x-4 2xl:flex-col 2xl:space-x-0 2xl:space-y-4">
+          <div className="flex items-center justify-center space-x-4 lg:flex-col lg:space-x-0 lg:space-y-4">
             <Link
               to="/"
-              className=" hover:text-gray-400"
+              className=" hover:text-tertiary"
               onClick={() => {
+                scrollUtils.scrollToTop();
                 dispatch(changeShowButtonUrl(''));
                 dispatch(changePage('home'));
-                scrollUtils.scrollToTop;
               }}
             >
               <RiHome2Fill className="text-2xl" />
             </Link>
             <Link
               to="/"
-              className=" hover:text-gray-400"
+              className=" hover:text-tertiary"
               onClick={() => {
                 dispatch(changeShowButtonUrl(''));
                 dispatch(changePage('home'));
@@ -97,7 +97,7 @@ export default function SocialNavbar() {
             </Link>
             <Link
               to="/"
-              className=" hover:text-gray-400"
+              className=" hover:text-tertiary"
               onClick={() => {
                 dispatch(changeShowButtonUrl(''));
                 dispatch(changePage('home'));
@@ -108,13 +108,13 @@ export default function SocialNavbar() {
             </Link>
           </div>
         )}
-        <div className="flex space-x-4 2xl:space-x-0 items-center 2xl:flex-col 2xl:space-y-4">
+        <div className="flex space-x-4 lg:space-x-0 items-center lg:flex-col lg:space-y-4">
           <div>
             <ButtonLightMode />
           </div>
           <div>
             <div
-              className={`flex 2xl:flex-col items-center space-x-2 2xl:space-x-0 text-sm justify-center text-1xl rounded bg-opacity-50 ${
+              className={`flex lg:flex-col items-center space-x-2 lg:space-x-0 text-sm justify-center text-1xl rounded bg-opacity-50 ${
                 isLightMode ? 'bg-primary' : 'bg-primaryDark'
               }`}
               onClick={() => {

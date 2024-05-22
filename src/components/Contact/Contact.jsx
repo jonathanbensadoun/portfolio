@@ -8,13 +8,11 @@ import { showMessageContact } from '../../store/slices/projectSlice';
  * fonctionnal with netlify form
  */
 export default function Contact() {
-  const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
   return (
     <div
-      id="contact"
-      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 2xl:mx-60 border-opacity-60  border-solid border-t-2 ${
+      className={`flex flex-col  items-center justify-center h-full mt-4 p-6 lg:mx-60 border-opacity-60  border-solid border-t-2 ${
         isLightMode ? 'border-secondary' : 'border-secondaryDark'
       }`}
     >
@@ -24,7 +22,7 @@ export default function Contact() {
             ? 'Interessé pour une collaboration ? '
             : 'Interested in a collaboration ?'}
         </h1>
-        <p className=" text-center mt-4 py-10">
+        <p id="contact" className=" text-center mt-4 py-10">
           {language === 'FR'
             ? "Ouvert à de nouvelles opportunités, je serais ravi d'échanger avec vous sur vos projets. Contactez moi via ce formulaire."
             : 'Open to new opportunities, I would be happy to discuss your projects with you. Contact me via this form.'}

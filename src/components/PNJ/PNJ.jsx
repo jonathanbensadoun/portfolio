@@ -63,7 +63,7 @@ const PNJ = () => {
 
   return (
     <div
-      className={`fixed bottom-12 2xl:bottom-2 2xl:right-4 right-2 z-50 invisible 2xl:visible `}
+      className={`fixed bottom-12 lg:bottom-2 lg:right-4 right-2 z-50 invisible lg:visible `}
     >
       <div className="relative inline-block">
         <div

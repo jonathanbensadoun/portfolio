@@ -5,7 +5,7 @@ export default function Footer() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   return (
     <div
-      className={`flex flex-col sm:flex-row 2xl:space-x-2 justify-center text-xs pb-20 shadow-md bg-opacity-25 mt-4 2xl:mt-0 p-6 2xl:pb-6 2xl:text-base  `}
+      className={`flex flex-col sm:flex-row lg:space-x-2 justify-center text-xs pb-20 shadow-md bg-opacity-25 mt-4 lg:mt-0 p-6 lg:pb-6 lg:text-base  `}
     >
       <p>
         {language === 'FR' ? "© Droits d'auteur 2024" : '© Copyright 2024'}

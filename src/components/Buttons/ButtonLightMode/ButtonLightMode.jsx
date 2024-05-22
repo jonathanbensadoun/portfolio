@@ -18,8 +18,8 @@ export default function ButtonLightMode() {
 
   return (
     <div
-      className={` text-1xl p-1  rounded bg-opacity-50 ${
-        isLightMode ? 'bg-primary' : 'bg-primaryDark'
+      className={` text-1xl p-1  rounded bg-opacity-75 ${
+        isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
       }`}
       onClick={() => {
         dispatch(

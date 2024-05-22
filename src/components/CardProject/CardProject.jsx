@@ -11,13 +11,13 @@ export default function CardProject({ title, description, image, link }) {
 
   return (
     <div
-      className={`mt-4 2xl:mx-4 relative 2xl:static transition-all duration-500 ease-in-out 2xl:h-80 w-80 cursor-pointer top-0 left-0 shadow-md text-textDark`}
+      className={`mt-4 lg:mx-4 relative lg:static transition-all duration-500 ease-in-out lg:h-80 w-80 cursor-pointer top-0 left-0 shadow-md text-textDark`}
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
     >
       <div
         className={`  p-2  ${
-          openCard ? '2xl:rounded-t' : 'rounded'
+          openCard ? 'lg:rounded-t' : 'rounded'
         }  transition-all ease-in-out duration-300 bg-opacity-25   ${
           isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
         }   `}
@@ -35,17 +35,17 @@ export default function CardProject({ title, description, image, link }) {
       </div>
       <div>
         <div
-          className={`absolute shadow-md  top-0 2xl:static flex flex-col justify-between items-center bg-opacity-90 2xl:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
+          className={`absolute shadow-md  top-0 lg:static flex flex-col justify-between items-center bg-opacity-90 lg:bg-opacity-25 transition-all duration-700 ease-out transform  w-full ${
             openCard
-              ? 'translate-y-0 opacity-100 h-full 2xl:rounded-b z-20 '
-              : '-translate-y-0 opacity-0  2xl:-translate-y-60 z-0'
+              ? 'translate-y-0 opacity-100 h-full lg:rounded-b z-20 '
+              : '-translate-y-0 opacity-0  lg:-translate-y-60 z-0'
           }
           ${
-            isLightMode ? 'bg-primaryDark 2xl:bg-secondary' : 'bg-secondaryDark'
+            isLightMode ? 'bg-primaryDark lg:bg-secondary' : 'bg-secondaryDark'
           }`}
         >
-          <h1 className="text-3xl pt-8 2xl:pt-4">{title}</h1>
-          <h2 className="mx-4 mt-4 text-center 2xl:text-1xl ">{description}</h2>
+          <h1 className="text-3xl pt-8 lg:pt-4">{title}</h1>
+          <h2 className="mx-4 mt-4 text-center lg:text-1xl ">{description}</h2>
           <Link to={`project/${title === 'Dinoto API' ? 'DinotoAPI' : title}`}>
             <button
               className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-50   ${
