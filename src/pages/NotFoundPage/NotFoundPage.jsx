@@ -12,13 +12,11 @@ const NotFoundPage = () => {
   useEffect(() => {
     dispatch(
       changeTextEncode(
-        "404! aie aie aie ! 😱 c'est pas grave revenez à l'accueil "
+        "404! aie aie aie ! 😱 c'est pas grave revenez à l'accueil 😉"
       )
     );
     dispatch(
-      changeTextEncodeEN(
-        '404! ouch! 😱 it is not serious come back to the home page '
-      )
+      changeTextEncodeEN("404! ouch! 😱 don't worry, click to the home page 😉")
     );
   }, []);
 
