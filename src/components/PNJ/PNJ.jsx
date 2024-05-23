@@ -61,6 +61,7 @@ const PNJ = () => {
     '4.png',
     'Encode-sourire.png',
     'Encode-sourire.png',
+    'pnj2.png',
   ];
   const [imageEncode, setImageEncode] = useState(imagesEncode[0]);
 
