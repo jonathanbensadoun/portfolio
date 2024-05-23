@@ -35,6 +35,11 @@ const PNJ = () => {
     "Je suis d'accord 🤝",
     "C'est génial ! 🎊",
     'Quel plaisir ! 😊',
+    '🤗',
+    '🤩',
+    '🎊',
+    '🤝',
+    "Pensez à contacter Jonathan pour plus d'informations ! 😉",
   ];
   const messagesEN = [
     'it tickles ! 😂',
@@ -53,6 +58,11 @@ const PNJ = () => {
     'I agree 🤝',
     "That's awesome! 🎊",
     'What a pleasure! 😊',
+    '🤗',
+    '🤩',
+    '🎊',
+    '🤝',
+    'Feel free to contact Jonathan for more information !😉',
   ];
 
   const imagesEncode = [
