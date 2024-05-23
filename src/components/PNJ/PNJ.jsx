@@ -55,7 +55,13 @@ const PNJ = () => {
     'What a pleasure! 😊',
   ];
 
-  const imagesEncode = ['2.png', '3.png', '4.png', 'Encode-sourire.png'];
+  const imagesEncode = [
+    '2.png',
+    '3.png',
+    '4.png',
+    'Encode-sourire.png',
+    'Encode-sourire.png',
+  ];
   const [imageEncode, setImageEncode] = useState(imagesEncode[0]);
 
   const randomMessage = () => {
