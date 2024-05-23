@@ -1,5 +1,5 @@
 import './PNJ.scss';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TypeAnimation } from 'react-type-animation';
 import {
@@ -55,12 +55,21 @@ const PNJ = () => {
     'What a pleasure! 😊',
   ];
 
+  const imagesEncode = ['2.png', '3.png', '4.png', 'Encode-sourire.png'];
+  const [imageEncode, setImageEncode] = useState(imagesEncode[0]);
+
   const randomMessage = () => {
     const index = Math.floor(Math.random() * messagesFR.length);
     dispatch(changeTextEncodeEN(messagesEN[index]));
     dispatch(changeTextEncode(messagesFR[index]));
   };
-
+  useEffect(() => {
+    const randomImage = () => {
+      const index = Math.floor(Math.random() * imagesEncode.length);
+      setImageEncode(imagesEncode[index]);
+    };
+    randomImage();
+  }, [textEncode, textEncodeEN]);
   return (
     <div
       className={`fixed bottom-12 lg:bottom-2 lg:right-4 right-2 z-50 invisible lg:visible `}
@@ -95,9 +104,9 @@ const PNJ = () => {
       </div>
 
       <img
-        className="h-40 w-40 animate-bounce"
-        src={'/img/pnj2.png'}
-        alt="PNJ"
+        className="h-40 w-40 animate-bounce mt-2 cursor-pointer ml-4"
+        src={imageEncode ? `/img/${imageEncode}` : '/img/2.png'}
+        alt="Encode le PNJ est petit robot sympathique qui vous accompagne sur le site"
         onClick={randomMessage}
       />
     </div>
