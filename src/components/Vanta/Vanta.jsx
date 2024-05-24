@@ -94,7 +94,7 @@ export default function Vanta() {
               : 'Fullstack developer'}
           </h2>
           <div className="flex items-start w-full">
-            <div className=" text-1xl md:text-2xl 2xl:text-4xl mx-4 text-justify lg:px-20 lg:mx-40 2xl:mb-20 lg:mb-20 xl:mb-4  h-24 lg:h-20 text-black-shadow ">
+            <div className=" text-1xl md:text-2xl 2xl:text-4xl mx-4 text-justify lg:px-20 lg:mx-40 2xl:mb-20 mb-8 lg:mb-20 xl:mb-4  h-24 lg:h-20 text-black-shadow ">
               {language === 'FR' ? (
                 <TypeAnimation
                   key={language}
@@ -113,7 +113,7 @@ export default function Vanta() {
                   cursor={true}
                   speed={75}
                   sequence={[
-                    ' Passionate web developer specializing in React. With my various professionnal experiences and technical expertise, my goal is to create exceptional online experiences tailored to your needs.',
+                    ' Passionate web developer specialized in React. With my diversified professional background and technical mastery, my goal is to create exceptional online experiences tailored to your needs.',
                     1000,
                   ]}
                 />
