@@ -187,6 +187,7 @@ function App() {
     l、ﾞ~ヽ
     じしf_, )ノ
     Bonjour, si vous avez des questions, n'hésitez pas à me contacter! 😁
+    Jonathan Bensadoun
     `;
 
     console.log(asciiArt);
