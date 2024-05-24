@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <div
       className={`flex flex-col  items-center justify-center h-full mt-4 p-6 lg:mx-60 border-opacity-60  border-solid border-t-2 ${
-        isLightMode ? 'border-secondary' : 'border-secondaryDark'
+        isLightMode ? 'border-secondary' : 'border-white'
       }`}
     >
       <div className="flex flex-col items-center justify-center pt-10">
@@ -31,7 +31,7 @@ export default function Contact() {
           className={`flex flex-col items-center rounded-lg mt-4 p-4 border-opacity-60 shadow-md bg-opacity-25 ${
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           } border-solid border-2 ${
-            isLightMode ? 'border-secondary' : 'border-secondaryDark'
+            isLightMode ? 'border-secondary' : 'border-white'
           } `}
         >
           <form
@@ -49,7 +49,9 @@ export default function Contact() {
               </label>
               <input
                 className={`py-2 px-3 mt-2 w-80 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-secondary ' : 'bg-secondaryDark'
+                  isLightMode
+                    ? 'bg-secondary '
+                    : 'bg-secondaryDark bg-opacity-75'
                 } `}
                 type="text"
                 name="name"
@@ -61,7 +63,9 @@ export default function Contact() {
               <label htmlFor="email">Email:</label>
               <input
                 className={`py-2 px-3 mt-2 w-80 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-secondary ' : 'bg-secondaryDark'
+                  isLightMode
+                    ? 'bg-secondary '
+                    : 'bg-secondaryDark bg-opacity-75'
                 }`}
                 type="email"
                 name="email"
@@ -75,7 +79,9 @@ export default function Contact() {
               </label>
               <textarea
                 className={`py-2 mt-2 px-3 w-80 rounded-md bg-opacity-25 ${
-                  isLightMode ? 'bg-secondary ' : 'bg-secondaryDark'
+                  isLightMode
+                    ? 'bg-secondary bg-opacity-25'
+                    : 'bg-secondaryDark bg-opacity-75'
                 }`}
                 name="message"
                 id="message"

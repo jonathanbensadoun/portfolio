@@ -36,13 +36,13 @@ export default function ButtonDLCV() {
       <div
         className={`relative shadow-md  inline-flex items-center px-12 py-3 my-3 overflow-hidden text-lg font-medium  border-2 rounded-full  ${
           isLightMode
-            ? 'border-text text-text group hover:bg-text'
-            : 'text-textDark border-textDark group hover:bg-textDark'
+            ? 'border-text text-text group hover:bg-tertiary'
+            : 'text-textDark border-textDark group hover:bg-tertiaryDark'
         }`}
       >
         <span
           className={`absolute left-0 block w-full h-0 transition-all  opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease ${
-            isLightMode ? 'bg-secondary' : 'bg-secondaryDark'
+            isLightMode ? 'bg-tertiary' : 'bg-tertiaryDark'
           }`}
         ></span>
         <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">

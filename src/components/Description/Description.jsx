@@ -40,7 +40,7 @@ export default function Description() {
       </div>
       <div
         className={`flex flex-col lg:flex-row w-full text-center rounded-xl shadow-md  border-opacity-60  border-2 ${
-          isLightMode ? 'border-secondary' : 'border-secondaryDark'
+          isLightMode ? 'border-secondary' : 'border-white'
         }`}
       >
         <div
@@ -95,7 +95,7 @@ export default function Description() {
 
         <div
           className={`flex  flex-col flex-grow  justify-start items-center w-full mt-4 lg:mt-0 p-8  border-opacity-60  border-solid border-t-2 lg:border-0 lg:border-x-2  ${
-            isLightMode ? 'border-secondary' : 'border-secondaryDark'
+            isLightMode ? 'border-secondary' : 'border-white'
           } `}
         >
           <div
@@ -146,7 +146,7 @@ export default function Description() {
 
         <div
           className={`flex  flex-col flex-grow justify-start items-center w-full mt-4 lg:mt-0 p-8 border-solid  border-opacity-60  border-t-2 lg:border-0  ${
-            isLightMode ? 'border-secondary' : 'border-secondaryDark'
+            isLightMode ? 'border-secondary' : 'border-white'
           } `}
         >
           <div
