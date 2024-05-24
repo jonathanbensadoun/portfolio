@@ -6,7 +6,7 @@ const initialState = {
   scrollToContact: false,
   contactSucess: false,
   isDesktop: false,
-  isLightMode: true,
+  isLightMode: false,
   reaload: false,
   language: 'FR',
   textEncode: 'Salut, je suis Encode, assistant de Jonathan. 🤗',
