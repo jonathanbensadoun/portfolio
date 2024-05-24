@@ -87,8 +87,8 @@ export default function Contact() {
             <button
               className={`py-2 px-4 shadow-md  rounded-md bg-opacity-50 ${
                 isLightMode
-                  ? 'bg-tertiary hover:bg-primary'
-                  : 'bg-tertiaryDark hover:bg-primaryDark'
+                  ? 'bg-tertiary hover:bg-secondary'
+                  : 'bg-tertiaryDark hover:bg-secondaryDark'
               }`}
               type="submit"
             >

@@ -52,38 +52,14 @@ export default function Navbar() {
             }}
           >
             <li
-              className={
-                'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
-              }
+              className={`navigation_list animate-opacity md:text-2xl text-sm text-black-shadow ${
+                isLightMode ? 'hover:text-tertiary' : 'hover:text-tertiaryDark'
+              }`}
             >
               {language === 'FR' ? 'ACCUEIL' : 'HOME'}
             </li>
           </NavLink>
-          <NavLink
-            to="/"
-            onClick={() => {
-              dispatch(showreaload(true));
-              dispatch(scrollOnTheProject(true));
-              dispatch(changeShowButtonUrl(''));
-              dispatch(changePage('home'));
-              dispatch(
-                changeTextEncode("✨Cliquez sur l'image pour le découvrir !✨")
-              );
-              dispatch(
-                changeTextEncodeEN('✨Click on the image to discover it!✨')
-              );
-            }}
-          >
-            <li
-              className={
-                'navigation_list animate-opacity md:text-2xl text-sm text-black-shadow '
-              }
-            >
-              {language === 'FR' ? 'PROJETS' : 'PROJECTS'}
-            </li>
-          </NavLink>
 
-          <Logo />
           <NavLink
             to="/"
             onClick={() => {
@@ -103,8 +79,36 @@ export default function Navbar() {
               );
             }}
           >
-            <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
+            <li
+              className={`navigation_list animate-opacity md:text-2xl text-sm text-black-shadow ${
+                isLightMode ? 'hover:text-tertiary' : 'hover:text-tertiaryDark'
+              }`}
+            >
               {language === 'FR' ? 'A PROPOS' : 'ABOUT'}
+            </li>
+          </NavLink>
+          <Logo />
+          <NavLink
+            to="/"
+            onClick={() => {
+              dispatch(showreaload(true));
+              dispatch(scrollOnTheProject(true));
+              dispatch(changeShowButtonUrl(''));
+              dispatch(changePage('home'));
+              dispatch(
+                changeTextEncode("✨Cliquez sur l'image pour le découvrir !✨")
+              );
+              dispatch(
+                changeTextEncodeEN('✨Click on the image to discover it!✨')
+              );
+            }}
+          >
+            <li
+              className={`navigation_list animate-opacity md:text-2xl text-sm text-black-shadow ${
+                isLightMode ? 'hover:text-tertiary' : 'hover:text-tertiaryDark'
+              }`}
+            >
+              {language === 'FR' ? 'PROJETS' : 'PROJECTS'}
             </li>
           </NavLink>
           <NavLink
@@ -126,7 +130,11 @@ export default function Navbar() {
               );
             }}
           >
-            <li className="navigation_list animate-opacity md:text-2xl text-sm text-black-shadow">
+            <li
+              className={`navigation_list animate-opacity md:text-2xl text-sm text-black-shadow ${
+                isLightMode ? 'hover:text-tertiary' : 'hover:text-tertiaryDark'
+              }`}
+            >
               CONTACT
             </li>
           </NavLink>
