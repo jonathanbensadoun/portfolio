@@ -47,8 +47,10 @@ export default function Description() {
           className={`flex flex-col justify-start items-center  w-full  flex-grow pt-8 `}
         >
           <div
-            className={`flex rounded-full p-2 bg-opacity-50 ${
-              isLightMode ? 'bg-tertiary ' : 'bg-tertiaryDark'
+            className={`flex rounded-full p-2  bg-opacity-50 ${
+              isLightMode
+                ? 'bg-tertiary shadow-md  '
+                : 'bg-tertiaryDark shadow-white'
             }`}
           >
             <FaReact className="text-5xl text-primaryDark" />
@@ -59,7 +61,7 @@ export default function Description() {
           <div className="flex flex-col justify-center items-center">
             <h3
               className={`text-1xl lg:text-2xl text-center font-bold pb-2 text-opacity-50 ${
-                isLightMode ? 'text-tertiary' : 'text-tertiaryDark'
+                isLightMode ? 'text-tertiary ' : 'text-tertiaryDark '
               }`}
             >
               {language === 'FR'
@@ -99,8 +101,10 @@ export default function Description() {
           } `}
         >
           <div
-            className={`flex rounded-full p-2 bg-opacity-50 ${
-              isLightMode ? 'bg-tertiary ' : 'bg-tertiaryDark'
+            className={`flex rounded-full p-2  bg-opacity-50 ${
+              isLightMode
+                ? 'bg-tertiary shadow-md '
+                : 'bg-tertiaryDark shadow-white'
             }`}
           >
             <FaNode className="text-5xl text-primaryDark" />
@@ -150,8 +154,10 @@ export default function Description() {
           } `}
         >
           <div
-            className={`flex rounded-full p-2 bg-opacity-50 ${
-              isLightMode ? 'bg-tertiary ' : 'bg-tertiaryDark'
+            className={`flex rounded-full p-2  bg-opacity-50 ${
+              isLightMode
+                ? 'bg-tertiary shadow-md '
+                : 'bg-tertiaryDark shadow-white'
             }`}
           >
             <VscGithub className="text-5xl text-primaryDark" />
@@ -161,7 +167,7 @@ export default function Description() {
           </h2>
           <div className="flex flex-col justify-center items-center text-center">
             <h3
-              className={`text-1xl lg:text-2xl font-bold pb-2 text-opacity-50 ${
+              className={`text-1xl lg:text-2xl font-bold  pb-2 text-opacity-50 ${
                 isLightMode ? 'text-tertiary' : 'text-tertiaryDark'
               }`}
             >

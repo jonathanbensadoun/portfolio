@@ -32,11 +32,11 @@ export default {
         bounce400: 'bounce 1s infinite 400ms',
       },
       boxShadow: {
-        white: '0 0 100px rgba(255, 255, 255, 0.5)',
+        white: '0 3px 8px -0.5px rgba(O, 0, 0, 0.3 )',
         neon: '0 0 5px #ddd, 0 0 10px #ddd, 0 0 15px #ddd, 0 0 20px #ddd',
       },
       textShadow: {
-        default: '0 2px 2px rgba(0, 0, 0, 0.3)',
+        default: '0 4px 10px rgba(0, 0, 0, 0.5)',
         lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
       },
       fontFamily: {

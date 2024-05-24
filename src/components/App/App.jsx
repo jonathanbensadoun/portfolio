@@ -31,7 +31,7 @@ import Loader from '../Loader/Loader';
  */
 function App() {
   const [homePage, setHomePage] = useState(true);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
   const isLightMode = useSelector((state) => state.project.isLightMode);
