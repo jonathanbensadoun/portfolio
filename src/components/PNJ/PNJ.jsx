@@ -7,6 +7,10 @@ import {
   changeTextEncodeEN,
 } from '../../store/slices/projectSlice';
 
+/**
+ * PNJ component
+ * @returns {JSX.Element} PNJ component
+ */
 const PNJ = () => {
   const dispatch = useDispatch();
   const textEncode = useSelector((state) => state.project.textEncode);
@@ -75,12 +79,20 @@ const PNJ = () => {
   ];
   const [imageEncode, setImageEncode] = useState(imagesEncode[0]);
 
+  /**
+   * Random message function
+   * @returns {void}  void
+   */
   const randomMessage = () => {
     const index = Math.floor(Math.random() * messagesFR.length);
     dispatch(changeTextEncodeEN(messagesEN[index]));
     dispatch(changeTextEncode(messagesFR[index]));
   };
   useEffect(() => {
+    /**
+     * Random image function
+     * @returns {void}  void
+     */
     const randomImage = () => {
       const index = Math.floor(Math.random() * imagesEncode.length);
       setImageEncode(imagesEncode[index]);

@@ -1,9 +1,14 @@
 import { useSelector } from 'react-redux';
 import CardProject from '../CardProject/CardProject';
 
+/**
+ * Projects component in home page
+ * @returns {JSX.Element} Projects component
+ */
 export default function Projects() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
+
   return (
     <div
       id="projects"

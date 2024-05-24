@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
+/**
+ * Loader component
+
+ * @returns {JSX.Element} components create a loader
+ */
 const Loader = () => {
   const [currentImage, setCurrentImage] = useState(2);
 
   useEffect(() => {
+    /**
+     * Set an interval to change the image every 300ms
+     */
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => {
         if (prevImage === 4) {

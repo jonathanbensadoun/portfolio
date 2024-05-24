@@ -8,7 +8,7 @@ import {
   scrollOnTheContact,
 } from '../../store/slices/projectSlice';
 import { GrProjects, GrContact } from 'react-icons/gr';
-import { MdOutlineTranslate } from 'react-icons/md';
+
 import scrollUtils from '../../utils/scrollUtils';
 import ButtonLightMode from '../Buttons/ButtonLightMode/ButtonLightMode';
 import {
@@ -20,6 +20,11 @@ import {
 } from '../../store/slices/projectSlice';
 import Flag from 'react-flagkit';
 
+/**
+ * SocialNavbar component
+ * @returns {JSX.Element} SocialNavbar component
+ *
+ */
 export default function SocialNavbar() {
   const dispatch = useDispatch();
   const isDesktop = useSelector((state) => state.project.isDesktop);

@@ -1,5 +1,10 @@
 import { useSelector } from 'react-redux';
 
+/**
+ * Tag component
+ * @param {Object[]} data list of tags
+ * @returns {JSX.Element} Tag component
+ */
 export default function Tag({ data }) {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);

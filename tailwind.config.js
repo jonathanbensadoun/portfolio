@@ -36,7 +36,7 @@ export default {
         neon: '0 0 5px #ddd, 0 0 10px #ddd, 0 0 15px #ddd, 0 0 20px #ddd',
       },
       textShadow: {
-        default: '0 4px 10px rgba(0, 0, 0, 0.5)',
+        default: '0 4px 10px rgba(0, 0, 0, 1)',
         lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
       },
       fontFamily: {

@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { useTransition, animated } from '@react-spring/web';
+import React from 'react';
+
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import scrollUtils from '../../utils/scrollUtils';
@@ -7,12 +7,13 @@ import {
   showreaload,
   changePage,
   changeShowButtonUrl,
-  changeTextEncode,
-  changeTextEncodeEN,
-  scrollOnTheDescription,
-  scrollOnTheProject,
-  scrollOnTheContact,
 } from '../../store/slices/projectSlice';
+
+/**
+ * Logo component
+ * @returns {JSX.Element} Logo component
+ 
+ */
 export default function Logo() {
   const dispatch = useDispatch();
   return (

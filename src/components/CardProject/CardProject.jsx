@@ -4,7 +4,15 @@ import { FiChevronsDown } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { showreaload } from '../../store/slices/projectSlice';
 
-export default function CardProject({ title, description, image, link }) {
+/**
+ * CardProject component
+ * @param {string} title  title of the project
+ * @param {string} description description of the project
+ * @param {string} image link to the image of the project
+ * @param {string} link link to the project
+ * @returns
+ */
+export default function CardProject({ title, description, image }) {
   const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const [openCard, setOpenCard] = useState(false);

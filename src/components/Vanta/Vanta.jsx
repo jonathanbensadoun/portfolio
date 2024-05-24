@@ -17,6 +17,10 @@ import {
   changeTextEncodeEN,
 } from '../../store/slices/projectSlice';
 
+/**
+ * Vanta component
+ * @returns {JSX.Element} Vanta component
+ */
 export default function Vanta() {
   const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
@@ -24,6 +28,11 @@ export default function Vanta() {
   const homePage = useSelector((state) => state.project.homePage);
 
   const myRef = useRef(null);
+
+  /**
+   * useEffect inside a component Vanta configuration
+   * return {void} background effect in header
+   */
   useEffect(() => {
     let vantaEffect;
     if (!isLightMode) {
@@ -64,6 +73,7 @@ export default function Vanta() {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [isLightMode, language, homePage]);
+
   return (
     <div>
       <div
@@ -75,7 +85,7 @@ export default function Vanta() {
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
-          <h1 className="text-2xl pt-10 mx-4 text-justify lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow font-bold">
+          <h1 className="text-3xl pt-10 mx-4 text-justify lg:px-20 lg:mx-20 lg:text-6xl 2xl:text-7xl lg:text-left animate-opacity text-black-shadow font-bold">
             Jonathan Bensadoun
           </h1>
           <h2 className="text-2xl pb-10  mx-4 text-justify lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
@@ -84,7 +94,7 @@ export default function Vanta() {
               : 'Fullstack developer'}
           </h2>
           <div className="flex items-start w-full">
-            <div className=" text-1xl  mx-4 text-justify lg:px-20 lg:mx-40  h-40 sm:h-30 lg:h-20 text-black-shadow ">
+            <div className=" text-1xl md:text-2xl 2xl:text-4xl mx-4 text-justify lg:px-20 lg:mx-40 2xl:mb-20 lg:mb-20 xl:mb-4  h-24 lg:h-20 text-black-shadow ">
               {language === 'FR' ? (
                 <TypeAnimation
                   key={language}
@@ -92,7 +102,7 @@ export default function Vanta() {
                   cursor={true}
                   speed={75}
                   sequence={[
-                    ' Développeur web passionné spécialisé en React. Fort de mon parcours professionnel diversifié et de ma maîtrise technique mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
+                    ' Développeur web passionné spécialisé en React. Fort de mon parcours professionnel diversifié et de ma maîtrise technique, mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
                     1000,
                   ]}
                 />

@@ -3,12 +3,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import Tag from '../Tag/Tag';
 import { useEffect } from 'react';
 import {
-  showreaload,
   changeTextEncode,
   changeTextEncodeEN,
   changeShowButtonUrl,
   changePage,
 } from '../../store/slices/projectSlice';
+
+/**
+ * ProjectDetail component
+ * @param {string} title title of the project
+ * @param {string} url link to the project
+ * @param {string} shortDescription short description of the project
+ * @param {string} description description of the project
+ * @param {string[]} technologies list of technologies used for the project
+ * @returns {JSX.Element} ProjectDetail component
+ */
 export default function ProjectDetail({
   title,
   url,

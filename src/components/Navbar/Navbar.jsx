@@ -17,6 +17,11 @@ import {
   changeTextEncode,
   changeTextEncodeEN,
 } from '../../store/slices/projectSlice';
+
+/**
+ * Navbar component
+ * @returns {JSX.Element} Navbar component
+ */
 export default function Navbar() {
   const dispatch = useDispatch();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,6 +30,10 @@ export default function Navbar() {
   const language = useSelector((state) => state.project.language);
 
   useEffect(() => {
+    /**
+     * Handle the scroll event
+     * @returns {void}
+     */
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > 50);
