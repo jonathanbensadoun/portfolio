@@ -182,10 +182,10 @@ function App() {
     setTimeout(handleLoad, 1000);
 
     const asciiArt = `
-    /l、_
-  （ﾟ ､ ｡７
-    l、ﾞ~ヽ
-    じしf_, )ノ
+    /l、_              /l、_
+  （ﾟ ､ ｡７          （ﾟ ､ ｡７
+   l、ﾞ~ヽ            l、ﾞ~ヽ
+    じしf_, )ノ        じしf_, )ノ
     Bonjour, si vous avez des questions, n'hésitez pas à me contacter! 😁
     Jonathan Bensadoun
     `;
