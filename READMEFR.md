@@ -1,6 +1,10 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b2c53e07-bb54-43cb-bd85-1e3872ff70f5/deploy-status)](https://app.netlify.com/sites/jonathan-bensadoun/deploys)
+
 # Portfolio de Jonathan Bensadoun
 
 Bienvenue sur mon portfolio personnel. Vous trouverez ici un aperçu de mes projets, compétences et expériences.
+Disponible en anglais [ici](README.md).
+Lien vers le site [ici](https://jonathan-bensadoun.netlify.app/).
 
 ## Table des Matières
 
