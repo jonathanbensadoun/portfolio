@@ -180,6 +180,16 @@ function App() {
     };
 
     setTimeout(handleLoad, 1000);
+
+    const asciiArt = `
+    /l、_
+  （ﾟ ､ ｡７
+    l、ﾞ~ヽ
+    じしf_, )ノ
+    Bonjour, si vous avez des questions, n'hésitez pas à me contacter! 😁
+    `;
+
+    console.log(asciiArt);
   }, []);
 
   return (
