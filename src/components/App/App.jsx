@@ -147,7 +147,7 @@ function App() {
         );
         dispatch(
           changeTextEncode(
-            '✨Cliquez sur une image pour découvrir un projet!✨ '
+            '✨Cliquez sur une image pour découvrir un projet!✨'
           )
         );
       }
