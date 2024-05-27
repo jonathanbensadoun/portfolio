@@ -142,9 +142,13 @@ function App() {
         projects.offsetTop - 800 <= scrollPosition
       ) {
         reachedProjectsHome = true;
-        dispatch(changeTextEncodeEN('✨Click on the image to discover it!✨'));
         dispatch(
-          changeTextEncode("✨Cliquez sur l'image pour le découvrir !✨")
+          changeTextEncodeEN('✨Click on an image to discover a project!✨')
+        );
+        dispatch(
+          changeTextEncode(
+            '✨Cliquez sur une image pour découvrir un projet!✨'
+          )
         );
       }
 

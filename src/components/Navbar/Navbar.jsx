@@ -105,10 +105,14 @@ export default function Navbar() {
               dispatch(changeShowButtonUrl(''));
               dispatch(changePage('home'));
               dispatch(
-                changeTextEncode("✨Cliquez sur l'image pour le découvrir !✨")
+                changeTextEncode(
+                  '✨Cliquez sur une image pour découvrir un projet!✨'
+                )
               );
               dispatch(
-                changeTextEncodeEN('✨Click on the image to discover it!✨')
+                changeTextEncodeEN(
+                  '✨Click on the image to discover the project!✨'
+                )
               );
             }}
           >

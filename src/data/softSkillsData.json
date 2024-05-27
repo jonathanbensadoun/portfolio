@@ -50,13 +50,20 @@
   },
   {
     "id": 8,
+    "name_fr": "respect des deadlines",
+    "name_en": "Respect of deadlines",
+    "category": "Personal Development",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 9,
     "name_fr": "Rigueur",
     "name_en": "Attention to detail",
     "category": "Personal Development",
     "color": "#C39BD3"
   },
   {
-    "id": 9,
+    "id": 10,
     "name_fr": "Résolution de problèmes",
     "name_en": "Problem solving",
     "category": "Personal Development",
