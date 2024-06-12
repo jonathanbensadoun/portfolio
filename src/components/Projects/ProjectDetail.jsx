@@ -62,7 +62,7 @@ export default function ProjectDetail({
       </div>
       <div className="flex flex-col justify-start items-center ">
         <img
-          src={`/img/${title}.gif`}
+          src={`/img/${title}.${title === 'Nimbus' ? 'png' : 'gif'}`}
           alt={`image du site ${title}`}
           className="rounded-lg shadow-md mt-4 "
         />

@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name_fr": "React",
+    "name_en": "React",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 3,
+    "name_fr": "API REST",
+    "name_en": "REST API",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+
+  {
+    "id": 5,
+    "name_fr": "Tailwind CSS",
+    "name_en": "Tailwind CSS",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 6,
+    "name_fr": "API open-meteo",
+    "name_en": "open-meteo API",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 7,
+    "name_fr": "Vanta.js",
+    "name_en": "Vanta.js",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 8,
+    "name_fr": "Three.js",
+    "name_en": "Three.js",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  }
+]

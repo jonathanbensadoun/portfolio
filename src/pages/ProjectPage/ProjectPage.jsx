@@ -9,6 +9,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import DinotoAPIText from '../../data/DinotoAPIText.json';
 import DinotoText from '../../data/DinotoText.json';
 import OsurvivorsText from '../../data/OsurvivorsText.json';
+import NimbusText from '../../data/NimbusText.json';
+import Nimbus from '../../data/Nimbus.json';
+
 import Loader from '../../components/Loader/Loader';
 
 export default function ProjectPage() {
@@ -50,6 +53,8 @@ export default function ProjectPage() {
               ? 'https://dinoto.netlify.app/'
               : title === 'DinotoAPI'
               ? 'https://dinotoapi.com/doc'
+              : title === 'Nimbus'
+              ? 'https://nimbus-sky.netlify.app/'
               : null
           }
           title={title}
@@ -66,6 +71,10 @@ export default function ProjectPage() {
               ? language === 'FR'
                 ? DinotoAPIText[0].shortDescriptionFR
                 : DinotoAPIText[0].shortDescriptionEN
+              : title === 'Nimbus'
+              ? language === 'FR'
+                ? NimbusText[0].shortDescriptionFR
+                : NimbusText[0].shortDescriptionEN
               : null
             // title === 'Osurvivors'
             //   ? OsurvivorsText[0].shortDescriptionFR
@@ -88,6 +97,10 @@ export default function ProjectPage() {
               ? language === 'FR'
                 ? DinotoAPIText[0].descriptionFR
                 : DinotoAPIText[0].descriptionEN
+              : title === 'Nimbus'
+              ? language === 'FR'
+                ? NimbusText[0].descriptionFR
+                : NimbusText[0].descriptionEN
               : null
           }
           technologies={
@@ -97,6 +110,8 @@ export default function ProjectPage() {
               ? Dinoto
               : title === 'DinotoAPI'
               ? DinotoAPI
+              : title === 'Nimbus'
+              ? Nimbus
               : null
           }
         />

@@ -50,6 +50,15 @@ export default function Projects() {
           }
           image="./img/dinotoapimini.png"
         />
+        <CardProject
+          title="Nimbus"
+          description={
+            language === 'FR'
+              ? '“ Application météo simple et intuitive. ”'
+              : '“ Simple and intuitive weather application.”'
+          }
+          image="./img/Nimbus-sky.png"
+        />
       </div>
     </div>
   );

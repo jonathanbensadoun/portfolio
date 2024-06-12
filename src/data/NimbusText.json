@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "shortDescriptionFR": "Application météo en temps réel",
+    "shortDescriptionEN": "Real-time weather application",
+    "descriptionFR": "Le site Nimbus-sky en temps réel est une application web qui permet de consulter la météo actuelle et les prévisions sur 4 jours pour votre ville. Elle utilise l’APIopen-meteo pour récupérer les données météorologiques de météo France.",
+    "descriptionEN": "The real-time Nimbus-sky site is a web application that allows you to check the current weather and forecasts for 4 days for your city. It uses the open-meteo API to retrieve meteorological data from weather France."
+  }
+]
