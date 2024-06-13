@@ -41,7 +41,7 @@ export default function ProjectDetail({
   }, []);
 
   return (
-    <div className="flex flex-col justify-start p-4 pt-12 lg:mx-40 h-full">
+    <div className="flex flex-col justify-start p-4 pt-12 lg:mx-40 ">
       <div className=" flex flex-col h-full items-center space-y-4   ">
         <h1 className="text-4xl lg:text-6xl font-bold text-center mt-10">
           {title}
@@ -62,7 +62,7 @@ export default function ProjectDetail({
       </div>
       <div className="flex flex-col justify-start items-center ">
         <img
-          src={`/img/${title}.${title === 'Nimbus' ? 'png' : 'gif'}`}
+          src={`/img/${title}.gif`}
           alt={`image du site ${title}`}
           className="rounded-lg shadow-md mt-4 "
         />
