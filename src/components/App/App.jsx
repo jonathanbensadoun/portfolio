@@ -24,6 +24,7 @@ import SocialNavbar from '../SocialNavbar/SocialNavbar';
 import Footer from '../Footer/Footer';
 import PNJ from '../PNJ/PNJ';
 import Loader from '../Loader/Loader';
+import Encode from '../Encode/Encode';
 
 /**
  * component App
@@ -215,6 +216,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/project/:title" element={<ProjectPage />} />
+              <Route path="/encode" element={<Encode />} />
               <Route path="/*" element={<NotFoundPage />} />
             </Routes>
           </div>
