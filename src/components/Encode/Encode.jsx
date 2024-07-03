@@ -30,7 +30,7 @@ function Encode() {
       };
 
       const response = await fetch(
-        'http://51.91.9.115:3050/api/chatbot',
+        'http://localhost:3000/api/chatbot',
         options
       );
       const data = await response.json();
@@ -42,7 +42,7 @@ function Encode() {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center p-40">
       <form onSubmit={handleSubmit}>
         <p>{response.response}</p>
         <input
