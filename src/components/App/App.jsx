@@ -191,7 +191,7 @@ function App() {
      /l、              /l、
    （ﾟ､ ｡７          （ﾟ､ ｡７
     |、~ヽ            |、~ヽ
-    じしf_,)ノ        じしf_,)ノ
+    じしf_,)ノ .      じしf_,)ノ
 
     Bonjour, si vous avez des questions, n'hésitez pas à me contacter! 😁
     Jonathan Bensadoun
