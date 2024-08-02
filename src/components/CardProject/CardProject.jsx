@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronsDown } from 'react-icons/fi';
-import { useDispatch, useSelector } from 'react-redux';
-import { showreaload } from '../../store/slices/projectSlice';
+import { useSelector } from 'react-redux';
 
 /**
  * CardProject component
@@ -13,13 +12,12 @@ import { showreaload } from '../../store/slices/projectSlice';
  * @returns
  */
 export default function CardProject({ title, description, image }) {
-  const dispatch = useDispatch();
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const [openCard, setOpenCard] = useState(false);
 
   return (
     <div
-      className={`mt-4 lg:mx-4 relative lg:static transition-all duration-500 ease-in-out lg:h-80 w-80 cursor-pointer top-0 left-0 shadow-md text-textDark`}
+      className="mt-4 lg:mx-4 relative lg:static transition-all duration-500 ease-in-out lg:h-80 w-80 cursor-pointer top-0 left-0 shadow-md text-textDark"
       onMouseEnter={() => setOpenCard(true)}
       onMouseLeave={() => setOpenCard(false)}
     >
@@ -61,6 +59,7 @@ export default function CardProject({ title, description, image }) {
                   ? 'bg-tertiary hover:bg-primary '
                   : 'bg-tertiaryDark hover:bg-primaryDark'
               }`}
+              type="button"
             >
               Voir le projet
             </button>
@@ -70,7 +69,7 @@ export default function CardProject({ title, description, image }) {
               openCard ? 'w-60 translate-y-0 ' : 'w-0 -translate-y-full '
             } 
             ${isLightMode ? 'bg-text' : 'bg-textDark'}`}
-          ></div>
+          />
         </div>
       </div>
     </div>
