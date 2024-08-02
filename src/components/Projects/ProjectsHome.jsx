@@ -20,9 +20,7 @@ export default function Projects() {
         {language === 'FR' ? 'Mes projets' : 'My projects'}
       </h1>
 
-      <div
-        className={`flex flex-wrap justify-center items-center  mt-4 lg:pb-60`}
-      >
+      <div className="flex flex-wrap justify-center items-center  mt-4 lg:pb-60">
         <CardProject
           title="Osurvivors"
           description={

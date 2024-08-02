@@ -3,7 +3,7 @@ const scrollUtils = {
    * Scroll to top
    * @returns {void} Scroll to top
    */
-  scrollToTop: function () {
+  scrollToTop() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -13,7 +13,7 @@ const scrollUtils = {
    * Scroll to projects
    * @returns {void} Scroll to projects
    */
-  scrollToProjects: function () {
+  scrollToProjects() {
     const projectsElement = document.getElementById('projects');
 
     projectsElement.scrollIntoView({ behavior: 'smooth' });
@@ -22,7 +22,7 @@ const scrollUtils = {
    * Scroll to about
    * @returns {void} Scroll to about
    */
-  scrollToContact: function () {
+  scrollToContact() {
     const contactElement = document.getElementById('contact');
 
     contactElement.scrollIntoView({ behavior: 'smooth' });
@@ -31,7 +31,7 @@ const scrollUtils = {
    * Scroll to description
    * @returns {void} Scroll to description
    */
-  scrollToDescription: function () {
+  scrollToDescription() {
     const descriptionElement = document.getElementById('description');
     descriptionElement.scrollIntoView({ behavior: 'smooth' });
   },

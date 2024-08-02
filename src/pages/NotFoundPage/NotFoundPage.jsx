@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   changeTextEncode,
   changeTextEncodeEN,
 } from '../../store/slices/projectSlice';
 
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.project.language);
 
@@ -18,7 +18,7 @@ const NotFoundPage = () => {
     dispatch(
       changeTextEncodeEN("404! ouch! 😱 don't worry, click to the home page 😉")
     );
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="flex flex-col justify-center items-center h-screen ">
@@ -30,6 +30,4 @@ const NotFoundPage = () => {
       </h1>
     </div>
   );
-};
-
-export default NotFoundPage;
+}

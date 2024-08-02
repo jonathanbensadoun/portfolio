@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
  * @returns {JSX.Element} components create a loader
  */
-const Loader = () => {
+export default function Loader() {
   const [currentImage, setCurrentImage] = useState(2);
 
   useEffect(() => {
@@ -16,9 +16,8 @@ const Loader = () => {
       setCurrentImage((prevImage) => {
         if (prevImage === 4) {
           return 2;
-        } else {
-          return prevImage + 1;
         }
+        return prevImage + 1;
       });
     }, 300);
 
@@ -29,7 +28,7 @@ const Loader = () => {
     <div className="flex flex-col items-center justify-center h-screen">
       <img
         src={`/img/${currentImage}.png`}
-        alt={`Image ${currentImage}`}
+        alt={`Encode le petit robot assitant ${currentImage}`}
         className="transition-opacity duration-300 w-60"
         style={{ opacity: 1 }}
       />
@@ -43,6 +42,4 @@ const Loader = () => {
       </div>
     </div>
   );
-};
-
-export default Loader;
+}

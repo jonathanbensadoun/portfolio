@@ -1,17 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import CLOUDS from 'vanta/dist/vanta.clouds.min';
-import FOG from 'vanta/dist/vanta.fog.min';
-import BIRDS from 'vanta/dist/vanta.birds.min';
-import DOTS from 'vanta/dist/vanta.dots.min';
-import WAVES from 'vanta/dist/vanta.waves.min';
-import RINGS from 'vanta/dist/vanta.rings.min';
-import NET from 'vanta/dist/vanta.net.min';
-import HALO from 'vanta/dist/vanta.halo.min';
-import scrollUtils from '../../utils/scrollUtils';
-import CLOUDS2 from 'vanta/dist/vanta.clouds2.min';
-import { TypeAnimation } from 'react-type-animation';
-import ButtonDLCV from '../Buttons/ButtonDLCV/ButtonDLCV';
+import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import HALO from 'vanta/dist/vanta.halo.min';
+import { TypeAnimation } from 'react-type-animation';
+import scrollUtils from '../../utils/scrollUtils';
+
+import ButtonDLCV from '../Buttons/ButtonDLCV/ButtonDLCV';
+
 import {
   changeTextEncode,
   changeTextEncodeEN,
@@ -99,7 +94,7 @@ export default function Vanta() {
                 <TypeAnimation
                   key={language}
                   className=""
-                  cursor={true}
+                  cursor="true"
                   speed={75}
                   sequence={[
                     ' Développeur web passionné spécialisé en React. Fort de mon parcours professionnel diversifié et de ma maîtrise technique, mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
@@ -110,7 +105,7 @@ export default function Vanta() {
                 <TypeAnimation
                   key={language}
                   className=""
-                  cursor={true}
+                  cursor="true"
                   speed={75}
                   sequence={[
                     ' Passionate web developer specialized in React. With my diversified professional background and technical mastery, my goal is to create exceptional online experiences tailored to your needs.',
@@ -123,6 +118,7 @@ export default function Vanta() {
           <div className="flex flex-col justify-center items-center text-black-shadow pt-8">
             <ButtonDLCV />
             <button
+              type="button"
               onClick={() => {
                 scrollUtils.scrollToProjects();
                 dispatch(
@@ -146,7 +142,7 @@ export default function Vanta() {
                   className={`absolute left-0 block w-full h-0 transition-all  opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease ${
                     isLightMode ? 'bg-tertiary' : 'bg-tertiaryDark'
                   }`}
-                ></span>
+                />
                 <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
                   <svg
                     className="w-5 h-5"
@@ -160,7 +156,7 @@ export default function Vanta() {
                       strokeLinejoin="round"
                       strokeWidth="2"
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
+                    />
                   </svg>
                 </span>
                 <span className="relative">

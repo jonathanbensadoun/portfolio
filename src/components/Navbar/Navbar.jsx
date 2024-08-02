@@ -1,47 +1,30 @@
-import Logo from '../Logo/Logo';
-
-import scrollUtils from '../../utils/scrollUtils';
-import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import {
-  scrollOnTheProject,
-  scrollOnTheContact,
-  scrollOnTheDescription,
-} from '../../store/slices/projectSlice';
-import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import scrollUtils from '../../utils/scrollUtils';
+
 import {
   showreaload,
   changePage,
   changeShowButtonUrl,
   changeTextEncode,
   changeTextEncodeEN,
+  scrollOnTheProject,
+  scrollOnTheContact,
+  scrollOnTheDescription,
 } from '../../store/slices/projectSlice';
 
+import Logo from '../Logo/Logo';
 /**
  * Navbar component
  * @returns {JSX.Element} Navbar component
  */
 export default function Navbar() {
   const dispatch = useDispatch();
-  const [isScrolled, setIsScrolled] = useState(false);
+
   const isDesktop = useSelector((state) => state.project.isDesktop);
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
-
-  useEffect(() => {
-    /**
-     * Handle the scroll event
-     * @returns {void}
-     */
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div

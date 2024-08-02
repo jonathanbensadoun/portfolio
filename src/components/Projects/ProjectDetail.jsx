@@ -1,7 +1,7 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Tag from '../Tag/Tag';
-import { useEffect } from 'react';
 import {
   changeTextEncode,
   changeTextEncodeEN,
@@ -35,10 +35,10 @@ export default function ProjectDetail({
     );
     dispatch(changeTextEncodeEN(`To visit ${title} click on the button below`));
     dispatch(changeShowButtonUrl(url));
-  }, []);
+  }, [dispatch, title, url]);
   useEffect(() => {
     dispatch(changePage('project'));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="flex flex-col justify-start p-4 pt-12 lg:mx-40 ">
@@ -54,6 +54,7 @@ export default function ProjectDetail({
               : 'bg-tertiaryDark hover:bg-primaryDark'
           }`}
           onClick={() => window.open(url, '_blank')}
+          type="button"
         >
           {language === 'FR'
             ? `Visitez le site ${title}`
@@ -63,7 +64,7 @@ export default function ProjectDetail({
       <div className="flex flex-col justify-start items-center ">
         <img
           src={`/img/${title}.gif`}
-          alt={`image du site ${title}`}
+          alt={`visite animé du site ${title}`}
           className="rounded-lg shadow-md mt-4 "
         />
 

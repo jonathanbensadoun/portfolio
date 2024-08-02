@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../../components/Header/Header';
 import ProjectsHome from '../../components/Projects/ProjectsHome';
 import Description from '../../components/Description/Description';

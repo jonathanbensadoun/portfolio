@@ -1,5 +1,5 @@
 import './PNJ.scss';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TypeAnimation } from 'react-type-animation';
 import {
@@ -11,7 +11,7 @@ import {
  * PNJ component
  * @returns {JSX.Element} PNJ component
  */
-const PNJ = () => {
+export default function PNJ() {
   const dispatch = useDispatch();
   const textEncode = useSelector((state) => state.project.textEncode);
   const textEncodeEN = useSelector((state) => state.project.textEncodeEN);
@@ -69,14 +69,18 @@ const PNJ = () => {
     'Feel free to contact Jonathan for more information !😉',
   ];
 
-  const imagesEncode = [
-    '2.png',
-    '3.png',
-    '4.png',
-    'Encode-sourire.png',
-    'Encode-sourire.png',
-    'pnj2.png',
-  ];
+  const imagesEncode = useMemo(
+    () => [
+      '2.png',
+      '3.png',
+      '4.png',
+      'Encode-sourire.png',
+      'Encode-sourire.png',
+      'pnj2.png',
+    ],
+    []
+  );
+
   const [imageEncode, setImageEncode] = useState(imagesEncode[0]);
 
   /**
@@ -98,7 +102,8 @@ const PNJ = () => {
       setImageEncode(imagesEncode[index]);
     };
     randomImage();
-  }, [textEncode, textEncodeEN]);
+  }, [textEncode, textEncodeEN, imagesEncode]);
+
   return (
     <div
       className={`fixed bottom-12 lg:bottom-2 lg:right-4 right-2 z-50 invisible lg:visible `}
@@ -112,12 +117,13 @@ const PNJ = () => {
           <TypeAnimation
             key={key}
             className="w-48 text-center px-2"
-            cursor={true}
+            cursor="true"
             speed={75}
             sequence={[text, 1000]}
           />
           {showButtonUrl && (
             <button
+              type="button"
               className={`py-2 mt-4 px-4 shadow-md text-center rounded-md bg-opacity-50 ${
                 isLightMode
                   ? 'bg-tertiary hover:bg-primary'
@@ -129,17 +135,27 @@ const PNJ = () => {
             </button>
           )}
         </div>
-        <div className="absolute border-2 border-transparent top-0 right-0"></div>
+        <div className="absolute border-2 border-transparent top-0 right-0" />
       </div>
 
-      <img
+      <div
         className="h-40 w-40 animate-bounce mt-2 cursor-pointer ml-4"
-        src={imageEncode ? `/img/${imageEncode}` : '/img/2.png'}
-        alt="Encode le PNJ est petit robot sympathique qui vous accompagne sur le site"
+        role="button"
+        tabIndex="0"
         onClick={randomMessage}
-      />
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            randomMessage();
+          }
+        }}
+      >
+        <img
+          src={imageEncode ? `/img/${imageEncode}` : '/img/2.png'}
+          alt="Encode le PNJ est petit robot sympathique qui vous accompagne sur le site"
+          className="h-full w-full"
+        />
+      </div>
     </div>
   );
-};
-
-export default PNJ;
+}

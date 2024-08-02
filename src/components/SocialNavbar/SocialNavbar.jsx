@@ -1,24 +1,22 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { RiHome2Fill } from 'react-icons/ri';
-import {
-  scrollOnTheProject,
-  scrollOnTheContact,
-} from '../../store/slices/projectSlice';
+
 import { GrProjects, GrContact } from 'react-icons/gr';
 
+import Flag from 'react-flagkit';
 import scrollUtils from '../../utils/scrollUtils';
 import ButtonLightMode from '../Buttons/ButtonLightMode/ButtonLightMode';
 import {
+  scrollOnTheProject,
+  scrollOnTheContact,
   changeLanguage,
   changeShowButtonUrl,
   changePage,
   changeTextEncode,
   changeTextEncodeEN,
 } from '../../store/slices/projectSlice';
-import Flag from 'react-flagkit';
 
 /**
  * SocialNavbar component
@@ -125,8 +123,18 @@ export default function SocialNavbar() {
               onClick={() => {
                 dispatch(changeLanguage());
                 dispatch(changeTextEncodeEN('Ok, I speak English.'));
-                dispatch(changeTextEncode('Ok, je parle Francais. '));
+                dispatch(changeTextEncode('Ok, je parle Francais.'));
               }}
+              role="button"
+              tabIndex="0"
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  dispatch(changeLanguage());
+                  dispatch(changeTextEncodeEN('Ok, I speak English.'));
+                  dispatch(changeTextEncode('Ok, je parle Francais.'));
+                }
+              }}
+              aria-label="Change Language"
             >
               <Flag country={language} />
             </div>

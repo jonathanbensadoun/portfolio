@@ -31,7 +31,7 @@ const projectSlice = createSlice({
     changeTextEncode: (state, action) => {
       state.textEncode = action.payload;
     },
-    changeLanguage: (state, action) => {
+    changeLanguage: (state) => {
       state.language = state.language === 'FR' ? 'GB' : 'FR';
       localStorage.setItem('language', state.language);
     },
