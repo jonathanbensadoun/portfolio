@@ -1,12 +1,11 @@
-import Tag from '../Tag/Tag';
-import softSkillsData from '../../data/softSkillsData.json';
-
 import { useSelector } from 'react-redux';
 
-import { IoCodeSlashSharp } from 'react-icons/io5';
 import { FaNode } from 'react-icons/fa';
 import { FaReact } from 'react-icons/fa6';
 import { VscGithub } from 'react-icons/vsc';
+import Tag from '../Tag/Tag';
+import softSkillsData from '../../data/softSkillsData.json';
+
 export default function Description() {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const language = useSelector((state) => state.project.language);
@@ -140,6 +139,8 @@ export default function Description() {
                 : 'Frequently used tools:'}
             </h3>
             <ul className="flex flex-col justify-center items-center">
+              <li>Langchain</li>
+              <li>Postman, Insomnia</li>
               <li>Strapi</li>
               <li>Sequelize</li>
               <li>Nodemailer</li>
@@ -195,7 +196,7 @@ export default function Description() {
             <ul className="flex flex-col justify-center items-center">
               <li>Dall-E, Stable Diffusion </li>
               <li>Whimsical, Mocodo</li>
-              <li>GPT-4o, Copilote </li>
+              <li>Mistral AI ,GPT-4o, Copilote, Claude Ai </li>
               <li>OVH, Netlify</li>
               <li>Trello, Slack, Discord </li>
             </ul>
@@ -204,21 +205,4 @@ export default function Description() {
       </div>
     </div>
   );
-}
-{
-  /* <li className="text-2xl lg:text-3xl">
-                {language === 'FR'
-                  ? 'Conception et développement de sites web'
-                  : 'Design and development of websites'}
-              </li>
-              <li className="text-2xl lg:text-3xl">
-                {language === 'FR'
-                  ? 'Création d’interfaces utilisateur interactives'
-                  : 'Creation of interactive user interfaces'}
-              </li>
-              <li className="text-2xl lg:text-3xl">
-                {language === 'FR'
-                  ? 'Optimisation de la performance des applications'
-                  : 'Optimization of application performance'}
-              </li> */
 }

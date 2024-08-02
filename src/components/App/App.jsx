@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
 
 import {
   scrollOnTheProject,
@@ -25,20 +24,17 @@ import Footer from '../Footer/Footer';
 import PNJ from '../PNJ/PNJ';
 import Loader from '../Loader/Loader';
 
-/**
- * component App
- * @returns {JSX.Element}
- */
 function App() {
   const [homePage, setHomePage] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(true); // Utilisation de useState
+
   const dispatch = useDispatch();
 
-  const isLightMode = useSelector((state) => state.project.isLightMode);
   const scrollToProject = useSelector((state) => state.project.scrollToProject);
   const scrollToContact = useSelector((state) => state.project.scrollToContact);
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-  const reaload = useSelector((state) => state.project.reaload);
+
   const scrollToDescription = useSelector(
     (state) => state.project.scrollToDescription
   );
@@ -63,32 +59,36 @@ function App() {
       scrollUtils.scrollToDescription();
       dispatch(scrollOnTheDescription(false));
     }
-  }, [scrollToProject, scrollToContact, scrollToDescription]);
+  }, [scrollToProject, scrollToContact, scrollToDescription, dispatch]);
 
   useEffect(() => {
     dispatch(isDesktopMediaQuery(isDesktop));
-  }, [isDesktop]);
+  }, [isDesktop, dispatch]);
 
   useEffect(() => {
     let language = localStorage.getItem('language');
-    let isLightMode = localStorage.getItem('isLightMode');
+    let storedIsLightMode = localStorage.getItem('isLightMode');
+
     if (!language) {
       localStorage.setItem('language', 'FR');
       language = 'FR';
     }
-    if (!isLightMode) {
+    if (!storedIsLightMode) {
       localStorage.setItem('isLightMode', true);
-      isLightMode = true;
+      storedIsLightMode = true;
     }
 
-    isLightMode = isLightMode === 'false' ? false : true;
+    setIsLightMode(storedIsLightMode !== 'false');
 
-    if (language || isLightMode) {
+    if (language || storedIsLightMode) {
       dispatch(
-        getLocalStorage({ isLightMode: isLightMode, language: language })
+        getLocalStorage({
+          isLightMode: storedIsLightMode !== 'false',
+          language,
+        })
       );
     }
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(
@@ -100,17 +100,13 @@ function App() {
       )
     );
     setHomePage(false);
-  }, [homePage]);
+  }, [homePage, dispatch]);
 
   useEffect(() => {
     let reachedDescription = false;
     let reachedProjectsHome = false;
     let reachedContact = false;
 
-    /**
-     * handleScroll - function to handle the scroll event
-     * @returns {void}
-     */
     const handleScroll = () => {
       const description = document.getElementById('description');
       const projects = document.getElementById('projects');
@@ -176,7 +172,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -211,7 +207,7 @@ function App() {
       ) : (
         <div>
           <Navbar />
-          <div className={`rounded-xl bg-opacity-30`}>
+          <div className="rounded-xl bg-opacity-30">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/project/:title" element={<ProjectPage />} />
