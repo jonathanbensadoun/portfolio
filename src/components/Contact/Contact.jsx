@@ -1,6 +1,5 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { showMessageContact } from '../../store/slices/projectSlice';
+import { useSelector } from 'react-redux';
+
 /**
  *
  * @returns
@@ -87,7 +86,7 @@ export default function Contact() {
                 id="message"
                 rows="5"
                 required
-              ></textarea>
+              />
             </div>
 
             <button
