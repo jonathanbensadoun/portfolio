@@ -31,6 +31,7 @@ function App() {
 
   const dispatch = useDispatch();
 
+  const isLightModeInStore = useSelector((state) => state.project.isLightMode);
   const scrollToProject = useSelector((state) => state.project.scrollToProject);
   const scrollToContact = useSelector((state) => state.project.scrollToContact);
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
@@ -40,6 +41,11 @@ function App() {
   );
   const page = useSelector((state) => state.project.page);
 
+  useEffect(() => {
+    if (isLightModeInStore !== null) {
+      setIsLightMode(isLightModeInStore);
+    }
+  }, [isLightModeInStore]);
   useEffect(() => {
     if (page === 'home') {
       setHomePage(true);
