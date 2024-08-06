@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronsDown } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
 
+import { GiClick } from 'react-icons/gi';
 /**
  * CardProject component
  * @param {string} title  title of the project
@@ -14,6 +15,17 @@ import { useSelector } from 'react-redux';
 export default function CardProject({ title, description, image }) {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const [openCard, setOpenCard] = useState(false);
+  const [showIconTouch, setShowIconTouch] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIconTouch(false);
+    }, 8000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <div
@@ -29,6 +41,9 @@ export default function CardProject({ title, description, image }) {
         }   `}
       >
         <div className="flex flex-col justify-end items-center">
+          {showIconTouch && (
+            <GiClick className="w-10 h-10 absolute z-20 bottom-0 right-0 lg:hidden animate-bounce200" />
+          )}
           <img
             src={image}
             alt={title}
