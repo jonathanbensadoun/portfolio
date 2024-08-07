@@ -80,16 +80,16 @@ export default function Vanta() {
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
-          <h1 className="text-3xl pt-10 mx-4 text-justify lg:px-20 lg:mx-20 lg:text-6xl 2xl:text-7xl lg:text-left animate-opacity text-black-shadow font-bold">
+          <h1 className="text-3xl pt-10 mx-4 text-center lg:px-20 lg:mx-20 lg:text-6xl 2xl:text-7xl lg:text-left animate-opacity text-black-shadow font-bold">
             Jonathan Bensadoun
           </h1>
-          <h2 className="text-2xl pb-10  mx-4 text-justify lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
+          <h2 className="text-2xl pb-10  mx-4 text-center lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
             {language === 'FR'
               ? 'Développeur fullstack'
               : 'Fullstack developer'}
           </h2>
           <div className="flex items-start w-full">
-            <div className=" text-1xl md:text-2xl 2xl:text-4xl mx-4 text-justify lg:px-20 lg:mx-40 2xl:mb-20 mb-8 lg:mb-20 xl:mb-4  h-24 lg:h-20 text-black-shadow ">
+            <div className=" text-1xl md:text-2xl 2xl:text-4xl mx-4 text-center lg:px-20 lg:mx-40 2xl:mb-20 mb-8 lg:mb-20 xl:mb-4  h-24 lg:h-20 text-black-shadow ">
               {language === 'FR' ? (
                 <TypeAnimation
                   key={language}
