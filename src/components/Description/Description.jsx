@@ -140,9 +140,9 @@ export default function Description() {
             </h3>
             <ul className="flex flex-col justify-center items-center">
               <li>Langchain</li>
+              <li> Firebase </li>
               <li>Postman, Insomnia</li>
-              <li>Strapi</li>
-              <li>Sequelize</li>
+              <li>Sequelize,Strapi</li>
               <li>Nodemailer</li>
               <li>JWT</li>
             </ul>
@@ -197,7 +197,7 @@ export default function Description() {
               <li>Dall-E, Stable Diffusion </li>
               <li>Whimsical, Mocodo</li>
               <li>Mistral AI ,GPT-4o, Copilote, Claude Ai </li>
-              <li>OVH, Netlify</li>
+              <li>OVH, Netlify, AWS</li>
               <li>Trello, Slack, Discord </li>
             </ul>
           </div>
