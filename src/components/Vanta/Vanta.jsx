@@ -85,7 +85,7 @@ export default function Vanta() {
               ? 'Développeur fullstack'
               : 'Fullstack developer'}
           </h1>
-          <h2 className="text-2xl pb-10  mx-4 text-center lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
+          <h2 className="text-2xl pb-10  mx-4 text-center lg:px-20 lg:mx-20 lg:text-4xl xl:text-5xl lg:text-left animate-opacity text-black-shadow">
             React | React Native | Node.js | Express
           </h2>
           <div className="flex items-start w-full">
