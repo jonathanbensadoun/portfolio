@@ -76,17 +76,17 @@ export default function Vanta() {
         className=" display flex flex-col justify-center h-full lg:h-screen pb-16 max-w-screen pt-16 lg:pt-10 transition-all duration-200 ease-out-in "
       >
         <div
-          className={`flex flex-col items-center mx-4 rounded-lg  bg-opacity-0  ${
+          className={`flex flex-col items-center justify-center  text-center w-full mx-4 rounded-lg  bg-opacity-0  ${
             isLightMode ? 'bg-primary' : 'bg-primaryDark'
           }`}
         >
-          <h1 className="text-3xl pt-10 mx-4 text-center lg:px-20 lg:mx-20 lg:text-6xl 2xl:text-7xl lg:text-left animate-opacity text-black-shadow font-bold">
-            Jonathan Bensadoun
-          </h1>
-          <h2 className="text-2xl pb-10  mx-4 text-center lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
+          <h1 className="text-3xl pt-10 md:pb-10 mx-4 text-center lg:px-20 lg:mx-20 lg:text-6xl 2xl:text-7xl lg:text-left animate-opacity text-black-shadow font-bold">
             {language === 'FR'
               ? 'Développeur fullstack'
               : 'Fullstack developer'}
+          </h1>
+          <h2 className="text-2xl pb-10  mx-4 text-center lg:px-20 lg:mx-20 lg:text-5xl lg:text-left animate-opacity text-black-shadow">
+            React | React Native | Node.js | Express
           </h2>
           <div className="flex items-start w-full">
             <div className=" text-1xl md:text-2xl 2xl:text-4xl mx-4 text-center lg:px-20 lg:mx-40 2xl:mb-20 mb-8 lg:mb-20 xl:mb-4  h-24 lg:h-20 text-black-shadow ">
@@ -97,7 +97,7 @@ export default function Vanta() {
                   cursor="true"
                   speed={75}
                   sequence={[
-                    ' Développeur web passionné spécialisé en React. Fort de mon parcours professionnel diversifié et de ma maîtrise technique, mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
+                    'Jonathan Bensadoun développeur web passionné spécialisé en React. Fort de mon parcours professionnel diversifié et de ma maîtrise technique, mon objectif est de créer des expériences en ligne exceptionnelles et adaptées à vos besoins.',
                     1000,
                   ]}
                 />
