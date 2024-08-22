@@ -69,7 +69,7 @@ export default function Description() {
             </h3>
             <ul className="flex flex-wrap  justify-center items-center space-x-1 pb-4 ">
               <li>React, </li>
-              <li> React Native, </li>
+              <li> React Native, Next JS, </li>
               <li> Redux, </li>
               <li>Tailwind</li>
             </ul>
