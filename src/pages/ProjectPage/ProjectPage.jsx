@@ -53,6 +53,8 @@ export default function ProjectPage() {
         return 'https://dinotoapi.com/doc';
       case 'Nimbus':
         return 'https://nimbus-sky.netlify.app/';
+      case 'Showcase':
+        return 'https://github.com/organization-JB-dev/example-showcase-website';
       default:
         return null;
     }
