@@ -53,6 +53,8 @@ This portfolio showcases my work as a developer, including various projects that
 - Vite
 - Node.js
 - Express
+- nextJS 
+
 
 ## Installation
 
