@@ -11,6 +11,8 @@ import DinotoText from '../../data/DinotoText.json';
 import OsurvivorsText from '../../data/OsurvivorsText.json';
 import NimbusText from '../../data/NimbusText.json';
 import Nimbus from '../../data/Nimbus.json';
+import ShowcaseText from '../../data/ShowcaseText.json';
+import Showcase from '../../data/Showcase.json';
 
 import Loader from '../../components/Loader/Loader';
 import { showreaload } from '../../store/slices/projectSlice';
@@ -73,6 +75,11 @@ export default function ProjectPage() {
         return languageDescription === 'FR'
           ? NimbusText[0].shortDescriptionFR
           : NimbusText[0].shortDescriptionEN;
+      case 'Showcase':
+        return languageDescription === 'FR'
+          ? ShowcaseText[0].shortDescriptionFR
+          : ShowcaseText[0].shortDescriptionEN;
+
       default:
         return null;
     }
@@ -95,6 +102,10 @@ export default function ProjectPage() {
         return languageDescription === 'FR'
           ? NimbusText[0].descriptionFR
           : NimbusText[0].descriptionEN;
+      case 'Showcase':
+        return languageDescription === 'FR'
+          ? ShowcaseText[0].descriptionFR
+          : ShowcaseText[0].descriptionEN;
       default:
         return null;
     }
@@ -109,6 +120,8 @@ export default function ProjectPage() {
         return DinotoAPI;
       case 'Nimbus':
         return Nimbus;
+      case 'Showcase':
+        return Showcase;
       default:
         return null;
     }

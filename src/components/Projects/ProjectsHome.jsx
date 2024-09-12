@@ -57,6 +57,15 @@ export default function Projects() {
           }
           image="./img/Nimbus-sky.png"
         />
+        <CardProject
+          title="Showcase"
+          description={
+            language === 'FR'
+              ? '“ Template de site vitrine pour restaurant. ”'
+              : '“ Showcase website template for restaurant.”'
+          }
+          image="./img/showcase.png"
+        />
       </div>
     </div>
   );
