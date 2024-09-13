@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name_fr": "React",
+    "name_en": "React",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 2,
+    "name_fr": "Next.js",
+    "name_en": "Next.js",
+    "category": "Frontend",
+    "color": "#D8BFD8"
+  },
+  {
+    "id": 3,
+    "name_fr": "Tailwind CSS",
+    "name_en": "Tailwind CSS",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 4,
+    "name_fr": "TypeScript",
+    "name_en": "TypeScript",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  }
+]

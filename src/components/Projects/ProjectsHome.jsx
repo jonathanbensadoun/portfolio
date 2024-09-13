@@ -66,6 +66,15 @@ export default function Projects() {
           }
           image="./img/showcase.png"
         />
+        <CardProject
+          title="Tool"
+          description={
+            language === 'FR'
+              ? '“ Divers outils pour les développeurs. ”'
+              : '“ Various tools for developers.”'
+          }
+          image="./img/Tool.png"
+        />
       </div>
     </div>
   );

@@ -13,6 +13,8 @@ import NimbusText from '../../data/NimbusText.json';
 import Nimbus from '../../data/Nimbus.json';
 import ShowcaseText from '../../data/ShowcaseText.json';
 import Showcase from '../../data/Showcase.json';
+import Tool from '../../data/Tool.json';
+import ToolText from '../../data/ToolText.json';
 
 import Loader from '../../components/Loader/Loader';
 import { showreaload } from '../../store/slices/projectSlice';
@@ -55,6 +57,8 @@ export default function ProjectPage() {
         return 'https://nimbus-sky.netlify.app/';
       case 'Showcase':
         return 'https://github.com/organization-JB-dev/example-showcase-website';
+      case 'Tool':
+        return 'https://tool-for-dev.netlify.app/';
       default:
         return null;
     }
@@ -81,7 +85,10 @@ export default function ProjectPage() {
         return languageDescription === 'FR'
           ? ShowcaseText[0].shortDescriptionFR
           : ShowcaseText[0].shortDescriptionEN;
-
+      case 'Tool':
+        return languageDescription === 'FR'
+          ? ToolText[0].shortDescriptionFR
+          : ToolText[0].shortDescriptionEN;
       default:
         return null;
     }
@@ -108,6 +115,10 @@ export default function ProjectPage() {
         return languageDescription === 'FR'
           ? ShowcaseText[0].descriptionFR
           : ShowcaseText[0].descriptionEN;
+      case 'Tool':
+        return languageDescription === 'FR'
+          ? ToolText[0].descriptionFR
+          : ToolText[0].descriptionEN;
       default:
         return null;
     }
@@ -124,6 +135,8 @@ export default function ProjectPage() {
         return Nimbus;
       case 'Showcase':
         return Showcase;
+      case 'Tool':
+        return Tool;
       default:
         return null;
     }
