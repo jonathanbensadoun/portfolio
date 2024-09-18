@@ -142,7 +142,7 @@ export default function Description() {
               <li>Langchain</li>
               <li> Firebase </li>
               <li>Postman, Insomnia</li>
-              <li>Sequelize,Strapi</li>
+              <li>Sequelize, Strapi</li>
               <li>Nodemailer</li>
               <li>JWT</li>
             </ul>
