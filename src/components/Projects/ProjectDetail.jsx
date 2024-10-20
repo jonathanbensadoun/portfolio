@@ -31,9 +31,19 @@ export default function ProjectDetail({
 
   useEffect(() => {
     dispatch(
-      changeTextEncode(`Pour visiter ${title} cliquez sur le bouton ci-dessous`)
+      changeTextEncode(
+        `Pour visiter ${
+          title === 'Where' ? 'Where I am ?' : title
+        } cliquez sur le bouton ci-dessous`
+      )
     );
-    dispatch(changeTextEncodeEN(`To visit ${title} click on the button below`));
+    dispatch(
+      changeTextEncodeEN(
+        `To visit ${
+          title === 'Where' ? 'Where I am ?' : title
+        } click on the button below`
+      )
+    );
     dispatch(changeShowButtonUrl(url));
   }, [dispatch, title, url]);
   useEffect(() => {
