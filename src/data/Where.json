@@ -1,0 +1,44 @@
+[
+  {
+    "id": 5,
+    "name_fr": "React Native",
+    "name_en": "React Native",
+    "category": "Application mobile",
+    "color": "#FF6347"
+  },
+  {
+    "id": 6,
+    "name_fr": "Expo",
+    "name_en": "Expo",
+    "category": "Application mobile",
+    "color": "#4682B4"
+  },
+  {
+    "id": 7,
+    "name_fr": "API Open Météo",
+    "name_en": "API Open Weather",
+    "category": "Backend",
+    "color": "#87CEEB"
+  },
+  {
+    "id": 8,
+    "name_fr": "LottieFile Animation",
+    "name_en": "LottieFile Animation",
+    "category": "Animation",
+    "color": "#FFD700"
+  },
+  {
+    "id": 3,
+    "name_fr": "Tailwind CSS",
+    "name_en": "Tailwind CSS",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 4,
+    "name_fr": "TypeScript",
+    "name_en": "TypeScript",
+    "category": "Frontend / Application mobile",
+    "color": "#C39BD3"
+  }
+]

@@ -15,6 +15,7 @@ export default function CardProject({ title, description, image }) {
   const isLightMode = useSelector((state) => state.project.isLightMode);
   const [openCard, setOpenCard] = useState(false);
   const [showIconTouch, setShowIconTouch] = useState(true);
+  const [TitleModified, setTitleModified] = useState(title);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,6 +26,15 @@ export default function CardProject({ title, description, image }) {
       clearTimeout(timer);
     };
   }, []);
+
+  useEffect(() => {
+    if (title === 'Dinoto API') {
+      setTitleModified('DinotoAPI');
+    }
+    if (title === 'Where I am ?') {
+      setTitleModified('Where');
+    }
+  }, [title]);
 
   return (
     <div
@@ -59,7 +69,7 @@ export default function CardProject({ title, description, image }) {
         >
           <h1 className="text-3xl pt-8 lg:pt-4">{title}</h1>
           <h2 className="mx-4 mt-4 text-center lg:text-1xl ">{description}</h2>
-          <Link to={`project/${title === 'Dinoto API' ? 'DinotoAPI' : title}`}>
+          <Link to={`project/${TitleModified}`}>
             <button
               className={`mt-5 font-bold py-2 px-4 rounded mb-2 bg-opacity-50   ${
                 isLightMode

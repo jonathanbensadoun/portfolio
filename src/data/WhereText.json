@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "shortDescriptionFR": " Application mobile Android et IOS de géolocalisation exacte de l'utilisateur",
+    "shortDescriptionEN": " Mobile application Android and IOS for exact geolocation of the user",
+    "descriptionFR": " Application mobile Android et IOS de géolocalisation exacte en utilisant les coordonées GPS du téléphone elle permet avoir accès à la latitude et la longitude de l'utilisateur et de d'afficher le nom de la ville , rue , code postal et pays mais aussi de pouvoir afficher la météo de la ville en temps réel",
+    "descriptionEN": " Mobile application Android and IOSfor exact geolocation using the phone's GPS coordinates it allows access to the user's latitude and longitude and to display the name of the city, street, postal code and country but also to display the weather of the city in real time"
+  }
+]

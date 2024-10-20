@@ -22,6 +22,15 @@ export default function Projects() {
 
       <div className="flex flex-wrap justify-center items-center gap-4 mt-4 lg:pb-8">
         <CardProject
+          title="Where I am ?"
+          description={
+            language === 'FR'
+              ? '“ Application Android & IOS de géolocalisation. ”'
+              : '“ Geolocation application.”'
+          }
+          image="./img/Where.png"
+        />
+        <CardProject
           title="Osurvivors"
           description={
             language === 'FR'

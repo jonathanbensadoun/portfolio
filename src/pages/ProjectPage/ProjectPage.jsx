@@ -15,6 +15,8 @@ import ShowcaseText from '../../data/ShowcaseText.json';
 import Showcase from '../../data/Showcase.json';
 import Tool from '../../data/Tool.json';
 import ToolText from '../../data/ToolText.json';
+import Where from '../../data/Where.json';
+import WhereText from '../../data/WhereText.json';
 
 import Loader from '../../components/Loader/Loader';
 import { showreaload } from '../../store/slices/projectSlice';
@@ -59,6 +61,8 @@ export default function ProjectPage() {
         return 'https://github.com/organization-JB-dev/example-showcase-website';
       case 'Tool':
         return 'https://tool-for-dev.netlify.app/';
+      case 'Where':
+        return 'https://github.com/jonathanbensadoun/weather-mobile';
       default:
         return null;
     }
@@ -89,6 +93,10 @@ export default function ProjectPage() {
         return languageDescription === 'FR'
           ? ToolText[0].shortDescriptionFR
           : ToolText[0].shortDescriptionEN;
+      case 'Where':
+        return languageDescription === 'FR'
+          ? WhereText[0].shortDescriptionFR
+          : WhereText[0].shortDescriptionEN;
       default:
         return null;
     }
@@ -119,6 +127,11 @@ export default function ProjectPage() {
         return languageDescription === 'FR'
           ? ToolText[0].descriptionFR
           : ToolText[0].descriptionEN;
+
+      case 'Where':
+        return languageDescription === 'FR'
+          ? WhereText[0].descriptionFR
+          : WhereText[0].descriptionEN;
       default:
         return null;
     }
@@ -137,6 +150,8 @@ export default function ProjectPage() {
         return Showcase;
       case 'Tool':
         return Tool;
+      case 'Where':
+        return Where;
       default:
         return null;
     }
